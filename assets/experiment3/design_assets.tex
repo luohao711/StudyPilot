@@ -119,5 +119,26 @@
 \node[card,text width=12.6cm,minimum height=1.0cm,anchor=south west,fill=orange] at ($(frame.south west)+(0.55,0.55)$) {调整建议：数据库设计和软件测试掌握度较低，下周各增加一次复习任务。};
 \node[font=\bfseries,above=4mm of frame] {学习结果与进度页面原型};
 \end{tikzpicture}
+\newpage
+
+% 7 Git record
+\begin{tikzpicture}
+\fill[black!92,rounded corners=4pt] (0,0) rectangle (15.2,8.2);
+\fill[black!75,rounded corners=4pt] (0,7.45) rectangle (15.2,8.2);
+\fill[red!70] (0.45,7.82) circle (0.10);
+\fill[yellow!70!orange] (0.78,7.82) circle (0.10);
+\fill[green!65!black] (1.11,7.82) circle (0.10);
+\node[text=white,font=\ttfamily\small,anchor=north west,align=left,text width=14.2cm] at (0.55,7.15) {
+\$ git log -1 --stat\\[3mm]
+commit 7ecf19a8e7c2a8e2d187ded9bfa4a61ce8daae20\\
+Author: 罗心月 <24111302025@local>\\
+Date: 2026-09-20 17:20:41 +0800\\[3mm]
+\quad 完成实验3架构图和界面原型\\[3mm]
+9 files changed, 190 insertions(+)\\
+assets/experiment3/rendered/figure-1.png -- figure-6.png\\
+实验3-软件架构与界面设计(2).md
+};
+\node[font=\bfseries,above=4mm,text=black] at (7.6,8.2) {Git提交记录};
+\end{tikzpicture}
 
 \end{document}
