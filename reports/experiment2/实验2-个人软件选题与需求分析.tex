@@ -1,0 +1,249 @@
+\documentclass[UTF8,12pt,a4paper]{ctexart}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\setmainfont{Times New Roman}
+\setCJKmainfont{Songti SC}
+\setCJKsansfont{Heiti SC}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=2em,itemsep=0.35em,topsep=0.35em}
+\renewcommand{\arraystretch}{1.25}
+\sloppy
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+\section*{实验2：个人软件选题与需求分析}
+
+\begin{center}
+姓名：罗心月\qquad 学号：24111302025\qquad 班级：一班
+\end{center}
+
+\section*{1. 实验目的}
+
+\begin{itemize}
+  \item 围绕真实或明确的用户问题完成个人软件选题，形成可在课程周期内独立完成的项目范围。
+  \item 掌握用户、场景、功能需求、非功能需求、用户故事和验收条件的表达方法。
+  \item 判断AI能力是否真正必要，并明确其输入、输出、价值、风险和非AI降级方案。
+\end{itemize}
+
+\begin{quote}
+\textbf{相关课程参考}
+
+\begin{itemize}
+  \item \href{https://seas.harvard.edu/computer-science/courses}{Harvard CS85：Introduction to Generative AI via Building Software for the Study of Arts \& Sciences（2026课程目录）}：参考其从真实领域问题出发、再把问题转换为软件需求的组织方式。本实验要求先说明用户和实际困难，再决定使用什么AI技术。
+  \item \href{https://cs50.harvard.edu/x/2026/project/}{Harvard CS50：Final Project（2026）}：参考其自主选题、解决真实问题和确定项目里程碑的做法。本课程将其调整为一人一款软件，并在需求阶段明确核心价值、范围和验收条件。
+\end{itemize}
+\end{quote}
+
+\section*{2. 实验内容}
+
+\subsection*{2.1 选题来源与问题陈述}
+
+\begin{itemize}
+  \item 用“目标用户—当前情境—主要困难—造成影响—拟解决方式”描述问题，避免使用空泛技术口号。
+  \item 通过一次简短访谈、现场观察、个人真实经历或公开需求材料说明选题来源，并保留问题记录、观察摘要或资料链接等证据。
+  \item 用一句话概括软件的核心价值，并说明用户在使用前后会发生什么可以观察到的变化。
+\end{itemize}
+
+\subsection*{2.2 用户画像与典型场景}
+
+\begin{itemize}
+  \item 至少定义1类主要用户，说明其目标、能力、使用环境、约束与痛点；项目存在管理者、内容提供者或其他使用者时，再补充相应的次要用户。
+  \item 用具体场景描述用户如何进入软件、完成任务、获得结果，以及失败时如何处理。
+  \item 为主要用户补充至少4个正常场景和2个异常场景，说明两种情况下软件分别应该如何响应。
+\end{itemize}
+
+\subsection*{2.3 现有方案与差异化}
+
+\begin{itemize}
+  \item 调研至少2个现有相似的产品、人工流程或开源方案，从功能、成本、隐私、易用性和AI能力等方面比较。
+  \item 指出本项目不准备解决的问题，防止需求边界不断扩大。
+  \item 总结现有方案中可以借鉴的设计和仍未解决的问题，明确本项目准备形成的差异。
+\end{itemize}
+
+\subsection*{2.4 用户故事、需求与验收条件}
+
+\begin{itemize}
+  \item 采用“作为……我希望……以便……”编写用户故事，并用“给定—当—那么”（Given/When/Then）写验收条件。
+  \item 建立用例图、用例描述：编号、描述、优先级、来源、依赖、验收方法等；非功能需求至少覆盖性能、可靠性、安全或可用性中的两类。
+  \item 围绕最核心的用户流程编写3—5个可直接用于后续实验的验收示例，至少包含正常情况、信息不足或失败情况以及需要人工确认的情况。
+\end{itemize}
+
+\subsection*{2.5 AI能力必要性与可行性}
+
+\begin{itemize}
+  \item 说明AI处理的任务为何难以完全用固定规则解决，明确模型输入、期望输出、允许错误和人工确认点。
+  \item 分析数据来源、模型服务、费用、时延、隐私、幻觉和评测难点，给出非AI降级方案。
+  \item 从2.4的验收示例中选择至少3组，补充输入、期望输出和判定方法，其中包含1组无法处理或需要人工确认的情况。
+\end{itemize}
+
+\subsection*{2.6 MVP(Minimum Viable Product)范围与第2—17周计划}
+
+\begin{itemize}
+  \item 形成一页个人项目方案，确定本学期只重点完成的一条核心用户流程，列出纳入MVP的功能和明确不在本学期实现的功能。
+  \item 列出每一阶段的可运行成果、验收条件和风险，确保一人能够在课程周期内完成。
+  \item 把计划落实到每周可检查的任务和阶段演示节点，并为可能延期的功能预留删减或替代方案。
+\end{itemize}
+
+\section*{3. 操作记录}
+
+\begin{itemize}
+  \item 按照2.1—2.6记录调研、分析、方案取舍和需求变化，不能只提交整理后的结论。
+  \item 访谈、观察、现有方案和公开资料必须说明来源；截图、表格和图示必须编号并配文字说明。
+  \item 在个人Github/Gitee仓库中保存项目方案和需求说明V1，给出文件路径及对应Commit。
+\end{itemize}
+
+\subsection*{3.1 选题确定}
+
+本项目来自本人管理课程任务时的实际问题：通知分散、任务粒度较大，完成后也无法看出相关知识点是否掌握。因此确定选题为“StudyPilot——基于大语言模型的个性化学习任务规划与知识追踪系统”，主要用户为需要同时处理多门课程任务的本科生。
+
+\begin{table}[htbp]
+\centering
+\caption{问题与需求对应关系}
+\begin{tabular}{p{3.3cm}p{4.5cm}p{5.2cm}}
+\toprule
+实际问题 & 用户需要 & 系统处理方式 \\
+\midrule
+任务信息分散 & 统一记录课程要求 & 手工录入课程、截止时间和可用时间 \\
+任务描述过大 & 得到可执行步骤 & AI拆分任务并给出时间建议 \\
+完成后缺少反馈 & 了解薄弱知识点 & 记录完成情况并更新知识状态 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{3.2 核心流程与场景}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+node distance=7mm,
+box/.style={draw,rounded corners,minimum width=2.6cm,minimum height=1cm,align=center,fill=gray!8},
+arr/.style={-{Latex[length=2.4mm]},thick}
+]
+\node[box] (input) {录入学习任务};
+\node[box,right=of input] (ai) {AI拆分与排期};
+\node[box,right=of ai] (confirm) {用户修改确认};
+\node[box,below=of confirm] (finish) {执行并填写反馈};
+\node[box,left=of finish] (track) {更新知识状态};
+\draw[arr] (input) -- (ai);
+\draw[arr] (ai) -- (confirm);
+\draw[arr] (confirm) -- (finish);
+\draw[arr] (finish) -- (track);
+\draw[arr] (track) -| (input);
+\end{tikzpicture}
+\caption{StudyPilot核心用户流程}
+\end{figure}
+
+正常场景包括录入作业、生成计划、修改确认、完成反馈和查看知识状态。若输入只有“复习高数”等模糊内容，系统提示补充范围与截止时间；若AI服务不可用，则保留原始输入，允许用户使用模板手工拆分。
+
+\subsection*{3.3 现有方案比较与取舍}
+
+调研来源为本人实际使用经历及Todoist、Notion公开功能说明。
+
+\begin{table}[htbp]
+\centering
+\caption{现有方案简要比较}
+\begin{tabular}{p{2.5cm}p{4.3cm}p{6.2cm}}
+\toprule
+方案 & 优点 & 不足 \\
+\midrule
+Todoist & 待办和日期管理成熟 & 缺少课程知识点追踪 \\
+Notion & 信息组织灵活 & 需要用户自行搭建流程 \\
+纸质/表格 & 简单、成本低 & 任务拆分和调整依赖手工 \\
+StudyPilot & 学习计划与知识状态形成闭环 & MVP功能较少，需要人工确认 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+项目借鉴清晰的任务状态和结构化记录，但不做通用项目管理。本学期不实现社交、题库、课程播放和复杂多端同步。
+
+\subsection*{3.4 需求与验收条件}
+
+核心用户故事：作为本科生，我希望把课程要求转换为可修改的学习计划，以便按时完成任务并了解自己的薄弱知识点。
+
+\begin{table}[htbp]
+\centering
+\caption{核心验收示例}
+\begin{tabular}{p{4.0cm}p{4.4cm}p{4.6cm}}
+\toprule
+给定 & 当 & 那么 \\
+\midrule
+任务、截止时间、可用时间完整 & 用户请求生成计划 & 返回可编辑的子任务列表 \\
+任务描述信息不足 & 用户请求生成计划 & 提示补充，不虚构内容 \\
+AI超时或格式错误 & 用户等待超过设定时间 & 保留输入并提供手工入口 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+非功能需求主要包括：普通页面加载时间不超过2秒；AI请求显示处理状态；删除数据前再次确认；只向模型发送生成计划所需信息。
+
+\subsection*{3.5 AI能力取舍}
+
+AI只负责理解自然语言要求并生成候选任务，输出任务名称、预计时长、建议日期和知识点。日期、字段和时长由程序校验，正式计划必须由用户确认。AI不可用时，系统使用固定模板、截止时间排序和手工录入完成降级。
+
+\subsection*{3.6 MVP范围与计划}
+
+\begin{table}[htbp]
+\centering
+\caption{MVP范围}
+\begin{tabular}{p{6.5cm}p{6.5cm}}
+\toprule
+纳入MVP & 暂不实现 \\
+\midrule
+任务录入、AI拆分、计划确认 & 自动同步学习通 \\
+完成反馈、知识状态列表 & 题库、学习问答、社交功能 \\
+AI失败后的手工降级 & 复杂知识图谱、多端实时同步 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{第2—17周计划}
+\small
+\begin{tabular}{p{2.2cm}p{8.0cm}p{3.0cm}}
+\toprule
+周次 & 主要任务 & 阶段成果 \\
+\midrule
+第2—3周 & 选题、调研、需求说明 & 需求说明V1 \\
+第4—6周 & 原型、数据库、任务管理 & 基础功能可运行 \\
+第7—10周 & AI拆分、校验、计划确认 & 核心流程演示 \\
+第11—13周 & 完成反馈、知识状态联动 & 学习闭环可运行 \\
+第14—15周 & 测试、异常处理与优化 & 测试记录 \\
+第16—17周 & 部署、文档、最终验收 & 完整项目材料 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+需求调整：原计划包含“自动同步学习通任务”，考虑到登录接口不稳定、隐私风险和个人开发时间，MVP改为手工录入；“自动判断掌握程度”也调整为系统建议、用户确认。
+
+\section*{4. 实验小结}
+
+\begin{itemize}
+  \item 总结最终选题、核心用户流程、MVP边界和AI能力的必要性。
+  \item 说明本次分析过程中至少一次需求变化、删减或取舍及其原因。
+\end{itemize}
+
+最终选题为“StudyPilot——基于大语言模型的个性化学习任务规划与知识追踪系统”，面向课程任务较多的本科生。核心流程是“任务录入—AI拆分—用户确认—完成反馈—知识追踪”。
+
+MVP保留任务管理、AI辅助拆分、反馈和知识状态列表。AI的必要性在于理解不同形式的课程要求，但其结果必须经过规则校验和人工确认，并提供非AI降级方案。
+
+本次主要删减了自动同步学习通、题库和复杂知识图谱等功能，以降低接口、隐私和开发周期风险，使个人项目能够在课程周期内完成。
+
+\end{document}
