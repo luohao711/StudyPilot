@@ -1,0 +1,123 @@
+\documentclass[UTF8]{ctexart}
+\usepackage[paperwidth=17cm,paperheight=10cm,margin=0.35cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\definecolor{navy}{HTML}{244A73}
+\definecolor{blue}{HTML}{E8F1FA}
+\definecolor{green}{HTML}{E7F4EC}
+\definecolor{orange}{HTML}{FCEEDB}
+\definecolor{graybg}{HTML}{F5F7FA}
+\tikzset{
+  box/.style={draw=navy,rounded corners=2pt,fill=white,minimum height=9mm,align=center,font=\small},
+  layer/.style={draw=navy,rounded corners=3pt,fill=blue,minimum width=10.5cm,minimum height=1.15cm,align=center,font=\small},
+  arr/.style={-{Latex[length=2.5mm]},thick,draw=navy},
+  entity/.style={draw=navy,rounded corners=2pt,fill=white,text width=3.15cm,align=left,font=\scriptsize,inner sep=6pt},
+  ui/.style={draw=navy,rounded corners=5pt,fill=white,minimum width=14.5cm,minimum height=8.2cm},
+  card/.style={draw=gray!45,rounded corners=3pt,fill=white,align=left,font=\scriptsize,inner sep=6pt},
+  button/.style={draw=navy,rounded corners=2pt,fill=navy,text=white,font=\scriptsize,minimum height=6mm,align=center}
+}
+\begin{document}
+\pagestyle{empty}
+\centering
+
+% 1 Overall architecture
+\begin{tikzpicture}[node distance=5mm]
+\node[layer] (ui) {表现层：入口页 \quad 课程与目标页 \quad 学习计划页 \quad 进度页};
+\node[layer,below=of ui] (service) {业务层：课程管理 \quad 目标管理 \quad 任务执行 \quad 掌握度更新};
+\node[layer,below=of service,fill=green] (ai) {AI服务层：提示构造 \quad 计划生成 \quad 结果校验 \quad 调整建议};
+\node[layer,below=of ai,fill=orange] (data) {数据层：用户 \quad 课程 \quad 考试目标 \quad 知识点 \quad 计划 \quad 每日任务};
+\node[box,left=4mm of ai,minimum width=2.5cm,fill=graybg] (llm) {云端LLM服务};
+\node[box,right=4mm of data,minimum width=2.2cm,fill=graybg] (db) {SQLite};
+\draw[arr] (ui) -- (service);
+\draw[arr] (service) -- (ai);
+\draw[arr] (ai) -- (data);
+\draw[arr,<->] (ai) -- (llm);
+\draw[arr,<->] (data) -- (db);
+\node[font=\bfseries,above=5mm of ui] {StudyPilot总体架构};
+\end{tikzpicture}
+\newpage
+
+% 2 Core flow
+\begin{tikzpicture}[node distance=7mm]
+\node[box,minimum width=2.5cm] (course) {创建课程};
+\node[box,right=of course,minimum width=2.5cm] (goal) {设置考试目标};
+\node[box,right=of goal,minimum width=2.8cm] (mastery) {填写知识点掌握度};
+\node[box,below=of mastery,minimum width=2.8cm,fill=green] (generate) {AI生成学习计划};
+\node[box,left=of generate,minimum width=2.5cm] (confirm) {用户确认计划};
+\node[box,left=of confirm,minimum width=2.5cm] (daily) {完成每日任务};
+\node[box,below=of daily,minimum width=2.5cm] (update) {更新掌握度};
+\node[box,right=of update,minimum width=2.5cm,fill=green] (adjust) {AI调整后续计划};
+\node[box,right=of adjust,minimum width=2.8cm,fill=orange] (fallback) {失败：保留输入并手工调整};
+\draw[arr] (course)--(goal); \draw[arr] (goal)--(mastery); \draw[arr] (mastery)--(generate);
+\draw[arr] (generate)--(confirm); \draw[arr] (confirm)--(daily); \draw[arr] (daily)--(update);
+\draw[arr] (update)--(adjust); \draw[arr] (adjust.north) -- ++(0,4mm) -| (confirm.south);
+\draw[arr,dashed] (generate)--(fallback);
+\node[font=\bfseries,above=4mm of goal] {核心学习闭环};
+\end{tikzpicture}
+\newpage
+
+% 3 ER diagram
+\begin{tikzpicture}[node distance=12mm and 15mm]
+\node[entity] (user) {\textbf{User}\par user\_id (PK)\par name};
+\node[entity,right=of user] (course) {\textbf{Course}\par course\_id (PK)\par user\_id (FK)\par name};
+\node[entity,right=of course] (goal) {\textbf{ExamGoal}\par goal\_id (PK)\par course\_id (FK)\par exam\_date, target};
+\node[entity,below=of user] (kp) {\textbf{KnowledgePoint}\par point\_id (PK)\par course\_id (FK)\par name, mastery};
+\node[entity,below=of goal] (plan) {\textbf{StudyPlan}\par plan\_id (PK)\par goal\_id (FK)\par status, version};
+\node[entity,below=10mm of course] (task) {\textbf{DailyTask}\par task\_id (PK)\par plan\_id (FK)\par point\_id (FK)\par date, status};
+\draw[arr] (user)--node[above,font=\scriptsize]{1:N}(course);
+\draw[arr] (course)--node[above,font=\scriptsize]{1:N}(goal);
+\draw[arr] (course.west) -| node[pos=.75,above,font=\scriptsize]{1:N}(kp.north);
+\draw[arr] (goal)--node[right,font=\scriptsize]{1:N}(plan);
+\draw[arr] (plan.west)--node[above,font=\scriptsize]{1:N}(task.east);
+\draw[arr] (kp.east)--node[above,font=\scriptsize]{1:N}(task.west);
+\node[font=\bfseries,above=8mm of course] {StudyPilot核心数据ER图};
+\end{tikzpicture}
+\newpage
+
+% 4 Home prototype
+\begin{tikzpicture}
+\node[ui] (frame) {};
+\node[fill=navy,text=white,rounded corners=3pt,minimum width=14.1cm,minimum height=8mm,font=\small] at ($(frame.north)+(0,-0.55)$) {StudyPilot \hfill 首页 \quad 学习计划 \quad 学习进度};
+\node[anchor=west,font=\bfseries\large] at ($(frame.north west)+(0.55,-1.45)$) {你好，罗心月};
+\node[anchor=west,font=\small,text=gray] at ($(frame.north west)+(0.55,-1.95)$) {今天有 3 项学习任务，预计 90 分钟};
+\node[card,text width=4.1cm,minimum height=2.1cm,anchor=north west] at ($(frame.north west)+(0.55,-2.45)$) {\textbf{软件工程}\par 考试：12月20日\par 当前掌握度：62\%};
+\node[card,text width=4.1cm,minimum height=2.1cm,anchor=north] at ($(frame.north)+(0,-2.45)$) {\textbf{高等数学}\par 考试：12月26日\par 当前掌握度：55\%};
+\node[card,text width=4.1cm,minimum height=2.1cm,anchor=north east] at ($(frame.north east)+(-0.55,-2.45)$) {\textbf{大学英语}\par 考试：1月3日\par 当前掌握度：71\%};
+\node[button,minimum width=3.2cm] at ($(frame.south west)+(2.25,0.75)$) {+ 创建课程};
+\node[button,minimum width=3.2cm,fill=white,text=navy] at ($(frame.south west)+(5.8,0.75)$) {生成今日计划};
+\node[anchor=west,font=\scriptsize,text=gray] at ($(frame.south west)+(9.0,0.75)$) {空数据时提示“先创建课程”};
+\node[font=\bfseries,above=4mm of frame] {首页/入口页原型};
+\end{tikzpicture}
+\newpage
+
+% 5 Plan prototype
+\begin{tikzpicture}
+\node[ui] (frame) {};
+\node[fill=navy,text=white,rounded corners=3pt,minimum width=14.1cm,minimum height=8mm,font=\small] at ($(frame.north)+(0,-0.55)$) {StudyPilot \hfill 今日学习计划 \quad 2026/09/20};
+\node[anchor=west,font=\bfseries] at ($(frame.north west)+(0.55,-1.45)$) {目标：软件工程期末达到 85 分};
+\node[card,text width=12.7cm,minimum height=0.85cm,anchor=north west] at ($(frame.north west)+(0.55,-1.85)$) {□ 复习需求分析与用户故事 \hfill 30分钟 \quad 待完成};
+\node[card,text width=12.7cm,minimum height=0.85cm,anchor=north west] at ($(frame.north west)+(0.55,-2.95)$) {□ 绘制StudyPilot核心流程图 \hfill 35分钟 \quad 进行中};
+\node[card,text width=12.7cm,minimum height=0.85cm,anchor=north west] at ($(frame.north west)+(0.55,-4.05)$) {✓ 整理系统架构分层 \hfill 25分钟 \quad 已完成};
+\node[card,text width=8.2cm,minimum height=1.2cm,anchor=north west,fill=green] at ($(frame.north west)+(0.55,-5.35)$) {AI建议：先完成流程图，再检查架构与需求是否对应。};
+\node[button,minimum width=2.6cm] at ($(frame.south east)+(-2.0,0.7)$) {确认计划};
+\node[button,minimum width=2.6cm,fill=white,text=navy] at ($(frame.south east)+(-5.0,0.7)$) {重新生成};
+\node[font=\bfseries,above=4mm of frame] {学习计划核心页面原型};
+\end{tikzpicture}
+\newpage
+
+% 6 Progress prototype
+\begin{tikzpicture}
+\node[ui] (frame) {};
+\node[fill=navy,text=white,rounded corners=3pt,minimum width=14.1cm,minimum height=8mm,font=\small] at ($(frame.north)+(0,-0.55)$) {StudyPilot \hfill 学习进度 \quad 软件工程};
+\node[anchor=west,font=\bfseries] at ($(frame.north west)+(0.55,-1.45)$) {本周完成 12 / 15 项 \quad 总掌握度 68\%};
+\foreach \y/\name/\pct in {2.2/需求分析/82,3.15/软件架构/70,4.1/数据库设计/58,5.05/软件测试/45}{
+  \node[anchor=west,font=\scriptsize] at ($(frame.north west)+(0.65,-\y)$) {\name};
+  \fill[gray!20,rounded corners=2pt] ($(frame.north west)+(3.0,-\y-0.12)$) rectangle ++(7.4,0.32);
+  \fill[navy,rounded corners=2pt] ($(frame.north west)+(3.0,-\y-0.12)$) rectangle ++({7.4*\pct/100},0.32);
+  \node[anchor=west,font=\scriptsize] at ($(frame.north west)+(10.7,-\y)$) {\pct\%};
+}
+\node[card,text width=12.6cm,minimum height=1.0cm,anchor=south west,fill=orange] at ($(frame.south west)+(0.55,0.55)$) {调整建议：数据库设计和软件测试掌握度较低，下周各增加一次复习任务。};
+\node[font=\bfseries,above=4mm of frame] {学习结果与进度页面原型};
+\end{tikzpicture}
+
+\end{document}

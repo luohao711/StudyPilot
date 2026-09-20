@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.out
+missfont.log
+tmp/
+build/
+assets/experiment3/design_assets.pdf
