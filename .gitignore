@@ -5,3 +5,13 @@ missfont.log
 tmp/
 build/
 assets/experiment3/design_assets.pdf
+
+# 运行环境
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.pytest_cache/
+backend/data/
+.npm-cache/
+!backend/logs/app.log
