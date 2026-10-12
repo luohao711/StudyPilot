@@ -102,7 +102,6 @@ async function loadCourses() {
 }
 
 async function load() {
-  message.value = ''
   active.value = null
   const [pointData, taskData] = await Promise.all([listPoints(courseId.value), listTasks(courseId.value)])
   points.value = pointData.items
@@ -124,12 +123,12 @@ async function openForm(task) {
 
 async function submitComplete() {
   submitting.value = true
-  message.value = ''
+  const pointName = suggestion.value.point_name
   try {
     const data = await completeTask(active.value.task_id, { mastery: form.mastery, note: form.note })
-    ok.value = true
-    message.value = `任务已完成，${suggestion.value.point_name} 掌握度 ${data.old_mastery}% → ${data.new_mastery}%`
     await load()
+    ok.value = true
+    message.value = `任务已完成，${pointName} 掌握度 ${data.old_mastery}% → ${data.new_mastery}%`
   } catch (e) {
     ok.value = false
     message.value = e.message
