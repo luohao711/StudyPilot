@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "name": "软件工程",
+      "term": "2026春",
+      "goal": { "exam_date_offset_days": 30, "target_score": 85, "available_minutes": 120 },
+      "points": [
+        { "name": "需求分析", "mastery": 62 },
+        { "name": "软件架构", "mastery": 45 },
+        { "name": "数据库设计", "mastery": 38 },
+        { "name": "软件测试", "mastery": 30 }
+      ]
+    },
+    {
+      "name": "高等数学",
+      "term": "2026春",
+      "goal": { "exam_date_offset_days": 45, "target_score": 90, "available_minutes": 90 },
+      "points": [
+        { "name": "极限与连续", "mastery": 70 },
+        { "name": "导数与微分", "mastery": 55 },
+        { "name": "定积分", "mastery": 40 }
+      ]
+    }
+  ]
+}

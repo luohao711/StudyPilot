@@ -2,14 +2,17 @@
   <div class="page">
     <header class="topbar">
       <span class="brand">StudyPilot</span>
-      <span class="nav">首页</span>
+      <nav class="nav">
+        <router-link to="/">首页</router-link>
+        <router-link to="/plan">学习计划</router-link>
+        <router-link to="/progress">学习进度</router-link>
+      </nav>
+      <span class="user">罗心月</span>
     </header>
     <main class="content">
-      <HomeView />
+      <router-view />
     </main>
   </div>
 </template>
 
-<script setup>
-import HomeView from './views/HomeView.vue'
-</script>
+<script setup></script>

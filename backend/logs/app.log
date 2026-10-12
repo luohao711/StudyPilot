@@ -1,3 +1,405 @@
 2026-10-12 09:59:34 INFO [studypilot] 初始化用户：罗心月
 2026-10-12 09:59:34 INFO [studypilot] 写入样例课程 2 条
 2026-10-12 09:59:34 INFO [studypilot] StudyPilot 后端启动，数据库：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:04:02 INFO [studypilot] 创建课程成功：数据结构（id=3）
+2026-10-12 10:04:04 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:05:00 INFO [studypilot] 创建课程成功：编译原理（id=4）
+2026-10-12 10:05:00 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:20 ERROR [studypilot] 未处理异常 POST /api/plans/generate
+Traceback (most recent call last):
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, *args, cancellable=cancellable, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/api/plans.py", line 35, in generate
+    return plan_service.generate_plan(payload.course_id, payload.available_minutes, payload.start_date)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/service/plan_service.py", line 17, in generate_plan
+    avg_mastery = sum(p["mastery"] for p in points) / len(points)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:20 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:20 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:20 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:20 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:20 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:07:20 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:20 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:20 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_t1_create_course0/test.db
+2026-10-12 10:07:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:07:20 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:07:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:27 ERROR [studypilot] 未处理异常 POST /api/plans/generate
+Traceback (most recent call last):
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, *args, cancellable=cancellable, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/api/plans.py", line 35, in generate
+    return plan_service.generate_plan(payload.course_id, payload.available_minutes, payload.start_date)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/service/plan_service.py", line 17, in generate_plan
+    avg_mastery = sum(p["mastery"] for p in points) / len(points)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:27 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:27 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:27 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:07:27 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:07:27 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:07:27 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:07:27 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:07:27 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:07:27 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_t1_create_course0/test.db
+2026-10-12 10:07:27 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:07:27 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:07:27 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:04 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:04 INFO [studypilot] 数据库位置：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:08:04 INFO [studypilot] 已清空全部业务数据
+2026-10-12 10:08:09 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:09 INFO [studypilot] 数据库位置：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:08:09 INFO [studypilot] 已清空全部业务数据
+2026-10-12 10:08:09 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:09 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:08:09 INFO [studypilot] 写入样例课程：软件工程（4 个知识点）
+2026-10-12 10:08:09 INFO [studypilot] 保存考试目标：课程 2，考试 2026-11-26，目标 90 分
+2026-10-12 10:08:09 INFO [studypilot] 写入样例课程：高等数学（3 个知识点）
+2026-10-12 10:08:10 INFO [studypilot] StudyPilot 后端启动，数据库：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:08:15 INFO [studypilot] 生成候选计划：课程 1，共 4 个任务
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:08:39 ERROR [studypilot] 未处理异常 POST /api/plans/generate
+Traceback (most recent call last):
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 274, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, *args, cancellable=cancellable, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/luo/anaconda3/lib/python3.13/site-packages/anyio/_backends/_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/api/plans.py", line 35, in generate
+    return plan_service.generate_plan(payload.course_id, payload.available_minutes, payload.start_date)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/service/plan_service.py", line 17, in generate_plan
+    avg_mastery = sum(p["mastery"] for p in points) / len(points)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:08:39 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:08:39 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:08:39 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:08:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:08:39 INFO [studypilot] 生成候选计划：课程 1，共 3 个任务
+2026-10-12 10:08:39 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:08:39 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:08:39 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:08:39 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_t1_create_course0/test.db
+2026-10-12 10:08:39 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:08:39 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:08:39 INFO [studypilot] StudyPilot 后端停止
