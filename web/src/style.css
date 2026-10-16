@@ -106,3 +106,18 @@ input.short { min-width: 90px; width: 110px; }
 
 .complete-form { margin-top: 14px; padding: 12px 14px; background: #fafbfd; border: 1px solid var(--line); border-radius: 8px; }
 .complete-form p { margin: 0 0 8px; }
+
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.answer { line-height: 1.7; white-space: pre-wrap; }
+.cites { margin-top: 10px; }
+.cites ul { margin: 6px 0 0; padding-left: 20px; }
+.cites li { margin: 4px 0; }

@@ -38,3 +38,8 @@ export const listTasks = (courseId, status = '') =>
   request(`/tasks?course_id=${courseId}${status ? `&status=${status}` : ''}`)
 export const taskSuggestion = (taskId) => request(`/tasks/${taskId}/suggestion`)
 export const completeTask = (taskId, payload) => post(`/tasks/${taskId}/complete`, payload)
+
+export const qaKb = () => request('/qa/kb')
+export const qaAsk = (payload) => post('/qa/ask', payload)
+export const qaChunks = (sourceId, limit = 3) =>
+  request(`/qa/kb/chunks?source_id=${sourceId}&limit=${limit}`)

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "Q1",
+    "type": "单片段可回答",
+    "question": "StudyPilot 的总体架构分为哪几层？各层负责什么？",
+    "expected_points": ["表现层", "业务层", "数据层"],
+    "expect_insufficient": false,
+    "rule": "能说出分层名称与职责，缺少分层名称算遗漏"
+  },
+  {
+    "id": "Q2",
+    "type": "单片段可回答",
+    "question": "知识点掌握度是系统自动修改，还是用户确认后修改？",
+    "expected_points": ["用户确认", "建议"],
+    "expect_insufficient": false,
+    "rule": "必须说明是系统建议、用户确认，答成自动修改算错误"
+  },
+  {
+    "id": "Q3",
+    "type": "多片段综合",
+    "question": "模型服务不可用时，学习计划的生成会怎么处理？",
+    "expected_points": ["规则模板", "手工"],
+    "expect_insufficient": false,
+    "rule": "需要同时说明降级方式和保留手工处理入口"
+  },
+  {
+    "id": "Q4",
+    "type": "单片段可回答",
+    "question": "本学期 MVP 明确不实现哪些功能？",
+    "expected_points": ["学习通", "题库"],
+    "expect_insufficient": false,
+    "rule": "至少说出两项不在范围内的功能"
+  },
+  {
+    "id": "Q5",
+    "type": "多片段综合",
+    "question": "实验4的测试覆盖了哪几类异常？请举两个例子。",
+    "expected_points": ["无效输入", "不存在"],
+    "expect_insufficient": false,
+    "rule": "需要给出异常类别并配例子，只给类别算部分正确"
+  },
+  {
+    "id": "Q6",
+    "type": "多片段综合",
+    "question": "系统数据库里保存了哪些数据？它们之间是什么关系？",
+    "expected_points": ["课程", "知识点", "任务"],
+    "expect_insufficient": false,
+    "rule": "需要说明主要数据对象及其关联，例如课程关联知识点和任务"
+  },
+  {
+    "id": "Q7",
+    "type": "资料无答案",
+    "question": "这套系统用的是哪种知识追踪算法（如贝叶斯知识追踪）？",
+    "expected_points": [],
+    "expect_insufficient": true,
+    "rule": "资料只写了掌握度人工更新，没有算法说明，正确做法是说明资料不足"
+  },
+  {
+    "id": "Q8",
+    "type": "资料无答案",
+    "question": "项目开发一共花了多少钱？服务器费用是多少？",
+    "expected_points": [],
+    "expect_insufficient": true,
+    "rule": "资料中没有费用信息，正确做法是说明资料不足，不能编造数字"
+  }
+]

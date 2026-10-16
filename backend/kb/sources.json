@@ -1,0 +1,42 @@
+[
+  {
+    "source_id": "S1",
+    "title": "实验2 个人软件选题与需求分析",
+    "path": "reports/experiment2/实验2-个人软件选题与需求分析.tex",
+    "type": "latex",
+    "license": "本人课程报告，可公开使用",
+    "privacy": "只包含本人课程选题信息，不含他人隐私数据"
+  },
+  {
+    "source_id": "S2",
+    "title": "实验3 软件架构与界面设计",
+    "path": "reports/experiment3/实验3-软件架构与界面设计.tex",
+    "type": "latex",
+    "license": "本人课程报告，可公开使用",
+    "privacy": "只包含系统设计内容，不含个人敏感信息"
+  },
+  {
+    "source_id": "S3",
+    "title": "实验4 软件基础功能开发",
+    "path": "reports/experiment4/实验4-软件基础功能开发.tex",
+    "type": "latex",
+    "license": "本人课程报告，可公开使用",
+    "privacy": "只包含实现与测试记录，不含个人敏感信息"
+  },
+  {
+    "source_id": "S4",
+    "title": "StudyPilot 项目说明",
+    "path": "README.md",
+    "type": "markdown",
+    "license": "本人项目文档，可公开使用",
+    "privacy": "只包含运行说明，不含密钥和个人数据"
+  },
+  {
+    "source_id": "S5",
+    "title": "StudyPilot 数据模型说明",
+    "path": "backend/kb/source/数据模型说明.md",
+    "type": "markdown",
+    "license": "本人项目文档，可公开使用",
+    "privacy": "只包含表结构与字段说明，不含真实数据"
+  }
+]

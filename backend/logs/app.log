@@ -653,3 +653,969 @@ Traceback (most recent call last):
 sqlite3.DatabaseError: file is not a database
 2026-10-12 10:15:20 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
 2026-10-12 10:15:20 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:15:25 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:15:25 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:15:25 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:15:25 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:15:25 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:15:25 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:15:25 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:15:25 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:15:25 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:15:25 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_t1_create_course0/test.db
+2026-10-12 10:15:25 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:15:25 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:15:25 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:17:03 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:17:03 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:17:03 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:17:03 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:17:03 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:17:03 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:17:03 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:17:03 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:17:03 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:17:03 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_t1_create_course0/test.db
+2026-10-12 10:17:03 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:17:03 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:17:03 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:21:41 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:28:10 INFO [studypilot] 数据库位置：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:28:10 INFO [studypilot] 已清空全部业务数据
+2026-10-12 10:28:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:28:10 INFO [studypilot] 数据库位置：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-12 10:28:10 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:28:10 INFO [studypilot] 写入样例课程：软件工程（4 个知识点）
+2026-10-12 10:28:10 INFO [studypilot] 保存考试目标：课程 2，考试 2026-11-26，目标 90 分
+2026-10-12 10:28:10 INFO [studypilot] 写入样例课程：高等数学（3 个知识点）
+2026-10-12 10:29:19 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 4 个任务
+2026-10-12 10:29:19 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:29:19 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:35:19 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:35:19 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:35:19 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:35:19 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-11，目标 85 分
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-12 10:35:19 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-12 10:35:19 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-12 10:35:19 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-12 10:35:19 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-12 10:35:19 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-12 10:35:19 INFO [studypilot] 初始化用户：罗心月
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_t1_create_course0/test.db
+2026-10-12 10:35:19 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-12 10:35:19 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-12 10:35:19 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 12:20:09 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:08:01 INFO [studypilot] 切分资料：实验2 个人软件选题与需求分析 -> 16 个片段
+2026-10-16 13:08:01 INFO [studypilot] 切分资料：实验3 软件架构与界面设计 -> 13 个片段
+2026-10-16 13:08:01 INFO [studypilot] 切分资料：实验4 软件基础功能开发 -> 27 个片段
+2026-10-16 13:08:01 INFO [studypilot] 切分资料：StudyPilot 项目说明 -> 7 个片段
+2026-10-16 13:08:01 INFO [studypilot] 知识库构建完成：4 篇资料，63 个片段
+2026-10-16 13:08:17 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1139 字符
+2026-10-16 13:08:18 INFO [studypilot] 模型返回：耗时 872 ms，tokens=731
+2026-10-16 13:08:18 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 872 ms，tokens=731，引用 [1]
+2026-10-16 13:08:32 INFO [studypilot] StudyPilot 后端启动，数据库：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-16 13:08:48 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1501 字符
+2026-10-16 13:08:48 INFO [studypilot] 模型返回：耗时 950 ms，tokens=957
+2026-10-16 13:08:48 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 950 ms，tokens=957，引用 [1, 2]
+2026-10-16 13:08:54 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1501 字符
+2026-10-16 13:08:55 INFO [studypilot] 模型返回：耗时 1129 ms，tokens=957
+2026-10-16 13:08:55 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1129 ms，tokens=957，引用 [1, 2]
+2026-10-16 13:09:11 INFO [studypilot] 切分资料：实验2 个人软件选题与需求分析 -> 17 个片段
+2026-10-16 13:09:11 INFO [studypilot] 切分资料：实验3 软件架构与界面设计 -> 13 个片段
+2026-10-16 13:09:11 INFO [studypilot] 切分资料：实验4 软件基础功能开发 -> 29 个片段
+2026-10-16 13:09:11 INFO [studypilot] 切分资料：StudyPilot 项目说明 -> 7 个片段
+2026-10-16 13:09:11 INFO [studypilot] 知识库构建完成：4 篇资料，66 个片段
+2026-10-16 13:09:23 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:09:23 ERROR [studypilot] 模型调用失败：模型服务鉴权失败（401），请检查 API Key（LLM_AUTH_FAILED）
+2026-10-16 13:09:23 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:09:23 ERROR [studypilot] 模型调用失败：模型服务响应超时（ConnectTimeout），请稍后重试（LLM_TIMEOUT）
+2026-10-16 13:09:23 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:09:23 ERROR [studypilot] 模型调用失败：无法连接模型服务（http://127.0.0.1:9），请检查网络或服务地址（LLM_CONNECTION_ERROR）
+2026-10-16 13:09:25 INFO [studypilot] 调用模型：model=deepseek-chat，messages=2 条，输入约 186 字符
+2026-10-16 13:09:26 INFO [studypilot] 模型返回：耗时 887 ms，tokens=153
+2026-10-16 13:09:26 INFO [studypilot] 调用模型：model=deepseek-chat，messages=2 条，输入约 171 字符
+2026-10-16 13:09:27 INFO [studypilot] 模型返回：耗时 1184 ms，tokens=142
+2026-10-16 13:09:27 WARNING [studypilot] 结构化输出校验失败：2 validation errors for StrictTask
+priority
+  Field required [type=missing, input_value={'title': '复习', 'minu...'point': '综合复习'}, input_type=dict]
+    For furth
+2026-10-16 13:09:33 INFO [studypilot] 调用模型：model=deepseek-chat，messages=2 条，输入约 171 字符
+2026-10-16 13:09:34 INFO [studypilot] 模型返回：耗时 699 ms，tokens=142
+2026-10-16 13:09:34 WARNING [studypilot] 结构化输出校验失败：2 validation errors for StrictTask
+priority
+  Field required [type=missing, input_value={'title': '复习', 'minu...'point': '综合复习'}, input_type=dict]
+    For further information visit https://errors.pyda
+2026-10-16 13:09:34 INFO [studypilot] 调用模型：model=deepseek-chat，messages=4 条，输入约 496 字符
+2026-10-16 13:09:35 INFO [studypilot] 模型返回：耗时 866 ms，tokens=244
+2026-10-16 13:09:37 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1425 字符
+2026-10-16 13:09:39 INFO [studypilot] 模型返回：耗时 1208 ms，tokens=903
+2026-10-16 13:09:39 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1208 ms，tokens=903，引用 [1, 2]
+2026-10-16 13:09:39 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1587 字符
+2026-10-16 13:09:40 INFO [studypilot] 模型返回：耗时 1025 ms，tokens=1006
+2026-10-16 13:09:40 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1025 ms，tokens=1006，引用 []
+2026-10-16 13:09:40 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 700 字符
+2026-10-16 13:09:41 INFO [studypilot] 模型返回：耗时 960 ms，tokens=421
+2026-10-16 13:09:41 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 1 个片段，耗时 960 ms，tokens=421，引用 []
+2026-10-16 13:09:47 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1614 字符
+2026-10-16 13:09:48 INFO [studypilot] 模型返回：耗时 1545 ms，tokens=1061
+2026-10-16 13:09:48 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1545 ms，tokens=1061，引用 [1, 2, 3]
+2026-10-16 13:09:48 WARNING [studypilot] 检索无结果，未调用模型：这个怎么用？
+2026-10-16 13:10:14 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1694 字符
+2026-10-16 13:10:15 INFO [studypilot] 模型返回：耗时 1094 ms，tokens=1067
+2026-10-16 13:10:15 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1094 ms，tokens=1067，引用 [1]
+2026-10-16 13:10:18 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 981 字符
+2026-10-16 13:10:20 INFO [studypilot] 模型返回：耗时 1575 ms，tokens=747
+2026-10-16 13:10:20 INFO [studypilot] 问答完成：mode=rag，prompt=v1，检索 3 个片段，耗时 1575 ms，tokens=747，引用 []
+2026-10-16 13:10:20 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1286 字符
+2026-10-16 13:10:21 INFO [studypilot] 模型返回：耗时 1234 ms，tokens=863
+2026-10-16 13:10:21 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1234 ms，tokens=863，引用 [1, 2, 3]
+2026-10-16 13:10:24 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 13:10:25 INFO [studypilot] 模型返回：耗时 1095 ms，tokens=223
+2026-10-16 13:10:25 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1095 ms，tokens=223，引用 []
+2026-10-16 13:10:25 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1226 字符
+2026-10-16 13:10:27 INFO [studypilot] 模型返回：耗时 1217 ms，tokens=797
+2026-10-16 13:10:27 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1217 ms，tokens=797，引用 [1]
+2026-10-16 13:10:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:10:28 INFO [studypilot] 模型返回：耗时 1082 ms，tokens=193
+2026-10-16 13:10:28 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1082 ms，tokens=193，引用 []
+2026-10-16 13:10:28 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1364 字符
+2026-10-16 13:10:30 INFO [studypilot] 模型返回：耗时 1983 ms，tokens=891
+2026-10-16 13:10:30 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1983 ms，tokens=891，引用 [1, 2, 3]
+2026-10-16 13:10:30 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:10:31 INFO [studypilot] 模型返回：耗时 1314 ms，tokens=221
+2026-10-16 13:10:31 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1314 ms，tokens=221，引用 []
+2026-10-16 13:10:31 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1366 字符
+2026-10-16 13:10:32 INFO [studypilot] 模型返回：耗时 1119 ms，tokens=912
+2026-10-16 13:10:32 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1119 ms，tokens=912，引用 [1, 2, 3]
+2026-10-16 13:10:32 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 236 字符
+2026-10-16 13:10:33 INFO [studypilot] 模型返回：耗时 1325 ms，tokens=208
+2026-10-16 13:10:33 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1325 ms，tokens=208，引用 []
+2026-10-16 13:10:33 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1434 字符
+2026-10-16 13:10:35 INFO [studypilot] 模型返回：耗时 1156 ms，tokens=957
+2026-10-16 13:10:35 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1156 ms，tokens=957，引用 [2, 3]
+2026-10-16 13:10:35 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:10:36 INFO [studypilot] 模型返回：耗时 1086 ms，tokens=183
+2026-10-16 13:10:36 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1086 ms，tokens=183，引用 []
+2026-10-16 13:10:36 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1596 字符
+2026-10-16 13:10:37 INFO [studypilot] 模型返回：耗时 1152 ms，tokens=1040
+2026-10-16 13:10:37 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1152 ms，tokens=1040，引用 [2, 3]
+2026-10-16 13:10:37 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:10:38 INFO [studypilot] 模型返回：耗时 1224 ms，tokens=214
+2026-10-16 13:10:38 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1224 ms，tokens=214，引用 []
+2026-10-16 13:10:38 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1338 字符
+2026-10-16 13:10:39 INFO [studypilot] 模型返回：耗时 1440 ms，tokens=904
+2026-10-16 13:10:39 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1440 ms，tokens=904，引用 [1, 2]
+2026-10-16 13:10:39 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 244 字符
+2026-10-16 13:10:41 INFO [studypilot] 模型返回：耗时 1219 ms，tokens=197
+2026-10-16 13:10:41 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1219 ms，tokens=197，引用 []
+2026-10-16 13:10:41 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1239 字符
+2026-10-16 13:10:42 INFO [studypilot] 模型返回：耗时 1230 ms，tokens=805
+2026-10-16 13:10:42 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1230 ms，tokens=805，引用 [2, 3]
+2026-10-16 13:10:42 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 239 字符
+2026-10-16 13:10:43 INFO [studypilot] 模型返回：耗时 1225 ms，tokens=175
+2026-10-16 13:10:43 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1225 ms，tokens=175，引用 []
+2026-10-16 13:10:43 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1293 字符
+2026-10-16 13:10:45 INFO [studypilot] 模型返回：耗时 1452 ms，tokens=884
+2026-10-16 13:10:45 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1452 ms，tokens=884，引用 [1, 2, 3]
+2026-10-16 13:10:55 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1976 字符
+2026-10-16 13:10:57 INFO [studypilot] 模型返回：耗时 1509 ms，tokens=1297
+2026-10-16 13:10:57 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 5 个片段，耗时 1509 ms，tokens=1297，引用 [4, 5]
+2026-10-16 13:11:11 INFO [studypilot] 切分资料：实验2 个人软件选题与需求分析 -> 17 个片段
+2026-10-16 13:11:11 INFO [studypilot] 切分资料：实验3 软件架构与界面设计 -> 13 个片段
+2026-10-16 13:11:11 INFO [studypilot] 切分资料：实验4 软件基础功能开发 -> 29 个片段
+2026-10-16 13:11:11 INFO [studypilot] 切分资料：StudyPilot 项目说明 -> 7 个片段
+2026-10-16 13:11:11 INFO [studypilot] 切分资料：StudyPilot 数据模型说明 -> 8 个片段
+2026-10-16 13:11:11 INFO [studypilot] 知识库构建完成：5 篇资料，74 个片段
+2026-10-16 13:11:13 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1338 字符
+2026-10-16 13:11:14 INFO [studypilot] 模型返回：耗时 1176 ms，tokens=913
+2026-10-16 13:11:14 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1176 ms，tokens=913，引用 [1, 2, 3]
+2026-10-16 13:11:41 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1147 字符
+2026-10-16 13:11:42 INFO [studypilot] 模型返回：耗时 1387 ms，tokens=770
+2026-10-16 13:11:42 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1387 ms，tokens=770，引用 [2]
+2026-10-16 13:12:08 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1169 字符
+2026-10-16 13:12:09 INFO [studypilot] 模型返回：耗时 1434 ms，tokens=706
+2026-10-16 13:12:09 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1434 ms，tokens=706，引用 [1]
+2026-10-16 13:12:11 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 13:12:12 INFO [studypilot] 模型返回：耗时 1385 ms，tokens=259
+2026-10-16 13:12:12 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1385 ms，tokens=259，引用 []
+2026-10-16 13:12:12 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1209 字符
+2026-10-16 13:12:13 INFO [studypilot] 模型返回：耗时 848 ms，tokens=813
+2026-10-16 13:12:13 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 848 ms，tokens=813，引用 [1]
+2026-10-16 13:12:13 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:12:15 INFO [studypilot] 模型返回：耗时 1479 ms，tokens=202
+2026-10-16 13:12:15 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1479 ms，tokens=202，引用 []
+2026-10-16 13:12:15 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1340 字符
+2026-10-16 13:12:15 INFO [studypilot] 模型返回：耗时 810 ms，tokens=844
+2026-10-16 13:12:15 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 810 ms，tokens=844，引用 [2, 3]
+2026-10-16 13:12:15 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:12:17 INFO [studypilot] 模型返回：耗时 1484 ms，tokens=218
+2026-10-16 13:12:17 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1484 ms，tokens=218，引用 []
+2026-10-16 13:12:17 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1369 字符
+2026-10-16 13:12:18 INFO [studypilot] 模型返回：耗时 1329 ms，tokens=870
+2026-10-16 13:12:18 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1329 ms，tokens=870，引用 [2, 3]
+2026-10-16 13:12:18 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 236 字符
+2026-10-16 13:12:20 INFO [studypilot] 模型返回：耗时 1255 ms，tokens=220
+2026-10-16 13:12:20 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1255 ms，tokens=220，引用 []
+2026-10-16 13:12:20 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1434 字符
+2026-10-16 13:12:20 INFO [studypilot] 模型返回：耗时 846 ms，tokens=928
+2026-10-16 13:12:20 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 846 ms，tokens=928，引用 [2, 3]
+2026-10-16 13:12:20 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:12:21 INFO [studypilot] 模型返回：耗时 894 ms，tokens=189
+2026-10-16 13:12:21 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 894 ms，tokens=189，引用 []
+2026-10-16 13:12:21 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1436 字符
+2026-10-16 13:12:22 INFO [studypilot] 模型返回：耗时 993 ms，tokens=950
+2026-10-16 13:12:22 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 993 ms，tokens=950，引用 [1, 2, 3]
+2026-10-16 13:12:22 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:12:24 INFO [studypilot] 模型返回：耗时 1205 ms，tokens=217
+2026-10-16 13:12:24 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1205 ms，tokens=217，引用 []
+2026-10-16 13:12:24 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1169 字符
+2026-10-16 13:12:25 INFO [studypilot] 模型返回：耗时 1533 ms，tokens=721
+2026-10-16 13:12:25 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1533 ms，tokens=721，引用 [1, 2]
+2026-10-16 13:12:25 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 244 字符
+2026-10-16 13:12:26 INFO [studypilot] 模型返回：耗时 993 ms，tokens=194
+2026-10-16 13:12:26 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 993 ms，tokens=194，引用 []
+2026-10-16 13:12:26 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1239 字符
+2026-10-16 13:12:27 INFO [studypilot] 模型返回：耗时 969 ms，tokens=779
+2026-10-16 13:12:27 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 969 ms，tokens=779，引用 [2, 3]
+2026-10-16 13:12:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 239 字符
+2026-10-16 13:12:28 INFO [studypilot] 模型返回：耗时 1077 ms，tokens=173
+2026-10-16 13:12:28 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1077 ms，tokens=173，引用 []
+2026-10-16 13:12:28 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1286 字符
+2026-10-16 13:12:29 INFO [studypilot] 模型返回：耗时 823 ms，tokens=821
+2026-10-16 13:12:29 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 823 ms，tokens=821，引用 [1, 2, 3]
+2026-10-16 13:12:48 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1386 字符
+2026-10-16 13:12:49 INFO [studypilot] 模型返回：耗时 997 ms，tokens=874
+2026-10-16 13:12:49 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1207 字符
+2026-10-16 13:12:50 INFO [studypilot] 模型返回：耗时 1110 ms，tokens=766
+2026-10-16 13:12:57 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1386 字符
+2026-10-16 13:12:58 INFO [studypilot] 模型返回：耗时 863 ms，tokens=873
+2026-10-16 13:12:58 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1035 字符
+2026-10-16 13:12:59 INFO [studypilot] 模型返回：耗时 1096 ms，tokens=702
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:11 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:11 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:11 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:11 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:11 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:11 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:11 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 13:13:11 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:11 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:11 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_t1_create_course0/test.db
+2026-10-16 13:13:11 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-16 13:13:11 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-16 13:13:11 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:23 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:23 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:23 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:23 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:23 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:23 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:23 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:23 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:23 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:24 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:24 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:24 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:24 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:24 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 13:13:24 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 13:13:24 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 13:13:24 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 13:13:24 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:24 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:24 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 13:13:24 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:24 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_t1_create_course0/test.db
+2026-10-16 13:13:24 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-16 13:13:24 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-16 13:13:24 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:13:26 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 13:13:27 INFO [studypilot] 模型返回：耗时 1207 ms，tokens=260
+2026-10-16 13:13:27 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1207 ms，tokens=260，引用 []
+2026-10-16 13:13:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1042 字符
+2026-10-16 13:13:28 INFO [studypilot] 模型返回：耗时 1216 ms，tokens=719
+2026-10-16 13:13:28 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 2 个片段，耗时 1216 ms，tokens=719，引用 [1]
+2026-10-16 13:13:28 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:13:29 INFO [studypilot] 模型返回：耗时 1332 ms，tokens=201
+2026-10-16 13:13:29 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1332 ms，tokens=201，引用 []
+2026-10-16 13:13:29 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1340 字符
+2026-10-16 13:13:31 INFO [studypilot] 模型返回：耗时 1119 ms，tokens=847
+2026-10-16 13:13:31 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1119 ms，tokens=847，引用 [2, 3]
+2026-10-16 13:13:31 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:13:32 INFO [studypilot] 模型返回：耗时 1744 ms，tokens=224
+2026-10-16 13:13:32 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1744 ms，tokens=224，引用 []
+2026-10-16 13:13:32 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1369 字符
+2026-10-16 13:13:33 INFO [studypilot] 模型返回：耗时 820 ms，tokens=867
+2026-10-16 13:13:33 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 820 ms，tokens=867，引用 [1, 2, 3]
+2026-10-16 13:13:33 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 236 字符
+2026-10-16 13:13:34 INFO [studypilot] 模型返回：耗时 1307 ms，tokens=215
+2026-10-16 13:13:34 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1307 ms，tokens=215，引用 []
+2026-10-16 13:13:34 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1434 字符
+2026-10-16 13:13:36 INFO [studypilot] 模型返回：耗时 1704 ms，tokens=927
+2026-10-16 13:13:36 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1704 ms，tokens=927，引用 [2, 3]
+2026-10-16 13:13:36 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 13:13:37 INFO [studypilot] 模型返回：耗时 1279 ms，tokens=192
+2026-10-16 13:13:37 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1279 ms，tokens=192，引用 []
+2026-10-16 13:13:37 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1436 字符
+2026-10-16 13:13:39 INFO [studypilot] 模型返回：耗时 1256 ms，tokens=951
+2026-10-16 13:13:39 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1256 ms，tokens=951，引用 [1, 2, 3]
+2026-10-16 13:13:39 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 13:13:40 INFO [studypilot] 模型返回：耗时 1476 ms，tokens=215
+2026-10-16 13:13:40 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1476 ms，tokens=215，引用 []
+2026-10-16 13:13:40 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1169 字符
+2026-10-16 13:13:41 INFO [studypilot] 模型返回：耗时 961 ms，tokens=704
+2026-10-16 13:13:41 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 961 ms，tokens=704，引用 [1, 2]
+2026-10-16 13:13:41 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 244 字符
+2026-10-16 13:13:42 INFO [studypilot] 模型返回：耗时 1093 ms，tokens=194
+2026-10-16 13:13:42 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1093 ms，tokens=194，引用 []
+2026-10-16 13:13:42 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 544 字符
+2026-10-16 13:13:44 INFO [studypilot] 模型返回：耗时 1344 ms，tokens=391
+2026-10-16 13:13:44 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 1 个片段，耗时 1344 ms，tokens=391，引用 [1]
+2026-10-16 13:13:44 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 239 字符
+2026-10-16 13:13:45 INFO [studypilot] 模型返回：耗时 1021 ms，tokens=180
+2026-10-16 13:13:45 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1021 ms，tokens=180，引用 []
+2026-10-16 13:13:45 WARNING [studypilot] 检索无结果，未调用模型：项目开发一共花了多少钱？服务器费用是多少？
+2026-10-16 13:13:53 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1286 字符
+2026-10-16 13:13:55 INFO [studypilot] 模型返回：耗时 1471 ms，tokens=869
+2026-10-16 13:13:55 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1471 ms，tokens=869，引用 [1, 2, 3]
+2026-10-16 13:13:57 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1159 字符
+2026-10-16 13:13:58 INFO [studypilot] 模型返回：耗时 955 ms，tokens=742
+2026-10-16 13:13:58 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 955 ms，tokens=742，引用 [2, 3]
+2026-10-16 13:14:01 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 216 字符
+2026-10-16 13:14:02 INFO [studypilot] 模型返回：耗时 1427 ms，tokens=254
+2026-10-16 13:14:02 INFO [studypilot] 问答完成：mode=direct，prompt=v2，检索 0 个片段，耗时 1427 ms，tokens=254，引用 []
+2026-10-16 13:14:04 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 700 字符
+2026-10-16 13:14:05 INFO [studypilot] 模型返回：耗时 784 ms，tokens=421
+2026-10-16 13:14:05 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 1 个片段，耗时 784 ms，tokens=421，引用 []
+2026-10-16 13:14:12 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 13:14:14 INFO [studypilot] StudyPilot 后端启动，数据库：/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/data/studypilot.db
+2026-10-16 13:14:22 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1369 字符
+2026-10-16 13:14:23 INFO [studypilot] 模型返回：耗时 1101 ms，tokens=867
+2026-10-16 13:14:23 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1101 ms，tokens=867，引用 [1, 2, 3]
+2026-10-16 13:14:25 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 544 字符
+2026-10-16 13:14:27 INFO [studypilot] 模型返回：耗时 1273 ms，tokens=382
+2026-10-16 13:14:27 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 1 个片段，耗时 1273 ms，tokens=382，引用 [1]
+2026-10-16 13:14:29 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 13:14:30 INFO [studypilot] 模型返回：耗时 1597 ms，tokens=225
+2026-10-16 13:14:30 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1597 ms，tokens=225，引用 []
+2026-10-16 13:14:32 WARNING [studypilot] 检索无结果，未调用模型：帮我写一首关于春天的诗
+2026-10-16 13:14:42 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 13:14:44 INFO [studypilot] 模型返回：耗时 1414 ms，tokens=237
+2026-10-16 13:14:44 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1414 ms，tokens=237，引用 []
+2026-10-16 13:14:46 WARNING [studypilot] 检索无结果，未调用模型：帮我写一首关于春天的诗
+2026-10-16 13:15:00 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1481 字符
+2026-10-16 13:15:01 INFO [studypilot] 模型返回：耗时 1228 ms，tokens=912
+2026-10-16 13:15:01 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1228 ms，tokens=912，引用 [1, 2, 3]
+2026-10-16 13:17:10 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1481 字符
+2026-10-16 13:17:11 INFO [studypilot] 模型返回：耗时 1299 ms，tokens=925
+2026-10-16 13:17:11 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1299 ms，tokens=925，引用 [1, 2, 3]
+2026-10-16 13:46:26 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:46:27 ERROR [studypilot] 模型调用失败：模型服务鉴权失败（401），请检查 API Key（LLM_AUTH_FAILED）
+2026-10-16 13:46:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:46:27 ERROR [studypilot] 模型调用失败：模型服务响应超时（ConnectTimeout），请稍后重试（LLM_TIMEOUT）
+2026-10-16 13:46:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-10-16 13:46:27 ERROR [studypilot] 模型调用失败：无法连接模型服务（http://127.0.0.1:9），请检查网络或服务地址（LLM_CONNECTION_ERROR）
+2026-10-16 13:47:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=2 条，输入约 186 字符
+2026-10-16 13:47:28 INFO [studypilot] 模型返回：耗时 755 ms，tokens=153
+2026-10-16 13:47:28 INFO [studypilot] 调用模型：model=deepseek-chat，messages=2 条，输入约 171 字符
+2026-10-16 13:47:29 INFO [studypilot] 模型返回：耗时 711 ms，tokens=142
+2026-10-16 13:47:29 WARNING [studypilot] 结构化输出校验失败：2 validation errors for StrictTask
+priority
+  Field required [type=missing, input_value={'title': '复习', 'minu...'point': '综合复习'}, input_type=dict]
+    For further information visit https://errors.pyda
+2026-10-16 13:47:29 INFO [studypilot] 调用模型：model=deepseek-chat，messages=4 条，输入约 496 字符
+2026-10-16 13:47:30 INFO [studypilot] 模型返回：耗时 651 ms，tokens=244
+2026-10-16 13:48:34 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1481 字符
+2026-10-16 13:48:36 INFO [studypilot] 模型返回：耗时 1404 ms，tokens=922
+2026-10-16 13:48:36 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1404 ms，tokens=922，引用 [1, 2, 3]
+2026-10-16 13:48:36 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1116 字符
+2026-10-16 13:48:37 INFO [studypilot] 模型返回：耗时 1261 ms，tokens=746
+2026-10-16 13:48:37 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 2 个片段，耗时 1261 ms，tokens=746，引用 [1, 2]
+2026-10-16 13:48:37 WARNING [studypilot] 检索无结果，未调用模型：帮我写一首关于春天的诗
+2026-10-16 13:50:10 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 984 字符
+2026-10-16 13:50:12 INFO [studypilot] 模型返回：耗时 1526 ms，tokens=696
+2026-10-16 13:50:12 INFO [studypilot] 问答完成：mode=rag，prompt=v1，检索 3 个片段，耗时 1526 ms，tokens=696，引用 [1, 2, 3]
+2026-10-16 13:50:12 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1289 字符
+2026-10-16 13:50:13 INFO [studypilot] 模型返回：耗时 1226 ms，tokens=826
+2026-10-16 13:50:13 INFO [studypilot] 问答完成：mode=rag，prompt=v2，检索 3 个片段，耗时 1226 ms，tokens=826，引用 [1, 2, 3]
+2026-10-16 13:51:44 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1035 字符
+2026-10-16 13:51:44 INFO [studypilot] 模型返回：耗时 879 ms，tokens=681
+2026-10-16 13:51:44 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1035 字符
+2026-10-16 13:51:45 INFO [studypilot] 模型返回：耗时 852 ms，tokens=681
+2026-10-16 13:53:15 INFO [studypilot] 切分资料：实验2 个人软件选题与需求分析 -> 17 个片段
+2026-10-16 13:53:15 INFO [studypilot] 切分资料：实验3 软件架构与界面设计 -> 13 个片段
+2026-10-16 13:53:15 INFO [studypilot] 切分资料：实验4 软件基础功能开发 -> 29 个片段
+2026-10-16 13:53:15 INFO [studypilot] 切分资料：StudyPilot 项目说明 -> 7 个片段
+2026-10-16 13:53:15 INFO [studypilot] 切分资料：StudyPilot 数据模型说明 -> 8 个片段
+2026-10-16 13:53:15 INFO [studypilot] 知识库构建完成：5 篇资料，74 个片段
+2026-10-16 13:54:23 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1386 字符
+2026-10-16 13:54:24 INFO [studypilot] 模型返回：耗时 1164 ms，tokens=873
+2026-10-16 13:54:24 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1035 字符
+2026-10-16 13:54:25 INFO [studypilot] 模型返回：耗时 743 ms，tokens=681
+2026-10-16 14:02:26 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 14:02:27 INFO [studypilot] 模型返回：耗时 882 ms，tokens=219
+2026-10-16 14:02:27 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 882 ms，tokens=219，引用 []
+2026-10-16 14:02:27 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1042 字符
+2026-10-16 14:02:29 INFO [studypilot] 模型返回：耗时 1694 ms，tokens=757
+2026-10-16 14:02:29 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 2 个片段，耗时 1694 ms，tokens=757，引用 [1]
+2026-10-16 14:02:29 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 14:02:30 INFO [studypilot] 模型返回：耗时 1304 ms，tokens=202
+2026-10-16 14:02:30 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1304 ms，tokens=202，引用 []
+2026-10-16 14:02:30 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1340 字符
+2026-10-16 14:02:31 INFO [studypilot] 模型返回：耗时 1164 ms，tokens=841
+2026-10-16 14:02:31 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1164 ms，tokens=841，引用 [2, 3]
+2026-10-16 14:02:31 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 14:02:33 INFO [studypilot] 模型返回：耗时 1890 ms，tokens=210
+2026-10-16 14:02:33 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1890 ms，tokens=210，引用 []
+2026-10-16 14:02:33 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1369 字符
+2026-10-16 14:02:34 INFO [studypilot] 模型返回：耗时 1296 ms，tokens=868
+2026-10-16 14:02:34 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1296 ms，tokens=868，引用 [1, 2, 3]
+2026-10-16 14:02:34 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 236 字符
+2026-10-16 14:02:36 INFO [studypilot] 模型返回：耗时 1582 ms，tokens=224
+2026-10-16 14:02:36 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1582 ms，tokens=224，引用 []
+2026-10-16 14:02:36 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1434 字符
+2026-10-16 14:02:37 INFO [studypilot] 模型返回：耗时 1380 ms，tokens=957
+2026-10-16 14:02:37 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1380 ms，tokens=957，引用 [2, 3]
+2026-10-16 14:02:37 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 14:02:38 INFO [studypilot] 模型返回：耗时 1163 ms，tokens=188
+2026-10-16 14:02:38 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1163 ms，tokens=188，引用 []
+2026-10-16 14:02:38 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1436 字符
+2026-10-16 14:02:40 INFO [studypilot] 模型返回：耗时 1304 ms，tokens=949
+2026-10-16 14:02:40 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1304 ms，tokens=949，引用 [1, 2, 3]
+2026-10-16 14:02:40 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 14:02:41 INFO [studypilot] 模型返回：耗时 1157 ms，tokens=209
+2026-10-16 14:02:41 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1157 ms，tokens=209，引用 []
+2026-10-16 14:02:41 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1169 字符
+2026-10-16 14:02:42 INFO [studypilot] 模型返回：耗时 1125 ms，tokens=688
+2026-10-16 14:02:42 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1125 ms，tokens=688，引用 [1]
+2026-10-16 14:02:42 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 244 字符
+2026-10-16 14:02:43 INFO [studypilot] 模型返回：耗时 1300 ms，tokens=196
+2026-10-16 14:02:43 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1300 ms，tokens=196，引用 []
+2026-10-16 14:02:43 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 544 字符
+2026-10-16 14:02:44 INFO [studypilot] 模型返回：耗时 1118 ms，tokens=390
+2026-10-16 14:02:44 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 1 个片段，耗时 1118 ms，tokens=390，引用 [1]
+2026-10-16 14:02:44 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 239 字符
+2026-10-16 14:02:46 INFO [studypilot] 模型返回：耗时 1423 ms，tokens=196
+2026-10-16 14:02:46 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1423 ms，tokens=196，引用 []
+2026-10-16 14:02:46 WARNING [studypilot] 检索无结果，未调用模型：项目开发一共花了多少钱？服务器费用是多少？
+2026-10-16 14:05:42 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 247 字符
+2026-10-16 14:05:44 INFO [studypilot] 模型返回：耗时 1395 ms，tokens=228
+2026-10-16 14:05:44 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1395 ms，tokens=228，引用 []
+2026-10-16 14:05:44 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1042 字符
+2026-10-16 14:05:45 INFO [studypilot] 模型返回：耗时 1473 ms，tokens=742
+2026-10-16 14:05:45 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 2 个片段，耗时 1473 ms，tokens=742，引用 [1]
+2026-10-16 14:05:45 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 14:05:47 INFO [studypilot] 模型返回：耗时 1598 ms，tokens=199
+2026-10-16 14:05:47 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1598 ms，tokens=199，引用 []
+2026-10-16 14:05:47 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1340 字符
+2026-10-16 14:05:48 INFO [studypilot] 模型返回：耗时 978 ms，tokens=849
+2026-10-16 14:05:48 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 978 ms，tokens=849，引用 [2, 3]
+2026-10-16 14:05:48 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 14:05:49 INFO [studypilot] 模型返回：耗时 1237 ms，tokens=188
+2026-10-16 14:05:49 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1237 ms，tokens=188，引用 []
+2026-10-16 14:05:49 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1369 字符
+2026-10-16 14:05:51 INFO [studypilot] 模型返回：耗时 1318 ms，tokens=860
+2026-10-16 14:05:51 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1318 ms，tokens=860，引用 [2, 3]
+2026-10-16 14:05:51 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 236 字符
+2026-10-16 14:05:52 INFO [studypilot] 模型返回：耗时 1590 ms，tokens=226
+2026-10-16 14:05:52 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1590 ms，tokens=226，引用 []
+2026-10-16 14:05:52 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1434 字符
+2026-10-16 14:05:53 INFO [studypilot] 模型返回：耗时 1061 ms，tokens=927
+2026-10-16 14:05:53 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1061 ms，tokens=927，引用 [2, 3]
+2026-10-16 14:05:53 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 240 字符
+2026-10-16 14:05:54 INFO [studypilot] 模型返回：耗时 1251 ms，tokens=189
+2026-10-16 14:05:54 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1251 ms，tokens=189，引用 []
+2026-10-16 14:05:54 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1436 字符
+2026-10-16 14:05:55 INFO [studypilot] 模型返回：耗时 984 ms，tokens=943
+2026-10-16 14:05:55 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 984 ms，tokens=943，引用 [2, 3]
+2026-10-16 14:05:55 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 242 字符
+2026-10-16 14:05:57 INFO [studypilot] 模型返回：耗时 1430 ms，tokens=214
+2026-10-16 14:05:57 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1430 ms，tokens=214，引用 []
+2026-10-16 14:05:57 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1169 字符
+2026-10-16 14:05:58 INFO [studypilot] 模型返回：耗时 1280 ms，tokens=704
+2026-10-16 14:05:58 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1280 ms，tokens=704，引用 [1, 2]
+2026-10-16 14:05:58 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 244 字符
+2026-10-16 14:06:00 INFO [studypilot] 模型返回：耗时 1451 ms，tokens=203
+2026-10-16 14:06:00 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1451 ms，tokens=203，引用 []
+2026-10-16 14:06:00 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 544 字符
+2026-10-16 14:06:01 INFO [studypilot] 模型返回：耗时 1074 ms，tokens=378
+2026-10-16 14:06:01 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 1 个片段，耗时 1074 ms，tokens=378，引用 [1]
+2026-10-16 14:06:01 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 239 字符
+2026-10-16 14:06:02 INFO [studypilot] 模型返回：耗时 1071 ms，tokens=175
+2026-10-16 14:06:02 INFO [studypilot] 问答完成：mode=direct，prompt=v3，检索 0 个片段，耗时 1071 ms，tokens=175，引用 []
+2026-10-16 14:06:02 WARNING [studypilot] 检索无结果，未调用模型：项目开发一共花了多少钱？服务器费用是多少？
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:09:10 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:09:10 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:09:10 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:09:10 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:09:10 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:09:10 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:09:10 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 14:09:10 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:09:10 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:09:10 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-11/test_t1_create_course0/test.db
+2026-10-16 14:09:10 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-16 14:09:10 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-16 14:09:10 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:11:54 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1339 字符
+2026-10-16 14:11:56 INFO [studypilot] 模型返回：耗时 1447 ms，tokens=850
+2026-10-16 14:11:56 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1447 ms，tokens=850，引用 [2, 3]
+2026-10-16 14:13:30 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 1339 字符
+2026-10-16 14:13:31 INFO [studypilot] 模型返回：耗时 1368 ms，tokens=869
+2026-10-16 14:13:31 INFO [studypilot] 问答完成：mode=rag，prompt=v3，检索 3 个片段，耗时 1368 ms，tokens=869，引用 [1, 2, 3]
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:23:36 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:23:36 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:23:36 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:23:36 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 INFO [studypilot] 保存考试目标：课程 1，考试 2026-11-15，目标 85 分
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-10-16 14:23:36 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-10-16 14:23:36 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-10-16 14:23:36 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-10-16 14:23:36 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-10-16 14:23:36 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止
+2026-10-16 14:23:36 INFO [studypilot] 初始化用户：罗心月
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-12/test_t1_create_course0/test.db
+2026-10-16 14:23:36 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-10-16 14:23:36 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-10-16 14:23:36 INFO [studypilot] StudyPilot 后端停止

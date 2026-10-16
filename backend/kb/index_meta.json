@@ -1,0 +1,48 @@
+{
+  "built_at": "2026-10-16 13:53:15",
+  "chunk_size": 420,
+  "chunk_overlap": 80,
+  "total_chunks": 74,
+  "sources": [
+    {
+      "source_id": "S1",
+      "title": "实验2 个人软件选题与需求分析",
+      "path": "reports/experiment2/实验2-个人软件选题与需求分析.tex",
+      "chars": 3957,
+      "chunks": 17,
+      "updated_at": "2026-09-20"
+    },
+    {
+      "source_id": "S2",
+      "title": "实验3 软件架构与界面设计",
+      "path": "reports/experiment3/实验3-软件架构与界面设计.tex",
+      "chars": 3025,
+      "chunks": 13,
+      "updated_at": "2026-09-22"
+    },
+    {
+      "source_id": "S3",
+      "title": "实验4 软件基础功能开发",
+      "path": "reports/experiment4/实验4-软件基础功能开发.tex",
+      "chars": 7179,
+      "chunks": 29,
+      "updated_at": "2026-10-12"
+    },
+    {
+      "source_id": "S4",
+      "title": "StudyPilot 项目说明",
+      "path": "README.md",
+      "chars": 991,
+      "chunks": 7,
+      "updated_at": "2026-10-12"
+    },
+    {
+      "source_id": "S5",
+      "title": "StudyPilot 数据模型说明",
+      "path": "backend/kb/source/数据模型说明.md",
+      "chars": 1696,
+      "chunks": 8,
+      "updated_at": "2026-10-16"
+    }
+  ]
+}
