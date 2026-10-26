@@ -10,6 +10,7 @@
 \usepackage{tabularx}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
+\usepackage{listings}
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
 \setmainfont{Times New Roman}
 \setCJKmainfont{Songti SC}
@@ -20,6 +21,25 @@
 \renewcommand{\arraystretch}{1.22}
 \renewcommand{\thefigure}{5-\arabic{figure}}
 \renewcommand{\thetable}{5-\arabic{table}}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  extendedchars=true,
+  inputencoding=utf8,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  keywordstyle=\color{blue!70!black},
+  commentstyle=\color{green!35!black},
+  stringstyle=\color{red!55!black},
+  showstringspaces=false,
+  captionpos=b,
+  xleftmargin=2em,
+}
+\renewcommand{\lstlistingname}{代码}
 \sloppy
 \pagestyle{fancy}
 \fancyhf{}
@@ -96,23 +116,24 @@
 
 \section*{3. 操作记录}
 
-截图、代码和日志等必须编号并配文字说明。
+截图、代码和日志等均编号并配文字说明；数据来自2026年10月26日在本机的实际重跑，截图中的模型服务、检索片段、回答、Token和费用均由程序输出。
 
 \subsection*{3.1 任务与模型调用}
 
 问答任务是“StudyPilot 资料问答”：用户用自然语言问项目或课程学习相关的问题，系统从本人编写的项目文档里检索资料，给出带出处的回答。结果用途是复习和查资料，不直接写入学习计划。对应的用户故事是实验2里的“作为本科生，我希望把课程要求转换成可修改的学习计划，以便按时完成任务并了解自己的薄弱知识点”，本实验补充的是其中的查资料环节。
 
-模型调用代码在 \texttt{backend/app/service/llm\_client.py}，用 httpx 调用 DeepSeek 的 Chat Completions 接口，密钥只从环境变量 \texttt{DEEPSEEK\_API\_KEY} 读取，不写进代码和日志。
+模型调用代码在 \texttt{backend/app/service/llm\_client.py}，用 httpx 调用 DeepSeek 的 Chat Completions 接口，密钥只从环境变量 \texttt{DEEPSEEK\_API\_KEY} 读取，不写进代码和日志。请求参数使用 \texttt{deepseek-chat}，本次运行接口返回的 \texttt{model} 字段为 \texttt{deepseek-flash}，报告中以接口实际返回为准。
 
 \begin{table}[H]
 \centering
 \caption{模型调用参数}
+\label{tab:params}
 \small
 \begin{tabularx}{\textwidth}{p{3.2cm}X}
 \toprule
 项目 & 设置 \\
 \midrule
-模型名称 & \texttt{deepseek-chat}（官方旧别名，实际由 DeepSeek-V4.1-Flash 提供） \\
+模型名称 & 请求参数 \texttt{deepseek-chat}；本次接口返回的 \texttt{model} 字段为 \texttt{deepseek-flash} \\
 调用方式 & HTTP POST，\texttt{https://api.deepseek.com/chat/completions} \\
 主要参数 & temperature 0.2（任务解析用 0）、max\_tokens 700—900、stream=false、超时 60 秒 \\
 结构化输出 & RAG 回答开启 \texttt{response\_format=json\_object}，再用 Pydantic 校验字段 \\
@@ -125,12 +146,14 @@
 \centering
 \includegraphics[width=0.96\textwidth]{e5-call-a.png}
 \caption{一次完整调用：检索片段、回答与出处}
+\label{fig:call-a}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-call.png}
-\caption{调用返回：引用核对与Token、耗时、费用}
+\caption{调用返回：引用核对、耗时、Token与费用}
+\label{fig:call}
 \end{figure}
 
 调用失败处理按类型区分，接口返回统一结构的错误信息，程序不会中断。
@@ -138,14 +161,15 @@
 \begin{table}[H]
 \centering
 \caption{三种调用失败情况的实测结果}
-\footnotesize
-\begin{tabularx}{\textwidth}{p{3.1cm}p{4.3cm}X p{1.6cm}}
+\label{tab:fail}
+\scriptsize
+\begin{tabularx}{\textwidth}{p{2.8cm}p{4.0cm}X p{1.4cm}}
 \toprule
 情况 & 错误码 & 提示信息 & 接口返回 \\
 \midrule
 API Key 无效 & LLM\_AUTH\_FAILED & 模型服务鉴权失败（401），请检查 API Key & HTTP 502 \\
-响应超时（超时设为1毫秒） & LLM\_TIMEOUT & 模型服务响应超时（ConnectTimeout），请稍后重试 & HTTP 504 \\
-服务地址不可达 & LLM\_CONNECTION\_ERROR & 无法连接模型服务，请检查网络或服务地址 & HTTP 503 \\
+响应超时（超时设为1毫秒） & LLM\_TIMEOUT & 响应超时（ConnectTimeout），请稍后重试 & HTTP 504 \\
+服务地址不可达 & LLM\_CONNECTION\_ERROR & 无法连接模型服务，请检查网络或地址 & HTTP 503 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -154,29 +178,32 @@ API Key 无效 & LLM\_AUTH\_FAILED & 模型服务鉴权失败（401），请检�
 \centering
 \includegraphics[width=0.9\textwidth]{e5-fail.png}
 \caption{调用失败实测：鉴权失败、超时、地址不可达}
+\label{fig:fail}
 \end{figure}
 
-结构化输出用“把自然语言学习要求解析成任务”来验证：字段为 title、minutes、date、point，日期用正则约束为 \texttt{YYYY-MM-DD}。正常输入一次通过；故意换成模型无法满足的结构（要求 priority、owner 字段）时，第一次校验失败，程序把校验错误回传给模型并要求只返回合法 JSON，第二次通过，整个过程耗时 1565 毫秒、386 tokens。
+结构化输出用“把自然语言学习要求解析成任务”来验证：字段为 title、minutes、date、point，日期用正则约束为 \texttt{YYYY-MM-DD}。正常输入一次通过，本次耗时 10479 毫秒、153 tokens（这次调用遇到模型服务延迟波动，日志中也能看到同一次调用的长耗时）；故意换成模型无法满足的结构（要求 priority、owner 字段）时，第一次校验失败，程序把校验错误回传给模型并要求只返回合法 JSON，第二次通过，重试样例耗时 2433 毫秒、386 tokens。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{e5-struct.png}
 \caption{结构化输出：正常解析与校验失败后重试}
+\label{fig:struct}
 \end{figure}
 
-三组输入的实测结果如下。第一组是正常问题，第二组缺少必要参数（第一版 Prompt 会直接讲设计内容，v3 修正后改为追问），第三组超出问答范围，检索没有达到阈值，直接返回资料不足，不调用模型。
+三组输入的期望与实际结果如下。第一组是正常问题；第二组缺少必要参数，期望先追问而不是直接给设计说明；第三组超出问答范围，期望检索无结果时返回资料不足并且不调用模型。
 
 \begin{table}[H]
 \centering
 \caption{三组输入的期望与实际结果}
+\label{tab:inputs}
 \small
-\begin{tabularx}{\textwidth}{p{1.6cm}p{4.3cm}X}
+\begin{tabularx}{\textwidth}{p{1.7cm}p{3.4cm}p{3.5cm}X}
 \toprule
-类型 & 输入 & 实际结果 \\
+类型 & 输入 & 期望 & 实际结果 \\
 \midrule
-正常问题 & StudyPilot 里知识点掌握度是怎么更新的？ & 回答“由用户填写或确认后更新，不是系统自动改的”，并给出三处引用 \\
-缺少必要信息 & 帮我设置考试目标 & 先说明无法直接设置，再列出需要补充的课程、考试日期、目标分数、每天可用时间 \\
-超出任务范围 & 帮我写一首关于春天的诗 & 检索无结果，返回“资料不足：知识库中没有找到与该问题相关的内容”，未调用模型 \\
+正常问题 & StudyPilot 里知识点掌握度是怎么更新的？ & 依据资料说明由用户填写或确认后更新，并给出来源 & 回答“由用户填写或确认后更新，取值 0—100 的整数，并记录最后更新时间”，引用 [1]；同时说明资料没有写自动计算机制 \\
+缺少必要信息 & 帮我设置考试目标 & 指出缺少课程、考试日期、目标分数和每天可用时间，请用户补充，不直接给设计说明 & 先说明无法直接设置，列出需要补充的课程、考试日期、目标分数和可用时间；但仍带出了 exam\_goals 字段和接口，回答偏长，页面标记为“资料不足” \\
+超出任务范围 & 帮我写一首关于春天的诗 & 检索无结果时返回资料不足，不调用模型 & 返回“资料不足：知识库中没有找到与该问题相关的内容”，未调用模型，耗时 0 ms、0 tokens \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -185,103 +212,125 @@ API Key 无效 & LLM\_AUTH\_FAILED & 模型服务鉴权失败（401），请检�
 \centering
 \includegraphics[width=0.96\textwidth]{e5-inputs.png}
 \caption{三组输入的实际反馈}
+\label{fig:inputs}
 \end{figure}
 
 \subsection*{3.2 Prompt与上下文组织}
 
-Prompt 模板放在 \texttt{backend/app/service/prompts.py}，任务要求与用户问题分开：模板里写清回答范围、长度、引用格式、信息不足和超范围时的处理，最后才是资料和用户问题。版本变化见表5-4，实际发送给模型的完整输入见图5-6和图5-7。
+Prompt 模板放在 \texttt{backend/app/service/prompts.py}，任务要求与用户问题分开：模板里写清回答范围、长度、引用格式、信息不足和超范围时的处理，最后才是资料和用户问题。版本变化见\ref{tab:prompt}，实际发送给模型的完整输入见\ref{fig:messages-head}和\ref{fig:messages}。
 
 \begin{table}[H]
 \centering
 \caption{Prompt修改记录}
-\small
-\begin{tabularx}{\textwidth}{p{1.1cm}p{3.0cm}X p{3.6cm}}
+\label{tab:prompt}
+\footnotesize
+\begin{tabularx}{\textwidth}{p{1.0cm}p{2.6cm}X p{4.4cm}}
 \toprule
 版本 & 原版本问题 & 修改内容 & 结果变化 \\
 \midrule
-v1 & RAG 只写“请根据资料回答问题” & 无格式要求，模型自由发挥 & 回答偏长、用 Markdown 罗列，没有编号引用，出处无法核对 \\
-v2 & 回答长度和引用不规范 & 增加只依据资料、250字以内、句末标注 [1]、资料不足时置 sufficient=false、只输出 JSON & 回答变短，引用可直接核对到片段；无答案时明确说资料不足 \\
-v3 & 缺少参数的操作请求（如“帮我设置考试目标”）被当成普通问题回答 & 增加一条：操作请求缺少参数时先列出需要补充的信息 & 同一问题改为追问课程、考试日期、目标分数、每天可用时间 \\
+v1 & RAG 只写“请根据资料回答问题” & 无格式要求，也不要求结构化输出 & 回答 7 行，使用 Markdown 加粗和列表，比 v2 长；引用编号 [2][3][1] 由模型自行写出，格式不受约束、未做校验 \\
+v2 & 回答长度和引用不规范 & 增加只依据资料、250字以内、句末标注 [1]、资料不足时置 sufficient=false、只输出 JSON & 回答压缩到 4 行，引用编号可程序提取并核对；资料不足时能明确说明 \\
+v3 & 缺少参数的操作请求（如“帮我设置考试目标”）被当成普通问题回答 & 增加一条：操作请求缺少参数时先列出需要补充的信息 & “帮我设置考试目标”改为先问课程、考试日期、目标分数和每天可用时间；但回答中仍带出字段名和接口，追问不够简洁 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{e5-prompt.png}
+\includegraphics[width=0.96\textwidth]{e5-prompt.png}
 \caption{Prompt v1（上）与 v2（下）对同一问题的回答对比}
+\label{fig:prompt}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.96\textwidth]{e5-prompt-v3.png}
+\caption{Prompt v2（上）与 v3（下）对“帮我设置考试目标”的回答对比}
+\label{fig:prompt-v3}
+\end{figure}
+
+实际发送给模型的输入只有一条 user 消息：先是任务要求，再是带编号的检索资料（每条含来源标题、章节和正文），最后是用户问题；本次没有多轮历史，因此没有加入历史消息。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-messages-head.png}
 \caption{实际发送给模型的输入：任务要求与资料编号}
+\label{fig:messages-head}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-messages.png}
 \caption{实际输入中的资料内容与用户问题}
+\label{fig:messages}
 \end{figure}
 
-上下文检查发现两类问题：一是检索排在后面的片段与问题无关（例如问架构却带回 LaTeX 编译命令），二是相邻片段有 80 字重叠，同一句话可能在上下文里出现两次（本次样例重复 25 字）。按“分数不低于最高分 60\%”精简后，上下文从 955 字降到 604 字（减少 37\%），prompt tokens 从 805 降到 612，回答和引用都没有变化。
+上下文检查用架构问题做样例，为了看清边缘片段，把 Top-k 调到 6、相关性阈值调到 3。检查发现两类问题：一是检索排在后面的片段与问题无关（第 5 条是“编译实验报告”的 LaTeX 命令，第 6 条是实验目的，都不能回答架构分层）；二是片段 S4-005 与前一片段有 25 字重叠，同一句“xelatex 实验3-软件架构与界面设计.tex”在上下文里出现了两次。按“分数不低于最高分 60\%”精简后，上下文从 1577 字降到 657 字（减少 58\%），prompt tokens 从 1080 降到 541，回答仍给出四层名称并引用 [2]，引用没有变化。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-context.png}
 \caption{上下文检查：无关片段、重复内容与精简前后对比}
+\label{fig:context}
 \end{figure}
+
+需要说明的是，按分数精简并不能去掉所有噪声：3.1 的调用中，检索前 3 名有两名来自《StudyPilot 项目说明》的“资料问答（RAG）”小节（分数 26.75、25.33），它们只是在讲命令用法，并不是数据模型说明；因为分数高，60\% 阈值仍会保留。这说明关键词检索的分数只能部分反映相关性，后续需要更好的排序或人工可调的过滤规则。
 
 \subsection*{3.3 知识库与切分策略}
 
-知识库共 5 篇资料，全部是本人编写的项目文档，来源明确、可以公开，不包含他人隐私和密钥。资料清单放在 \texttt{backend/kb/sources.json}，每条记录使用权限和隐私处理方式。
+知识库共 5 篇资料，全部是本人编写的项目文档，来源明确、可以公开，不包含他人隐私、密钥和真实用户数据。资料清单放在 \texttt{backend/kb/sources.json}，每条记录格式、使用权限和隐私处理方式。当前构建共 77 个片段。
 
 \begin{table}[H]
 \centering
 \caption{知识库资料清单}
-\small
-\begin{tabularx}{\textwidth}{p{1.0cm}p{4.4cm}p{5.4cm}p{1.6cm}p{1.4cm}}
+\label{tab:kb}
+\footnotesize
+\begin{tabularx}{\textwidth}{p{0.8cm}p{3.5cm}p{4.3cm}p{2.4cm}p{1.3cm}p{1.2cm}}
 \toprule
-编号 & 资料 & 来源文件 & 字数 & 片段数 \\
+编号 & 资料 & 来源文件 & 格式与权限 & 字数 & 片段数 \\
 \midrule
-S1 & 实验2 个人软件选题与需求分析 & reports/experiment2/…tex & 3957 & 17 \\
-S2 & 实验3 软件架构与界面设计 & reports/experiment3/…tex & 3025 & 13 \\
-S3 & 实验4 软件基础功能开发 & reports/experiment4/…tex & 7179 & 29 \\
-S4 & StudyPilot 项目说明 & README.md & 991 & 7 \\
-S5 & StudyPilot 数据模型说明 & backend/kb/source/数据模型说明.md & 1696 & 8 \\
+S1 & 实验2 个人软件选题与需求分析 & reports/experiment2/…tex & LaTeX；本人报告，可公开 & 3957 & 17 \\
+S2 & 实验3 软件架构与界面设计 & reports/experiment3/…tex & LaTeX；本人报告，可公开 & 3025 & 13 \\
+S3 & 实验4 软件基础功能开发 & reports/experiment4/…tex & LaTeX；本人报告，可公开 & 7179 & 29 \\
+S4 & StudyPilot 项目说明 & README.md & Markdown；本人项目文档 & 1882 & 10 \\
+S5 & StudyPilot 数据模型说明 & backend/kb/source/数据模型说明.md & Markdown；本人整理，可公开 & 1696 & 8 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-清理与切分：LaTeX 报告先转成纯文本，去掉导言区、命令和图片，表格按行转成“单元格 | 单元格”，图只有标题时保留“图表：标题”一行；然后按标题切成小节，小节内按段落合并到 420 字左右，同一小节被切开时保留上一片段末尾 80 字作为重叠。更新方法是修改源文件后重新执行 \texttt{python3 -m app.tools.build\_kb}，片段编号会重新生成。
+清理与切分：LaTeX 报告先转成纯文本，去掉导言区、命令和图片，表格按行转成“单元格 | 单元格”，图只有标题时保留“图表：标题”一行；Markdown 去掉代码围栏和重复标题。然后按标题切成小节，小节内按段落合并到 420 字左右，同一小节被切开时保留上一片段末尾 80 字作为重叠。更新方法是修改源文件后重新执行 \texttt{python3 -m app.tools.build\_kb}，片段编号会重新生成；本次重建前是 74 个片段，补充 README 的资料问答说明后变为 77 个，说明资料更新后必须重建索引。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-kb.png}
-\caption{知识库构建结果：5篇资料、74个片段}
+\caption{知识库构建结果：5篇资料、77个片段}
+\label{fig:kb}
 \end{figure}
 
-抽查了 3 个片段：S2-009（架构分层，141 字，无重叠）、S5-004（知识点表字段，157 字，无重叠）、S3-019（掌握度更新与验收，有重叠）。检查结果：关键句子完整，“系统分为表现层、业务层、AI服务层和数据层”没有在切分处断开；来源路径、章节和更新时间都能对应回原资料；带重叠的片段开头确实重复了上一片段的结尾，用于避免跨片段的问题漏检。
+抽查了 3 个片段：S2-009（架构分层，141 字，无重叠）、S5-004（知识点表字段，157 字，无重叠）、S3-019（非AI业务闭环的验收记录，381 字，与前一片段重叠）。检查结果：关键句子完整，“系统分为表现层、业务层、AI服务层和数据层”没有在切分处断开；来源路径、章节和更新时间都能对应回原资料；带重叠的片段开头确实重复了上一片段的结尾，用于避免跨片段的问题漏检。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-chunks.png}
 \caption{片段抽查一：S2-009与S5-004的内容与元数据}
+\label{fig:chunks}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-chunks2.png}
 \caption{片段抽查二：S3-019的内容与重叠标记}
+\label{fig:chunks2}
 \end{figure}
 
 \subsection*{3.4 检索与RAG最小链路}
 
-检索用关键词方法：中文按二字切分、英文按单词切分，用 BM25 排序（k1=1.5，b=0.75），并加入标题字段加权和同义词扩展。选择理由是没有配置嵌入模型，资料量只有几十个片段，关键词检索的排序依据可以逐项核对，不需要额外的模型服务。主要参数见表5-6。
+检索用关键词方法：中文按二字切分、英文按单词切分，用 BM25 排序（k1=1.5，b=0.75），并加入标题字段加权和同义词扩展。选择理由是没有配置嵌入模型，资料量只有几十个片段，关键词检索的排序依据可以逐项核对，不需要额外的模型服务。主要参数见\ref{tab:retrieval-params}。
 
 \begin{table}[H]
 \centering
 \caption{切分与检索参数}
+\label{tab:retrieval-params}
 \small
 \begin{tabularx}{\textwidth}{p{3.4cm}X}
 \toprule
@@ -297,12 +346,13 @@ Top-k & 默认 3，页面可调 1—8 \\
 \end{tabularx}
 \end{table}
 
-阈值是抽查后定的：有答案的问题最高分在 15.9—33.2 之间，与项目无关的问题在 6.9 分以下，取 10 分可以分开这两类；话题相关但资料没有答案的问题落在中间，交给模型判断并把 sufficient 置为 false。
+阈值是抽查后定的：有答案的问题首位片段在 17.7—33.2 分之间（例如架构 23.0、掌握度 32.9、数据库关系 20.7）；话题相关但资料没有答案的问题（知识追踪算法）首位 12.6 分；与项目完全无关的问题检索为空。取 10 分可以把“有资料”和“完全无关”分开，话题相关但资料不足的交给模型判断并把 sufficient 置为 false。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-retrieval.png}
 \caption{一次查询的Top-3片段与BM25分数}
+\label{fig:retrieval}
 \end{figure}
 
 样例检查发现过一次检索失败：问“系统数据库里保存了哪些数据？它们之间是什么关系？”时，前 3 个片段都是实验3的设计说明，没有检索到数据模型的内容，回答只能给出资料不足。原因是问题和资料用词不一致（问“数据库、数据”，资料里写的是“表、字段、主键”），而且正文里的通用词太多。加入标题加权和同义词扩展后，数据模型说明的“表之间的关联”片段排到第 1，回答也正确了。
@@ -310,53 +360,57 @@ Top-k & 默认 3，页面可调 1—8 \\
 \begin{table}[H]
 \centering
 \caption{检索改进前后对比（同一个问题）}
+\label{tab:retrieval-improve}
 \small
-\begin{tabularx}{\textwidth}{p{2.6cm}X p{3.4cm}}
+\begin{tabularx}{\textwidth}{p{2.4cm}X p{3.4cm}}
 \toprule
 阶段 & Top-3 片段（分数） & 回答情况 \\
 \midrule
 改进前 & S2-004(11.2)、S2-001(7.4)、S2-006(6.1) & 资料不足，未回答 \\
-改进后 & S5-007(20.4)、S5-008(16.0)、S5-001(16.0) & 正确列出用户、课程、考试目标、知识点、计划、任务及关联，并给出引用 \\
+改进后 & S5-007(20.7)、S5-008(16.4)、S5-001(16.3) & 正确列出用户、课程、考试目标、知识点、计划、任务及关联，并给出引用 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-回答生成后做引用核对：检查编号是否在检索结果范围内，并计算被引用片段与回答的词语重合度，低于 0.12 标记为需要人工复核，编号越界直接判为不可靠。本轮对比测试中 RAG 组共引用 12 处，逐条检查全部对应。
+RAG 链路为：问题输入 → 检索 Top-k 片段 → 按“[编号] 来源/章节/正文”组织上下文 → 调用模型并校验 JSON → 检查引用编号并返回回答。引用核对会检查编号是否在检索结果范围内，并计算被引用片段与回答的词语重合度，低于 0.12 标记为需要人工复核，编号越界直接判为不可靠。3.5 的对比测试中 RAG 组共引用 13 处：12 处重合度不低于 0.12，1 处（Q6 的 [3]，S5-001）为 0.098，需要人工复核；逐条回看片段，发现它只是数据模型说明的来源元数据，不能直接支持表关系，属于弱引用。没有出现编号越界。
 
-资料不足分两种处理：检索完全没有结果时（如“项目开发一共花了多少钱”）直接返回资料不足，不调用模型；检索到了片段但资料回答不了时（如“用的是哪种知识追踪算法”），把 sufficient 置为 false，并在回答里说明缺少什么信息。
+资料不足分两种处理：检索完全没有结果时（如“项目开发一共花了多少钱”）直接返回资料不足，不调用模型；检索到了片段但资料回答不了时（如“用的是哪种知识追踪算法”），把 sufficient 置为 false，并在回答里说明缺少什么信息。对比测试的完整记录保存在 \texttt{backend/tests/data/compare\_result.json}，包含问题、检索片段、实际上下文、回答、引用检查、耗时和 Token。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{e5-ask-rag.png}
 \caption{页面入口：RAG回答、出处与检索片段}
+\label{fig:ask-rag}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.88\textwidth]{e5-ask-insufficient.png}
 \caption{资料不足时的回答：说明缺少什么信息，不编造}
+\label{fig:ask-insufficient}
 \end{figure}
 
 \subsection*{3.5 对比测试与质量分析}
 
-固定问题集放在 \texttt{backend/tests/data/compare\_questions.json}，共 8 题：4 题单片段可回答、2 题多片段综合、2 题资料无答案。判断规则写明每题需要覆盖的要点；资料无答案的两题，正确做法是说明资料不足，不能编造数字或算法名称。两组使用相同的问题、模型和 temperature（0.2），RAG 组多出资料和引用要求，每次调用都是独立的单轮对话。
+固定问题集放在 \texttt{backend/tests/data/compare\_questions.json}，共 8 题：3 题单片段可回答（Q1、Q2、Q4）、3 题多片段综合（Q3、Q5、Q6）、2 题资料无答案（Q7、Q8）。判断规则写明每题需要覆盖的要点；资料无答案的两题，正确做法是说明资料不足，不能编造数字或算法名称。两组使用相同的问题、模型和 temperature（0.2），直接组使用 \texttt{DIRECT\_V3}（不提供资料，200 字以内，缺少参数时追问，超范围时拒绝），RAG 组使用 \texttt{RAG\_V3}（只依据资料、250 字以内、句末标注 [1]、资料不足时置 sufficient=false、只输出 JSON），RAG 组多出资料和引用要求；每次调用都是独立的单轮对话，不复用上一次上下文。
 
 \begin{table}[H]
 \centering
 \caption{对比测试逐题结果（Prompt v3，Top-k=3；耗时与Tokens两列为“直接/RAG”）}
+\label{tab:compare}
 \scriptsize
-\begin{tabularx}{\textwidth}{p{0.55cm}p{1.35cm}p{3.1cm}p{1.25cm}p{1.25cm}p{0.85cm}p{1.9cm}p{1.75cm}}
+\begin{tabularx}{\textwidth}{p{0.9cm}p{1.35cm}p{3.0cm}p{1.2cm}p{1.2cm}p{0.75cm}p{1.9cm}p{1.75cm}}
 \toprule
-编号 & 类型 & 问题 & 要点\\直接 & 要点\\RAG & 引用 & 耗时ms & Tokens \\
+编号 & 类型 & 问题 & 要点\newline 直接 & 要点\newline RAG & 引用 & 耗时ms & Tokens \\
 \midrule
-Q1 & 单片段 & 总体架构分为哪几层 & 2/3 & 3/3 & 1 & 1395 / 1473 ms & 228 / 742 \\
-Q2 & 单片段 & 掌握度自动修改还是用户确认 & 1/2 & 2/2 & 2 & 1598 / 978 ms & 199 / 849 \\
-Q3 & 多片段 & 模型不可用时计划怎么生成 & 0/2 & 2/2 & 2 & 1237 / 1318 ms & 188 / 860 \\
-Q4 & 单片段 & MVP 不实现哪些功能 & 0/2 & 2/2 & 2 & 1590 / 1061 ms & 226 / 927 \\
-Q5 & 多片段 & 测试覆盖哪几类异常 & 0/2 & 2/2 & 2 & 1251 / 984 ms & 189 / 943 \\
-Q6 & 多片段 & 数据库保存哪些数据及关系 & 3/3 & 3/3 & 2 & 1430 / 1280 ms & 214 / 704 \\
-Q7 & 资料无答案 & 用的是哪种知识追踪算法 & 未声明资料不足 & 声明资料不足 & 1 & 1451 / 1074 ms & 203 / 378 \\
-Q8 & 资料无答案 & 开发花了多少钱 & 未声明资料不足 & 声明资料不足（未调用模型） & 0 & 1071 / 0 ms & 175 / 0 \\
+Q1 & 单片段 & 总体架构分为哪几层 & 0/3 & 3/3 & 1 & 1239 / 1462 ms & 214 / 905 \\
+Q2 & 单片段 & 掌握度自动修改还是用户确认 & 1/2 & 2/2 & 2 & 1252 / 1386 ms & 195 / 841 \\
+Q3 & 多片段 & 模型不可用时计划怎么生成 & 0/2 & 2/2 & 3 & 1666 / 1374 ms & 223 / 866 \\
+Q4 & 单片段 & MVP 不实现哪些功能 & 0/2 & 2/2 & 2 & 1797 / 1564 ms & 234 / 980 \\
+Q5 & 多片段 & 测试覆盖哪几类异常 & 0/2 & 2/2 & 2 & 1782 / 1371 ms & 195 / 945 \\
+Q6 & 多片段 & 数据库保存哪些数据及关系 & 3/3 & 3/3 & 2 & 1733 / 1474 ms & 235 / 709 \\
+Q7 & 资料无答案 & 用的是哪种知识追踪算法 & 无要求 & 无要求 & 1 & 1443 / 1242 ms & 209 / 383 \\
+Q8 & 资料无答案 & 开发花了多少钱 & 无要求 & 无要求 & 0 & 1215 / 0 ms & 182 / 0 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -364,28 +418,30 @@ Q8 & 资料无答案 & 开发花了多少钱 & 未声明资料不足 & 声明资
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-compare.png}
-\caption{对比测试运行结果：16次调用，7025 tokens，约0.021元}
+\caption{对比测试运行结果：16次调用，7316 tokens，约0.0224元}
+\label{fig:compare}
 \end{figure}
 
-本次共执行 16 次调用（Q8 的 RAG 组因检索无结果未调用模型），合计 7025 tokens，按输入 2 元/百万、输出 8 元/百万估算约 0.0211 元，总用时 19.2 秒。RAG 组单次约 0.0021—0.0025 元、700—950 tokens，直接模型组约 0.0006—0.0010 元、180—230 tokens，RAG 的输入 tokens 约为直接模型的 3 倍，费用和耗时都更高。
+本次共执行 16 次调用（Q8 的 RAG 组因检索无结果未调用模型），合计 7316 tokens，按输入 2 元/百万、输出 8 元/百万估算约 0.0224 元，总用时 22.0 秒。直接组 8 次共 1687 tokens、约 0.00685 元；RAG 组 7 次调用共 5629 tokens、约 0.01553 元。RAG 的 tokens 约为直接组的 3.3 倍（输入 tokens 约 4.4 倍），费用约为 2.3 倍；耗时两组接近（直接组合计 12.1 秒、RAG 组合计 9.9 秒），本次网络波动较大，不能据此认为 RAG 一定更快或更慢。
 
-人工检查回答内容，主要差别有三点。第一是正确性：直接模型在项目专属问题上给出了看似合理但和项目不符的内容，例如 Q1 把架构说成“交互层、应用层、领域服务层、数据层”（项目实际是表现层、业务层、AI服务层、数据层），Q6 说有“测验/错题”表（项目没有），属于无依据内容；RAG 组的回答都能在原片段里找到对应句子。第二是资料无答案时的处理：直接模型 Q7 说无法确认、Q8 说超出范围，都没有明确说明“资料不足”，而 RAG 组两题都说明了资料不足并列出缺少的信息，没有编造。第三是引用可靠性：RAG 组 12 处引用全部能对应到检索片段，词语重合度在 0.12—0.52 之间。
+人工检查回答内容，主要差别有四点。第一是正确性：直接模型在项目专属问题上给出了看似合理但和项目不符的内容。Q1 把架构说成“表示层、应用层、领域层、基础设施层”，项目实际是“表现层、业务层、AI服务层、数据层”；Q2 说“系统根据练习/测验结果自动更新掌握度”，实际是用户填写或确认后更新；Q3 提到规则/模板但没有手工调整入口；Q4 编造了“多用户协作/社交、复杂推荐算法、移动端 App、第三方日历、知识图谱可视化、自动出题与批改”等 MVP 排除项，项目资料里没有这些表述。RAG 组的回答都能在原片段里找到对应句子。第二是资料无答案时的处理：直接模型 Q7 没有编造具体算法，而是列出 BKT、DKT、IRT 等候选并建议查看设计文档，Q8 以超出范围为由拒绝；RAG 组两题都明确说明资料不足，并列出缺少的信息，没有编造。第三是引用可靠性：RAG 组 13 处引用中 12 处通过重合度阈值，1 处弱引用已人工标注，没有编号越界；但“能引用”不等于“引用足以支持结论”，Q6 的弱引用就是例子。第四是自动要点打分的局限：Q6 直接组按关键词判为 3/3，但它把掌握度说成“掌握度记录”、把任务说成关联计划，和实际数据模型有出入，说明关键词命中只能作为初筛，最终还要人工判断。
 
-也有 RAG 答得不如直接模型的地方：Q2 中直接模型虽然结论不准确，但提示了“建议查看需求文档中的知识追踪模块”，而 RAG 的回答只在资料范围内作答；Q5 的要点命中在人工核对时发现，RAG 给出的两个例子都正确，但异常类别的表述不如直接模型的分类完整。这些说明 RAG 的作用是把回答限制在资料范围内、并提供可核对的出处，不能代替人工判断内容是否准确。
+也有 RAG 答得不够好的地方：Q1 已经正确说出四层名称，却在末尾补“各层详细分工资料不足”，被程序标成“资料不足声明=是”，看起来像没有回答完整；Q7 只检索到 1 个片段，答案信息量偏少；Q1 和 3.1 的掌握度问题都把 README 的“资料问答（RAG）”小节排进前几名，关键词分数高但内容与问题无关，说明检索排序仍有噪声。结论是：RAG 的作用是把回答限制在资料范围内、并提供可核对的出处，不能代替人工判断内容是否准确；本次样例中 RAG 在项目专属事实和“资料不足”处理上明显更好，直接模型在措辞自然度和通用知识上不差，但容易把通用知识当成项目事实。
 
 \subsection*{3.6 模块调用与后续使用}
 
-检索和回答生成整理成可调用模块，依赖关系和失败返回见表5-9。知识库准备方法：把资料登记到 \texttt{backend/kb/sources.json}，执行 \texttt{python3 -m app.tools.build\_kb} 生成 \texttt{chunks.jsonl} 即可；资料更新后重新执行同一条命令。
+检索和回答生成整理成可调用模块，依赖关系和失败返回见\ref{tab:modules}。知识库准备方法：把资料登记到 \texttt{backend/kb/sources.json}，执行 \texttt{python3 -m app.tools.build\_kb} 生成 \texttt{chunks.jsonl} 即可；资料更新后重新执行同一条命令。
 
 \begin{table}[H]
 \centering
 \caption{模块、输入输出与失败返回}
-\footnotesize
-\begin{tabularx}{\textwidth}{p{5.0cm}p{2.1cm}X p{3.1cm}}
+\label{tab:modules}
+\scriptsize
+\begin{tabularx}{\textwidth}{p{4.3cm}p{2.7cm}X p{2.9cm}}
 \toprule
 模块 & 依赖 & 输入与输出 & 失败返回 \\
 \midrule
-\texttt{qa\_service.answer\_question} & retriever、prompts、llm\_client & 问题、模式、Top-k、Prompt版本 → 回答、引用、检索片段、耗时、tokens、费用 & 空问题 400、问题过长 400、知识库未构建 400 \\
+\texttt{qa\_service.answer\_question} & retriever、prompts、llm\_client & 问题、模式、Top-k、Prompt版本 → 回答、引用、检索片段、实际上下文、耗时、tokens、费用 & 空问题 400、问题过长 400、知识库未构建 400 \\
 \texttt{retriever.search} & kb\_service & 问题、Top-k、阈值 → 按分数排序的片段 & 无结果时返回空列表 \\
 \texttt{kb\_service.build\_index} & sources.json & 资料清单 → chunks.jsonl 与索引元数据 & 资料文件缺失 500 \\
 \texttt{llm\_client.chat} & httpx & messages、模型参数 → 内容、用量、耗时 & 未配置 503、连接失败 503、超时 504、鉴权失败 502、限流 503、返回结构异常 502 \\
@@ -394,62 +450,78 @@ Q8 & 资料无答案 & 开发花了多少钱 & 未声明资料不足 & 声明资
 \end{tabularx}
 \end{table}
 
-入口有页面、接口和命令行三种：页面是 \texttt{/api/qa/ask} 对应的“资料问答”页（RAG/直接模型可切换，显示回答、出处、检索片段、耗时和费用）；接口为 \texttt{POST /api/qa/ask}、\texttt{GET /api/qa/kb}、\texttt{GET /api/qa/kb/chunks}、\texttt{POST /api/qa/kb/rebuild}；命令行包括 \texttt{ask\_cli}（问答，可打印检索结果和完整输入）、\texttt{build\_kb}、\texttt{inspect\_chunks}、\texttt{compare\_test}、\texttt{context\_check}、\texttt{fail\_demo}、\texttt{parse\_task}。另外增加了 10 个离线单元测试，和实验4的 10 个用例一起共 20 个，全部通过。
+入口有页面、接口和命令行三种：页面是 \texttt{/api/qa/ask} 对应的“资料问答”页（RAG/直接模型可切换，显示回答、出处、检索片段、耗时和费用）；接口为 \texttt{POST /api/qa/ask}、\texttt{GET /api/qa/kb}、\texttt{GET /api/qa/kb/chunks}、\texttt{POST /api/qa/kb/rebuild}；命令行包括 \texttt{ask\_cli}（问答，可打印检索结果和完整输入）、\texttt{build\_kb}、\texttt{inspect\_chunks}、\texttt{compare\_test}、\texttt{context\_check}、\texttt{fail\_demo}、\texttt{parse\_task}。另外有 10 个离线单元测试，和实验4的 10 个用例一起共 20 个，本次全部通过。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{e5-ask-direct.png}
 \caption{页面入口：直接模型模式（不给资料）的回答}
+\label{fig:ask-direct}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.85\textwidth]{e5-ask-out-of-range.png}
 \caption{页面入口：超出范围的问题返回资料不足}
+\label{fig:ask-out-of-range}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-tests.png}
 \caption{单元测试：20个用例全部通过}
+\label{fig:tests}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-log.png}
-\caption{运行日志：模型调用、返回用量与检索无结果}
+\caption{运行日志：调用失败分类、模型调用/返回用量与检索无结果}
+\label{fig:log}
 \end{figure}
 
-结论是继续在 StudyPilot 中使用 RAG，作为“资料问答”功能保留，但只作为参考，不直接生成或修改学习计划。当前局限：一是关键词检索对用词差异敏感，同义词表靠手工维护；二是中文按二字切分会产生无意义组合，可能误匹配；三是知识库只有 5 篇项目文档，没有教材内容，回答范围有限；四是引用核对只看词语重合度，不能完全判断语义是否支持回答；五是 RAG 的费用和耗时约为直接模型的 3 倍。下一步计划：把 ER 图等图片内容补充成文字资料，加入课程复习资料；把 8 个固定问题作为回归测试集，修改 Prompt 或检索参数后自动跑一遍对比；后续再考虑关键词与向量检索结合。
+结论是继续在 StudyPilot 中使用 RAG，作为“资料问答”功能保留，但只作为参考，不直接生成或修改学习计划。当前局限：一是关键词检索对用词差异敏感，同义词表靠手工维护；二是中文按二字切分会产生无意义组合，可能误匹配；三是知识库只有 5 篇项目文档，没有教材内容，回答范围有限；四是引用核对只看词语重合度，不能完全判断语义是否支持回答（本次 Q6 的 0.098 弱引用就是例子）；五是 RAG 的 tokens 和费用约为直接模型的 3.3 倍和 2.3 倍。下一步计划：把 ER 图等图片内容补充成文字资料，加入课程复习资料；把 8 个固定问题作为回归测试集，修改 Prompt 或检索参数后自动跑一遍对比；改进上下文过滤，对“资料问答（RAG）”这类命令说明片段做来源降权；后续再考虑关键词与向量检索结合。
 
-\subsection*{3.7 版本记录}
+\clearpage
+\subsection*{3.7 关键代码}
 
-代码和报告都提交到 GitHub 仓库 \url{https://github.com/luohao711/StudyPilot}，本实验对应 tag \texttt{v0.3}。
+模型调用与失败分类的代码见代码5-1，RAG 主流程见代码5-2；代码直接来自仓库文件，省略了与本实验无关的辅助函数。
+
+\lstinputlisting[firstline=49,lastline=110,caption={模型调用与失败分类（backend/app/service/llm\_client.py 第49—110行）}]{../../backend/app/service/llm_client.py}
+
+\lstinputlisting[firstline=99,lastline=155,caption={RAG 主流程：检索、上下文、调用与引用校验（backend/app/service/qa\_service.py 第99—155行）}]{../../backend/app/service/qa_service.py}
+
+\subsection*{3.8 版本记录}
+
+代码提交到 GitHub 仓库 \url{https://github.com/luohao711/StudyPilot}，本实验对应 commit \texttt{7fe795a}、tag \texttt{v0.3}；报告源文件、截图和运行证据放在 \texttt{reports/experiment5/} 与 \texttt{backend/tests/data/} 下。
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-git-log.png}
 \caption{版本记录：本实验对应的Commit与Tag}
+\label{fig:gitlog}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.96\textwidth]{e5-push.png}
 \caption{推送到GitHub的记录}
+\label{fig:push}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{e5-github.png}
 \caption{StudyPilot仓库页面}
+\label{fig:github}
 \end{figure}
 
 \section*{4. 实验小结}
 
-本次完成了 StudyPilot 的资料问答功能：用 DeepSeek 的 deepseek-chat 接口做模型调用，把 5 篇项目文档转成 74 个片段的知识库，用 BM25 关键词检索做检索，再让模型依据检索到的片段生成带出处的回答，前端加了一个“资料问答”页面，命令行和接口也都能调用。
+本次完成了 StudyPilot 的资料问答功能：用 DeepSeek 的 chat completions 接口做模型调用，把 5 篇项目文档转成 77 个片段的知识库，用 BM25 关键词检索做检索，再让模型依据检索到的片段生成带出处的回答，前端加了一个“资料问答”页面，命令行和接口也都能调用。
 
-过程中主要做了三件事。第一是 Prompt 改了两次：初版没有格式要求，回答发散、没有引用；第二版要求只依据资料、限制长度并输出 JSON，引用可以逐条核对；测试三组输入时又发现“帮我设置考试目标”这类缺少参数的操作请求会被当成普通问题回答，于是加了追问规则。第二是知识库补了一次：抽查时问“数据库保存了哪些数据”答不上来，因为实验3的 ER 图是图片，文字里没有表结构，补了一份数据模型说明后回答正确，也说明资料覆盖范围决定了 RAG 的上限。第三是检索调了两次：加入标题加权和同义词扩展后，同一个问题的正确片段从检索不到变成排在第 1。
+过程中主要做了四件事。第一是 Prompt 改了两次：初版没有格式要求，回答发散、使用 Markdown 列表且引用格式不受约束；第二版要求只依据资料、限制长度并输出 JSON，引用可以逐条核对；测试三组输入时又发现“帮我设置考试目标”这类缺少参数的操作请求会被当成普通问题回答，于是加了追问规则。对比 v2 和 v3 可见 v3 会先说明缺少参数、再列需要补充的信息，但回答里仍带出字段名和接口，追问还不够简洁。第二是知识库重建：抽查时问“数据库保存了哪些数据”，旧版只命中实验3的设计说明；补一份数据模型说明后回答正确；本次重跑还把 README 的资料问答说明纳入知识库，片段数从 74 变为 77，说明资料更新后必须重建索引。第三是检索调整：加入标题加权和同义词扩展后，同一个问题的正确片段从检索不到变成排在第 1。第四是上下文工程：Top-k=6 时上下文 1577 字、包含 LaTeX 编译命令等无关内容和重复命令，按分数精简到 657 字（减少 58\%），prompt tokens 从 1080 降到 541，回答和引用没有变化；但按分数精简不能去掉所有噪声，README 的高分无关片段仍会保留。
 
-对比测试用 8 个固定问题跑了 16 次调用，共约 0.021 元。直接模型在项目专属问题上会给出看似合理但不符实际的内容（架构分层名称、并不存在的表），RAG 的回答都能对应到原片段并给出引用，两个资料无答案的问题也都明确说明资料不足。局限是关键词检索依赖用词、知识库范围有限、RAG 的费用和时间约为直接模型的三倍，后续用固定的 8 个问题做回归测试，并考虑补充资料和结合向量检索。
+对比测试用 8 个固定问题跑了 16 次调用，共 7316 tokens、约 0.0224 元、22.0 秒。直接模型在项目专属问题上会给出看似合理但不符实际的内容（架构分层名称、自动更新掌握度、编造 MVP 排除项），RAG 的回答都能对应到原片段并给出引用，两个资料无答案的问题也都明确说明资料不足。RAG 也不是没有问题：Q1 已经答对却补充“资料不足”，Q7 检索片段偏少，README 的 RAG 说明会排进前几名，引用核对只能看词语重合度（本次有 1 处弱引用）。局限是关键词检索依赖用词、知识库范围有限、RAG 的 tokens 和费用约为直接模型的 3.3 倍和 2.3 倍；后续用固定的 8 个问题做回归测试，补充资料并改进过滤，再考虑关键词与向量检索结合。
 
 \end{document}

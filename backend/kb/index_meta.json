@@ -1,8 +1,8 @@
 {
-  "built_at": "2026-10-16 13:53:15",
+  "built_at": "2026-10-26 09:58:44",
   "chunk_size": 420,
   "chunk_overlap": 80,
-  "total_chunks": 74,
+  "total_chunks": 77,
   "sources": [
     {
       "source_id": "S1",
@@ -32,9 +32,9 @@
       "source_id": "S4",
       "title": "StudyPilot 项目说明",
       "path": "README.md",
-      "chars": 991,
-      "chunks": 7,
-      "updated_at": "2026-10-12"
+      "chars": 1882,
+      "chunks": 10,
+      "updated_at": "2026-10-16"
     },
     {
       "source_id": "S5",

@@ -9,9 +9,8 @@ from app.service import kb_service, llm_client, prompts, retriever
 
 MAX_QUESTION_CHARS = 200
 DEFAULT_TOP_K = 3
-# 费用估算口径：模型 deepseek-chat（官方旧别名，实际由 DeepSeek-V4.1-Flash 提供）。
-# 官网高峰价：输入 $0.3/百万 tokens（缓存未命中）、输出 $1.2/百万 tokens，
-# 按汇率 7.1 折算约 2.13 元 / 8.52 元，这里取 2 元和 8 元做保守近似。
+# 费用估算口径：请求参数 model=deepseek-chat，实际返回的 model 字段以接口响应为准
+# （本次实测返回 deepseek-flash）。价格按输入 2 元/百万 tokens、输出 8 元/百万 tokens 保守估算。
 PRICE_INPUT_PER_M = 2.0
 PRICE_OUTPUT_PER_M = 8.0
 INSUFFICIENT_TEXT = "资料不足：知识库中没有找到与该问题相关的内容，无法回答。"
@@ -69,6 +68,7 @@ def _empty_retrieval(question: str, mode: str, top_k: int, prompt_version: str) 
         "sufficient": False,
         "retrieved": [],
         "citation_checks": [],
+        "context": "",
         "usage": {},
         "latency_ms": 0,
         "model": None,
@@ -141,6 +141,7 @@ def answer_question(
             for i, hit in enumerate(hits, start=1)
         ],
         "citation_checks": verify_citations(answer, hits) if mode == "rag" else [],
+        "context": context,
         "usage": raw["usage"],
         "latency_ms": raw["latency_ms"],
         "model": raw["model"],

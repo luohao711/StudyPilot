@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-16 14:06:02",
+  "run_at": "2026-10-26 10:00:17",
   "prompt_version": "v3",
   "top_k": 3,
   "modes": [
@@ -7,36 +7,35 @@
     "rag"
   ],
   "total_calls": 16,
-  "total_tokens": 7025,
-  "total_cost_yuan": 0.021076,
-  "total_seconds": 19.2,
+  "total_tokens": 7316,
+  "total_cost_yuan": 0.022384,
+  "total_seconds": 22.0,
   "rows": [
     {
       "id": "Q1",
       "type": "单片段可回答",
       "question": "StudyPilot 的总体架构分为哪几层？各层负责什么？",
       "mode": "direct",
-      "answer": "StudyPilot 总体架构通常分为四层：表现层、业务逻辑层、数据层和基础设施层。表现层负责界面展示与用户交互；业务逻辑层处理学习计划生成、知识追踪与推荐；数据层负责课程、任务、掌握度等数据存储与访问；基础设施层提供日志、配置、安全与部署支持。依据是典型分层架构设计，便于解耦与维护。",
+      "answer": "StudyPilot 总体架构通常分为四层：表示层、应用层、领域层、基础设施层。表示层负责界面与交互；应用层编排用例与任务流程；领域层承载学习计划、知识追踪等核心业务规则；基础设施层提供数据库、通知、外部服务等支撑。依据是分层架构的职责分离原则。",
       "points_expected": [
         "表现层",
         "业务层",
         "数据层"
       ],
-      "points_hit": [
-        "表现层",
-        "数据层"
-      ],
-      "points_score": "2/3",
+      "points_hit": [],
+      "points_score": "0/3",
       "claims_insufficient": false,
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 142,
-      "completion_tokens": 86,
-      "total_tokens": 228,
-      "latency_ms": 1395,
-      "cost_yuan": 0.000972,
+      "completion_tokens": 72,
+      "total_tokens": 214,
+      "latency_ms": 1239,
+      "cost_yuan": 0.00086,
       "skipped_reason": ""
     },
     {
@@ -44,7 +43,7 @@
       "type": "单片段可回答",
       "question": "StudyPilot 的总体架构分为哪几层？各层负责什么？",
       "mode": "rag",
-      "answer": "StudyPilot 总体架构分为四层：表现层、业务层、AI服务层和数据层[1]。各层职责依据资料：普通程序（业务层）负责数据保存、日期与字段校验；LLM（AI服务层）只生成候选计划；用户负责最终确认[1]。核心流程加入人工确认点和AI失败后的手工处理入口，避免模型结果直接写入正式计划[1]。资料未逐层细化表现层与数据层的具体职责，仅给出上述划分与分工。",
+      "answer": "结论：StudyPilot 总体架构分为表现层、业务层、AI服务层和数据层四层 [1]。依据：资料仅说明普通程序负责数据保存、日期与字段校验，LLM只生成候选计划，用户负责最终确认 [1]；并指出核心流程设有人工确认点和AI失败后的手工处理入口，避免模型结果直接写入正式计划 [1]。资料未逐层说明各层具体职责，因此各层详细分工资料不足。",
       "points_expected": [
         "表现层",
         "业务层",
@@ -56,33 +55,51 @@
         "数据层"
       ],
       "points_score": "3/3",
-      "claims_insufficient": false,
+      "claims_insufficient": true,
       "expect_insufficient": false,
       "citations": [
         1
       ],
       "citations_reliable": 1,
+      "citation_checks": [
+        {
+          "index": 1,
+          "chunk_id": "S2-009",
+          "source_title": "实验3 软件架构与界面设计",
+          "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.2 架构与核心流程设计",
+          "overlap": 0.887,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S2-009",
-          "score": 23.486,
+          "score": 22.979,
           "source_title": "实验3 软件架构与界面设计",
           "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.2 架构与核心流程设计"
         },
         {
           "index": 2,
+          "chunk_id": "S4-005",
+          "score": 21.704,
+          "source_title": "StudyPilot 项目说明",
+          "section": "StudyPilot 课程实验报告 / 资料问答（RAG）"
+        },
+        {
+          "index": 3,
           "chunk_id": "S2-004",
-          "score": 18.63,
+          "score": 18.058,
           "source_title": "实验3 软件架构与界面设计",
           "section": "实验3：软件架构与界面设计 / 2. 实验内容 / 2.3 软件架构与模块设计"
         }
       ],
-      "prompt_tokens": 617,
-      "completion_tokens": 125,
-      "total_tokens": 742,
-      "latency_ms": 1473,
-      "cost_yuan": 0.002234,
+      "context": "[1] 来源：《实验3 软件架构与界面设计》 章节：实验3：软件架构与界面设计 / 3. 操作记录 / 3.2 架构与核心流程设计\n系统分为表现层、业务层、AI服务层和数据层。普通程序负责数据保存、日期与字段校验；LLM只生成候选计划；用户负责最终确认。\n图表：StudyPilot总体架构图\n核心流程加入了人工确认点和AI失败后的手工处理入口，避免模型结果直接写入正式计划。\n图表：StudyPilot核心流程图\n\n[2] 来源：《StudyPilot 项目说明》 章节：StudyPilot 课程实验报告 / 资料问答（RAG）\np.tools.ask_cli \"知识点掌握度怎么更新？\n\"     # 命令行问答\npython3 -m app.tools.ask_cli \"计划怎么生成？\n\" --show-retrieval --only-context\npython3 -m app.tools.inspect_chunks --source S2 --limit 3   # 片段抽查\npython3 -m app.tools.context_check \"总体架构分几层？\n\"        # 上下文检查与精简\npython3 -m app.tools.compare_test                      # 直接模型 vs RAG 对比测试\npython3 -m app.tools.fail_demo                         # 调用失败处理演示\n```\n\n[3] 来源：《实验3 软件架构与界面设计》 章节：实验3：软件架构与界面设计 / 2. 实验内容 / 2.3 软件架构与模块设计\n- 绘制软件与外部环境关系图（也称简化的系统上下文图），标出用户、个人软件、模型或模型服务以及项目需要访问的外部系统或数据源，说明哪些内容属于本软件、哪些属于外部依赖。模型应根据实际运行和调用方式放在合适位置，并注明使用本地模型还是云端模型服务。图形可以参考已经学习的数据流图，用简单的方框和带名称的箭头表示。\n- 绘制软件总体架构图和模块结构图，根据项目特点选择已学习的分层、MVC等体系结构风格，并可使用包图或构件图表示界面、业务、数据和AI能力等模块。两张图可以合并，但要写明各模块的职责和依赖关系。\n- 在总体架构图中标明主要数据、调用方向或交互关系，并制作“用户—普通程序—模型—工具职责划分表”，说明核心流程中每一方负责什么以及由谁检查AI结果。",
+      "prompt_tokens": 787,
+      "completion_tokens": 118,
+      "total_tokens": 905,
+      "latency_ms": 1462,
+      "cost_yuan": 0.002518,
       "skipped_reason": ""
     },
     {
@@ -90,7 +107,7 @@
       "type": "单片段可回答",
       "question": "知识点掌握度是系统自动修改，还是用户确认后修改？",
       "mode": "direct",
-      "answer": "结论：两者结合——系统自动计算，关键变更需用户确认。\n\n依据：StudyPilot 通常根据练习/测验结果自动更新掌握度估值；但涉及大幅调整或用户手动修正时，应提供确认环节，避免误判。具体规则以项目设计文档为准。",
+      "answer": "结论：取决于修改来源。系统根据练习/测验结果自动更新掌握度；用户手动修正需本人确认后生效。\n\n依据：自动更新保证追踪实时性，用户确认用于纠偏（如误判、自学补充）。具体规则以项目设计文档为准。",
       "points_expected": [
         "用户确认",
         "建议"
@@ -103,12 +120,14 @@
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 139,
-      "completion_tokens": 60,
-      "total_tokens": 199,
-      "latency_ms": 1598,
-      "cost_yuan": 0.000758,
+      "completion_tokens": 56,
+      "total_tokens": 195,
+      "latency_ms": 1252,
+      "cost_yuan": 0.000726,
       "skipped_reason": ""
     },
     {
@@ -116,7 +135,7 @@
       "type": "单片段可回答",
       "question": "知识点掌握度是系统自动修改，还是用户确认后修改？",
       "mode": "rag",
-      "answer": "结论：由系统给出建议值，用户确认后才修改。依据：原设计曾准备由系统自动修改掌握度，实验3检查时已改为“系统建议、用户确认”[2]；实验4测试中，完成任务时系统给出建议值40%，本人确认后软件测试掌握度才从30%更新到40%[3]。",
+      "answer": "结论：由用户确认后修改，系统只给出建议值。依据：设计检查时已将原“系统自动修改掌握度”改为“系统建议、用户确认”[2]；完成任务时系统给出建议值40%，本人确认后软件测试掌握度才从30%更新到40%[3]。",
       "points_expected": [
         "用户确认",
         "建议"
@@ -133,34 +152,53 @@
         3
       ],
       "citations_reliable": 2,
+      "citation_checks": [
+        {
+          "index": 2,
+          "chunk_id": "S2-012",
+          "source_title": "实验3 软件架构与界面设计",
+          "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.5 设计检查与版本记录",
+          "overlap": 0.232,
+          "reliable": true
+        },
+        {
+          "index": 3,
+          "chunk_id": "S3-019",
+          "source_title": "实验4 软件基础功能开发",
+          "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.4 非AI关键业务闭环",
+          "overlap": 0.225,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S5-004",
-          "score": 33.195,
+          "score": 32.88,
           "source_title": "StudyPilot 数据模型说明",
           "section": "StudyPilot 数据模型说明 / 表结构 / knowledge_points 知识点表"
         },
         {
           "index": 2,
           "chunk_id": "S2-012",
-          "score": 25.013,
+          "score": 25.172,
           "source_title": "实验3 软件架构与界面设计",
           "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.5 设计检查与版本记录"
         },
         {
           "index": 3,
           "chunk_id": "S3-019",
-          "score": 22.837,
+          "score": 22.066,
           "source_title": "实验4 软件基础功能开发",
           "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.4 非AI关键业务闭环"
         }
       ],
+      "context": "[1] 来源：《StudyPilot 数据模型说明》 章节：StudyPilot 数据模型说明 / 表结构 / knowledge_points 知识点表\n- point_id：主键，自增\n- course_id：外键，指向 courses.course_id\n- name：知识点名称，同一课程下不允许重名（UNIQUE(course_id, name)）\n- mastery：掌握度，0—100 的整数，由用户填写或确认后更新\n- updated_at：最后更新时间\n\n[2] 来源：《实验3 软件架构与界面设计》 章节：实验3：软件架构与界面设计 / 3. 操作记录 / 3.5 设计检查与版本记录\n检查时发现两个问题：原流程缺少AI失败处理，已增加手工调整入口；原掌握度准备由系统自动修改，现改为系统建议、用户确认。设计文件已提交并上传至GitHub仓库：https://github.com/luohao711/StudyPilot。\n图表：Git推送成功记录\n图表：StudyPilot GitHub仓库页面\n\n[3] 来源：《实验4 软件基础功能开发》 章节：实验4：软件基础功能开发 / 3. 操作记录 / 3.4 非AI关键业务闭环\n改为 done，知识点掌握度按用户确认值更新\n调整后续计划 | 学习进度页 | /api/plans/adjust、任务业务 | 未完成任务重新排到考试日期之前\n测试输入取自本人这学期的实际情况：软件工程，考试 2026-11-11，目标 85 分，每天可用 120 分钟，四个知识点掌握度为 30%、38%、45%、62%。生成结果是 4 个任务，分别排在 10 月 12 日至 10 月 15 日，时长 35、35、30、20 分钟，掌握度最低的软件测试排在最前。完成任务时系统给出建议值 40%，本人确认后软件测试掌握度从 30% 更新到 40%，课程总体掌握度从 44% 变为 46%。\n图表：学习进度页：掌握度与每日任务\n图表：完成情况填写：系统给出建议值，由用户确认\n图表：完成结果：掌握度由30%更新为40%\n图表：调整后续计划：未完成任务重新排期",
       "prompt_tokens": 755,
-      "completion_tokens": 94,
-      "total_tokens": 849,
-      "latency_ms": 978,
-      "cost_yuan": 0.002262,
+      "completion_tokens": 86,
+      "total_tokens": 841,
+      "latency_ms": 1386,
+      "cost_yuan": 0.002198,
       "skipped_reason": ""
     },
     {
@@ -168,7 +206,7 @@
       "type": "多片段综合",
       "question": "模型服务不可用时，学习计划的生成会怎么处理？",
       "mode": "direct",
-      "answer": "模型服务不可用时，系统应降级处理：返回基于本地规则/模板的保守计划，并提示“智能生成暂不可用”。依据：避免阻塞核心流程，保证可用性；待服务恢复后可重新生成或手动调整。",
+      "answer": "结论：模型服务不可用时，系统应降级为规则/模板生成学习计划，并提示用户结果可能简化；同时记录失败并支持稍后重试。\n\n依据：学习计划生成依赖模型服务，但核心排程可由本地规则完成（按考试日期、课程权重、每日可用时间分配任务）。若完全无法生成，则返回明确错误并保留用户输入，避免编造计划。",
       "points_expected": [
         "规则模板",
         "手工"
@@ -179,12 +217,14 @@
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 137,
-      "completion_tokens": 51,
-      "total_tokens": 188,
-      "latency_ms": 1237,
-      "cost_yuan": 0.000682,
+      "completion_tokens": 86,
+      "total_tokens": 223,
+      "latency_ms": 1666,
+      "cost_yuan": 0.000962,
       "skipped_reason": ""
     },
     {
@@ -192,7 +232,7 @@
       "type": "多片段综合",
       "question": "模型服务不可用时，学习计划的生成会怎么处理？",
       "mode": "rag",
-      "answer": "模型服务不可用时，学习计划会改用规则模板生成，并支持手工编辑调整。依据：资料[2]指出计划生成改为“模型服务不可用就用规则模板”；资料[3]也说明模型服务不可用时改用规则模板和手工编辑计划，且AI失败可继续操作、保留输入并支持手工调整。",
+      "answer": "结论：模型服务不可用时会降级为规则模板生成，并支持手工编辑调整。依据：计划生成改为“模型服务不可用就用规则模板”[2]；模型服务不可用时改用规则模板和手工编辑计划[3]；study_plans 表的 generator 字段中 rule_template 即表示规则模板生成[1]。",
       "points_expected": [
         "规则模板",
         "手工"
@@ -205,38 +245,66 @@
       "claims_insufficient": false,
       "expect_insufficient": false,
       "citations": [
+        1,
         2,
         3
       ],
-      "citations_reliable": 2,
+      "citations_reliable": 3,
+      "citation_checks": [
+        {
+          "index": 1,
+          "chunk_id": "S5-005",
+          "source_title": "StudyPilot 数据模型说明",
+          "section": "StudyPilot 数据模型说明 / 表结构 / study_plans 学习计划表",
+          "overlap": 0.278,
+          "reliable": true
+        },
+        {
+          "index": 2,
+          "chunk_id": "S3-009",
+          "source_title": "实验4 软件基础功能开发",
+          "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.1 迭代计划与两个版本",
+          "overlap": 0.156,
+          "reliable": true
+        },
+        {
+          "index": 3,
+          "chunk_id": "S2-008",
+          "source_title": "实验3 软件架构与界面设计",
+          "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.1 需求与技术选择",
+          "overlap": 0.146,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S5-005",
-          "score": 20.897,
+          "score": 20.913,
           "source_title": "StudyPilot 数据模型说明",
           "section": "StudyPilot 数据模型说明 / 表结构 / study_plans 学习计划表"
         },
         {
           "index": 2,
           "chunk_id": "S3-009",
-          "score": 19.515,
+          "score": 19.387,
           "source_title": "实验4 软件基础功能开发",
           "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.1 迭代计划与两个版本"
         },
         {
           "index": 3,
           "chunk_id": "S2-008",
-          "score": 14.808,
+          "score": 14.698,
           "source_title": "实验3 软件架构与界面设计",
           "section": "实验3：软件架构与界面设计 / 3. 操作记录 / 3.1 需求与技术选择"
         }
       ],
+      "context": "[1] 来源：《StudyPilot 数据模型说明》 章节：StudyPilot 数据模型说明 / 表结构 / study_plans 学习计划表\n- plan_id：主键，自增\n- course_id：外键，指向 courses.course_id\n- status：计划状态，draft（候选）或 confirmed（已确认）\n- generator：生成方式，rule_template 表示规则模板生成\n- created_at：创建时间\n- confirmed_at：用户确认时间\n\n[2] 来源：《实验4 软件基础功能开发》 章节：实验4：软件基础功能开发 / 3. 操作记录 / 3.1 迭代计划与两个版本\n2 | c390c38 | 计划与任务闭环可运行，10 个测试用例全部通过 | 通过\n图表：两个版本的Commit与Tag记录\n图表：初版到修订版的文件变化统计\n两个版本之间的主要变化：新增考试目标、知识点、学习计划和每日任务四组接口，前端从单页改为三个页面；计划生成改为“模型服务不可用就用规则模板”；补上空数据、重复、日期越界等校验；后端增加分层异常处理和日志。\n\n[3] 来源：《实验3 软件架构与界面设计》 章节：实验3：软件架构与界面设计 / 3. 操作记录 / 3.1 需求与技术选择\n本次围绕“创建课程—设置考试目标—填写掌握度—生成计划—完成任务—更新掌握度—调整计划”进行设计。需求对应情况如下。\n图表：需求与设计对应表\np{1.2cm}X X X}\n编号 | 需求 | 设计内容 | 验收点\nR1 | 创建课程和考试目标 | 课程、目标模块；首页入口 | 信息可保存和修改\nR2 | AI生成学习计划 | AI服务层；计划页 | 结果可编辑、确认\nR3 | 完成任务并更新掌握度 | 任务、知识点模块；进度页 | 状态可追踪\nR4 | AI失败可继续操作 | 校验与降级流程 | 保留输入，支持手工调整\n技术方案采用Vue负责界面、Python FastAPI负责业务接口、SQLite保存本地数据，并通过可替换的接口调用云端LLM。选择分层结构，便于分别测试界面、业务、AI和数据模块。模型服务不可用时，改用规则模板和手工编辑计划。",
       "prompt_tokens": 769,
-      "completion_tokens": 91,
-      "total_tokens": 860,
-      "latency_ms": 1318,
-      "cost_yuan": 0.002266,
+      "completion_tokens": 97,
+      "total_tokens": 866,
+      "latency_ms": 1374,
+      "cost_yuan": 0.002314,
       "skipped_reason": ""
     },
     {
@@ -244,7 +312,7 @@
       "type": "单片段可回答",
       "question": "本学期 MVP 明确不实现哪些功能？",
       "mode": "direct",
-      "answer": "结论：StudyPilot 本学期 MVP 不实现“多用户协作/社交、复杂推荐算法、跨平台同步、自动批改主观题”等功能。依据：MVP 聚焦核心闭环——课程录入、任务规划、学习进度追踪与基础提醒；上述功能开发成本高、依赖数据多，留待后续迭代。若你指的是具体需求文档中的排除项，请提供该文档或课程要求，我可据此核对。",
+      "answer": "结论：StudyPilot 本学期 MVP 不实现以下功能：多用户协作/社交、复杂推荐算法、移动端 App、第三方日历深度集成、知识图谱可视化、自动出题与批改。\n\n依据：MVP 聚焦“学习任务规划 + 知识追踪”核心闭环，优先保证单用户任务拆解、进度记录与掌握度追踪可用；上述功能属增强项，留待后续迭代。具体范围以课程需求文档和团队评审结论为准。",
       "points_expected": [
         "学习通",
         "题库"
@@ -255,12 +323,14 @@
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 134,
-      "completion_tokens": 92,
-      "total_tokens": 226,
-      "latency_ms": 1590,
-      "cost_yuan": 0.001004,
+      "completion_tokens": 100,
+      "total_tokens": 234,
+      "latency_ms": 1797,
+      "cost_yuan": 0.001068,
       "skipped_reason": ""
     },
     {
@@ -268,7 +338,7 @@
       "type": "单片段可回答",
       "question": "本学期 MVP 明确不实现哪些功能？",
       "mode": "rag",
-      "answer": "本学期 MVP 明确不实现：自动同步学习通、题库、学习问答、社交功能、复杂知识图谱、多端实时同步 [3]；此外也不做通用项目管理，以及社交、题库、课程播放和复杂多端同步 [2]。",
+      "answer": "本学期 MVP 明确不实现：自动同步学习通、题库、学习问答、社交功能、复杂知识图谱、多端实时同步；此外也不做通用项目管理、课程播放和复杂多端同步。[2][3] 依据是现有方案比较与取舍中说明本学期不实现社交、题库、课程播放和复杂多端同步，MVP范围表也把自动同步学习通、题库、学习问答、社交功能、复杂知识图谱、多端实时同步列为暂不实现。[2][3]",
       "points_expected": [
         "学习通",
         "题库"
@@ -285,34 +355,53 @@
         3
       ],
       "citations_reliable": 2,
+      "citation_checks": [
+        {
+          "index": 2,
+          "chunk_id": "S1-012",
+          "source_title": "实验2 个人软件选题与需求分析",
+          "section": "实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.3 现有方案比较与取舍",
+          "overlap": 0.264,
+          "reliable": true
+        },
+        {
+          "index": 3,
+          "chunk_id": "S1-015",
+          "source_title": "实验2 个人软件选题与需求分析",
+          "section": "实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.6 MVP范围与计划",
+          "overlap": 0.274,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S1-007",
-          "score": 26.305,
+          "score": 26.555,
           "source_title": "实验2 个人软件选题与需求分析",
           "section": "实验2：个人软件选题与需求分析 / 2. 实验内容 / 2.6 MVP(Minimum Viable Product)范围与第2—17周计划"
         },
         {
           "index": 2,
           "chunk_id": "S1-012",
-          "score": 15.173,
+          "score": 15.321,
           "source_title": "实验2 个人软件选题与需求分析",
           "section": "实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.3 现有方案比较与取舍"
         },
         {
           "index": 3,
           "chunk_id": "S1-015",
-          "score": 13.856,
+          "score": 13.989,
           "source_title": "实验2 个人软件选题与需求分析",
           "section": "实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.6 MVP范围与计划"
         }
       ],
+      "context": "[1] 来源：《实验2 个人软件选题与需求分析》 章节：实验2：个人软件选题与需求分析 / 2. 实验内容 / 2.6 MVP(Minimum Viable Product)范围与第2—17周计划\n- 形成一页个人项目方案，确定本学期只重点完成的一条核心用户流程，列出纳入MVP的功能和明确不在本学期实现的功能。\n- 列出每一阶段的可运行成果、验收条件和风险，确保一人能够在课程周期内完成。\n- 把计划落实到每周可检查的任务和阶段演示节点，并为可能延期的功能预留删减或替代方案。\n\n[2] 来源：《实验2 个人软件选题与需求分析》 章节：实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.3 现有方案比较与取舍\n调研来源为本人实际使用经历及Todoist、Notion公开功能说明。\n图表：现有方案简要比较\np{2.5cm}p{4.3cm}p{6.2cm}}\n方案 | 优点 | 不足\nTodoist | 待办和日期管理成熟 | 缺少课程知识点追踪\nNotion | 信息组织灵活 | 需要用户自行搭建流程\n纸质/表格 | 简单、成本低 | 任务拆分和调整依赖手工\nStudyPilot | 学习计划与知识状态形成闭环 | MVP功能较少，需要人工确认\n项目借鉴清晰的任务状态和结构化记录，但不做通用项目管理。本学期不实现社交、题库、课程播放和复杂多端同步。\n\n[3] 来源：《实验2 个人软件选题与需求分析》 章节：实验2：个人软件选题与需求分析 / 3. 操作记录 / 3.6 MVP范围与计划\n图表：MVP范围\np{6.5cm}p{6.5cm}}\n纳入MVP | 暂不实现\n任务录入、AI拆分、计划确认 | 自动同步学习通\n完成反馈、知识状态列表 | 题库、学习问答、社交功能\nAI失败后的手工降级 | 复杂知识图谱、多端实时同步\n图表：第2—17周计划\np{2.2cm}p{8.0cm}p{3.0cm}}\n周次 | 主要任务 | 阶段成果\n第2—3周 | 选题、调研、需求说明 | 需求说明V1\n第4—6周 | 原型、数据库、任务管理 | 基础功能可运行\n第7—10周 | AI拆分、校验、计划确认 | 核心流程演示\n第11—13周 | 完成反馈、知识状态联动 | 学习闭环可运行\n第14—15周 | 测试、异常处理与优化 | 测试记录\n第16—17周 | 部署、文档、最终验收 | 完整项目材料",
       "prompt_tokens": 853,
-      "completion_tokens": 74,
-      "total_tokens": 927,
-      "latency_ms": 1061,
-      "cost_yuan": 0.002298,
+      "completion_tokens": 127,
+      "total_tokens": 980,
+      "latency_ms": 1564,
+      "cost_yuan": 0.002722,
       "skipped_reason": ""
     },
     {
@@ -320,7 +409,7 @@
       "type": "多片段综合",
       "question": "实验4的测试覆盖了哪几类异常？请举两个例子。",
       "mode": "direct",
-      "answer": "无法处理：该问题缺少 StudyPilot 项目上下文，我无法确认“实验4”具体指哪份实验要求或代码。请补充实验文档、被测模块或异常清单，我再帮你归纳异常类别并举例。",
+      "answer": "无法处理：该问题涉及具体实验4的测试内容，但当前对话未提供实验4的文档或测试用例信息，我不能编造异常类别和例子。请补充实验4的测试报告、用例清单或相关代码片段，我再据此回答。",
       "points_expected": [
         "无效输入",
         "不存在"
@@ -331,12 +420,14 @@
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 141,
-      "completion_tokens": 48,
-      "total_tokens": 189,
-      "latency_ms": 1251,
-      "cost_yuan": 0.000666,
+      "completion_tokens": 54,
+      "total_tokens": 195,
+      "latency_ms": 1782,
+      "cost_yuan": 0.000714,
       "skipped_reason": ""
     },
     {
@@ -344,7 +435,7 @@
       "type": "多片段综合",
       "question": "实验4的测试覆盖了哪几类异常？请举两个例子。",
       "mode": "rag",
-      "answer": "实验4的测试覆盖了无效输入、数据不存在、依赖不可用、数据冲突等异常 [2]。例如：任务不存在时接口返回404，提示“任务不存在或已被删除” [3]；数据库文件损坏时捕获sqlite3错误，返回500并记录异常，提示“数据库暂时不可用，请稍后重试” [3]。",
+      "answer": "实验4的测试覆盖了无效输入、数据不存在、依赖不可用、数据冲突等异常，要求避免程序崩溃或无反馈[2]。例如：任务不存在时接口返回404并提示“任务不存在或已被删除”[3]；数据库文件损坏时捕获sqlite3错误，返回500并提示“数据库暂时不可用，请稍后重试”[3]。",
       "points_expected": [
         "无效输入",
         "不存在"
@@ -361,34 +452,53 @@
         3
       ],
       "citations_reliable": 2,
+      "citation_checks": [
+        {
+          "index": 2,
+          "chunk_id": "S3-006",
+          "source_title": "实验4 软件基础功能开发",
+          "section": "实验4：软件基础功能开发 / 2. 实验内容 / 2.5 异常处理、日志与基础测试",
+          "overlap": 0.24,
+          "reliable": true
+        },
+        {
+          "index": 3,
+          "chunk_id": "S3-021",
+          "source_title": "实验4 软件基础功能开发",
+          "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.5 异常处理、日志与基础测试",
+          "overlap": 0.284,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S3-024",
-          "score": 17.7,
+          "score": 17.766,
           "source_title": "实验4 软件基础功能开发",
           "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.5 异常处理、日志与基础测试"
         },
         {
           "index": 2,
           "chunk_id": "S3-006",
-          "score": 15.237,
+          "score": 15.279,
           "source_title": "实验4 软件基础功能开发",
           "section": "实验4：软件基础功能开发 / 2. 实验内容 / 2.5 异常处理、日志与基础测试"
         },
         {
           "index": 3,
           "chunk_id": "S3-021",
-          "score": 14.188,
+          "score": 14.129,
           "source_title": "实验4 软件基础功能开发",
           "section": "实验4：软件基础功能开发 / 3. 操作记录 / 3.5 异常处理、日志与基础测试"
         }
       ],
+      "context": "[1] 来源：《实验4 软件基础功能开发》 章节：实验4：软件基础功能开发 / 3. 操作记录 / 3.5 异常处理、日志与基础测试\n库不可用 | 返回 500 与统一提示 | 失败：直接抛出 DatabaseError | 数据访问层捕获 sqlite3 错误，转成业务异常并写日志 | 通过\n图表：初版与AI初稿的测试结果：2个用例失败\n图表：修订版复测：10个用例全部通过\n日志写在 backend/logs/app.log，同时打印到控制台。记录内容包括：启动时的数据库位置、样例数据写入、每次业务操作的结果（如创建课程、生成计划、确认计划、完成任务）、业务异常的请求方法与错误码，以及未处理异常的完整堆栈。下面是完成任务不存在时接口返回 404 的日志，可以看到错误码 TASK_NOT_FOUND 和前面的数据库异常堆栈。\n图表：运行日志：业务异常与数据库异常堆栈\n图表：数据库不可用时页面给出统一提示\n\n[2] 来源：《实验4 软件基础功能开发》 章节：实验4：软件基础功能开发 / 2. 实验内容 / 2.5 异常处理、日志与基础测试\n- 选择与个人软件实际有关的无效输入、数据不存在、依赖不可用或数据冲突等异常进行处理，避免程序直接崩溃或没有反馈。\n- 结合实验2和实验3的设计，整理并执行不少于6个测试用例，记录预期结果、初版结果、修复内容和修订版复测结果。\n- 记录能够帮助定位问题的必要日志，说明日志位置和主要内容。\n\n[3] 来源：《实验4 软件基础功能开发》 章节：实验4：软件基础功能开发 / 3. 操作记录 / 3.5 异常处理、日志与基础测试\n| 返回 404 | “任务不存在或已被删除”\n数据库文件损坏 | 捕获 sqlite3 错误，返回 500 并记录异常 | “数据库暂时不可用，请稍后重试”\n测试用 pytest 编写，共 10 个用例，每个用例使用独立的临时数据库。初版只有课程接口，所以大部分用例报错；修订版补齐接口和校验后全部通过。\n图表：测试用例与两次执行结果\np{0.6cm}p{2.9cm}p{2.6cm}p{2.4cm}X p{1.3cm}}\n编号 | 用例 | 预期结果 | 初版(v0.1)结果 | 修复内容 | 复测结果\nT1 | 创建课程 | 返回 201 并能查到 | 失败：返回 409 | 启动不再自动写样例课程，改用 seed 脚本；",
       "prompt_tokens": 846,
-      "completion_tokens": 97,
-      "total_tokens": 943,
-      "latency_ms": 984,
-      "cost_yuan": 0.002468,
+      "completion_tokens": 99,
+      "total_tokens": 945,
+      "latency_ms": 1371,
+      "cost_yuan": 0.002484,
       "skipped_reason": ""
     },
     {
@@ -396,7 +506,7 @@
       "type": "多片段综合",
       "question": "系统数据库里保存了哪些数据？它们之间是什么关系？",
       "mode": "direct",
-      "answer": "StudyPilot 数据库主要保存：用户、课程、任务、计划、知识点、学习记录/掌握度等数据。关系通常是：用户选修多门课程；课程包含多个知识点和任务；任务可关联知识点并归入学习计划；学习记录关联用户与知识点，用于更新掌握度。具体字段以项目数据字典或 ER 图为准。",
+      "answer": "结论：StudyPilot 数据库主要保存用户、课程、学习任务、计划、知识点和掌握度记录等数据；它们以用户为中心关联，课程关联任务与知识，任务关联计划，知识追踪记录关联用户与知识点。\n\n依据：学习规划需要任务与计划，知识追踪需要知识点及掌握度历史，因此通常形成“用户—课程—任务/知识—记录”的关系结构。具体字段与基数需以项目数据模型文档为准。",
       "points_expected": [
         "课程",
         "知识点",
@@ -412,12 +522,14 @@
       "expect_insufficient": false,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 138,
-      "completion_tokens": 76,
-      "total_tokens": 214,
-      "latency_ms": 1430,
-      "cost_yuan": 0.000884,
+      "completion_tokens": 97,
+      "total_tokens": 235,
+      "latency_ms": 1733,
+      "cost_yuan": 0.001052,
       "skipped_reason": ""
     },
     {
@@ -425,7 +537,7 @@
       "type": "多片段综合",
       "question": "系统数据库里保存了哪些数据？它们之间是什么关系？",
       "mode": "rag",
-      "answer": "系统保存用户、课程、考试目标、知识点、学习计划、每日任务等数据。关系为：用户1—N课程；课程1—1考试目标；课程1—N知识点；课程1—N学习计划（最新为当前计划）；计划1—N每日任务；知识点1—N每日任务，任务的point_id可为空[1]。数据库文件为backend/data/studypilot.db[2]。",
+      "answer": "系统保存用户、课程、考试目标、知识点、学习计划、每日任务等数据。关系为：一个用户拥有多门课程；一门课程对应一条考试目标、多个知识点和多份学习计划（最新一份为当前计划）；一份计划包含多个每日任务；一个知识点可关联多个任务，且任务的 point_id 可为空。[1] 资料未列出各表的全部字段，因此无法说明具体保存哪些字段。[1][3]",
       "points_expected": [
         "课程",
         "知识点",
@@ -441,37 +553,56 @@
       "expect_insufficient": false,
       "citations": [
         1,
-        2
+        3
       ],
-      "citations_reliable": 2,
+      "citations_reliable": 1,
+      "citation_checks": [
+        {
+          "index": 1,
+          "chunk_id": "S5-007",
+          "source_title": "StudyPilot 数据模型说明",
+          "section": "StudyPilot 数据模型说明 / 表之间的关联",
+          "overlap": 0.818,
+          "reliable": true
+        },
+        {
+          "index": 3,
+          "chunk_id": "S5-001",
+          "source_title": "StudyPilot 数据模型说明",
+          "section": "StudyPilot 数据模型说明",
+          "overlap": 0.098,
+          "reliable": false
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S5-007",
-          "score": 20.449,
+          "score": 20.669,
           "source_title": "StudyPilot 数据模型说明",
           "section": "StudyPilot 数据模型说明 / 表之间的关联"
         },
         {
           "index": 2,
           "chunk_id": "S5-008",
-          "score": 16.044,
+          "score": 16.424,
           "source_title": "StudyPilot 数据模型说明",
           "section": "StudyPilot 数据模型说明 / 数据维护说明"
         },
         {
           "index": 3,
           "chunk_id": "S5-001",
-          "score": 15.984,
+          "score": 16.251,
           "source_title": "StudyPilot 数据模型说明",
           "section": "StudyPilot 数据模型说明"
         }
       ],
+      "context": "[1] 来源：《StudyPilot 数据模型说明》 章节：StudyPilot 数据模型说明 / 表之间的关联\n- 一个用户拥有多门课程：users 1—N courses。\n- 一门课程有一条考试目标：courses 1—1 exam_goals。\n- 一门课程有多个知识点：courses 1—N knowledge_points。\n- 一门课程有多份学习计划，最新一份为当前计划：courses 1—N study_plans。\n- 一份计划包含多个每日任务：study_plans 1—N daily_tasks。\n- 一个知识点可以关联多个任务：knowledge_points 1—N daily_tasks（task.point_id 可为空）。\n\n[2] 来源：《StudyPilot 数据模型说明》 章节：StudyPilot 数据模型说明 / 数据维护说明\n- 建表语句在服务启动时执行，使用 CREATE TABLE IF NOT EXISTS，不会删除已有数据。\n- 样例数据放在 backend/seed_data.json，用 python3 -m app.seed 写入，--clear 清空业务数据，--reset 清空后重新写入。\n- 数据库文件为 backend/data/studypilot.db，删除该文件后重新启动服务即可重建空库。\n\n[3] 来源：《StudyPilot 数据模型说明》 章节：StudyPilot 数据模型说明\n来源：本人根据 backend/app/repository/db.py 的建表语句整理，2026-10-16 更新。\n用途：补充实验3 ER 图的文字说明，方便资料问答检索到表结构与关联关系。",
       "prompt_tokens": 595,
-      "completion_tokens": 109,
-      "total_tokens": 704,
-      "latency_ms": 1280,
-      "cost_yuan": 0.002062,
+      "completion_tokens": 114,
+      "total_tokens": 709,
+      "latency_ms": 1474,
+      "cost_yuan": 0.002102,
       "skipped_reason": ""
     },
     {
@@ -479,7 +610,7 @@
       "type": "资料无答案",
       "question": "这套系统用的是哪种知识追踪算法（如贝叶斯知识追踪）？",
       "mode": "direct",
-      "answer": "无法确认具体算法。StudyPilot 的知识追踪算法需以项目文档或代码为准；仅凭系统名称不能断定是贝叶斯知识追踪（BKT）还是其他模型（如DKT、IRT）。建议查看需求规格说明书、模型设计章节或后端代码中的算法实现。",
+      "answer": "无法确认具体算法。StudyPilot 的知识追踪算法选型需以项目设计文档或代码为准；仅凭系统名称不能断定是贝叶斯知识追踪（BKT）还是其他模型（如DKT、IRT等）。建议查看需求/设计文档中的“知识追踪模块”说明或相关源码配置。",
       "points_expected": [],
       "points_hit": [],
       "points_score": "无要求",
@@ -487,12 +618,14 @@
       "expect_insufficient": true,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 141,
-      "completion_tokens": 62,
-      "total_tokens": 203,
-      "latency_ms": 1451,
-      "cost_yuan": 0.000778,
+      "completion_tokens": 68,
+      "total_tokens": 209,
+      "latency_ms": 1443,
+      "cost_yuan": 0.000826,
       "skipped_reason": ""
     },
     {
@@ -500,7 +633,7 @@
       "type": "资料无答案",
       "question": "这套系统用的是哪种知识追踪算法（如贝叶斯知识追踪）？",
       "mode": "rag",
-      "answer": "资料不足，无法确定具体知识追踪算法。依据：资料[1]仅说明 StudyPilot 是“基于大语言模型的个性化学习任务规划与知识追踪系统”，未提及贝叶斯知识追踪或其他算法名称。",
+      "answer": "资料不足，无法确定具体知识追踪算法。现有资料仅说明 StudyPilot 是“基于大语言模型的个性化学习任务规划与知识追踪系统”[1]，未提及是否采用贝叶斯知识追踪或其他算法，也未给出算法设计细节。",
       "points_expected": [],
       "points_hit": [],
       "points_score": "无要求",
@@ -510,20 +643,31 @@
         1
       ],
       "citations_reliable": 1,
+      "citation_checks": [
+        {
+          "index": 1,
+          "chunk_id": "S4-001",
+          "source_title": "StudyPilot 项目说明",
+          "section": "StudyPilot 课程实验报告",
+          "overlap": 0.774,
+          "reliable": true
+        }
+      ],
       "retrieved": [
         {
           "index": 1,
           "chunk_id": "S4-001",
-          "score": 12.513,
+          "score": 12.586,
           "source_title": "StudyPilot 项目说明",
           "section": "StudyPilot 课程实验报告"
         }
       ],
+      "context": "[1] 来源：《StudyPilot 项目说明》 章节：StudyPilot 课程实验报告\n项目：StudyPilot——基于大语言模型的个性化学习任务规划与知识追踪系统\n学生信息：一班，24111302025，罗心月",
       "prompt_tokens": 312,
-      "completion_tokens": 66,
-      "total_tokens": 378,
-      "latency_ms": 1074,
-      "cost_yuan": 0.001152,
+      "completion_tokens": 71,
+      "total_tokens": 383,
+      "latency_ms": 1242,
+      "cost_yuan": 0.001192,
       "skipped_reason": ""
     },
     {
@@ -531,7 +675,7 @@
       "type": "资料无答案",
       "question": "项目开发一共花了多少钱？服务器费用是多少？",
       "mode": "direct",
-      "answer": "无法处理：该问题涉及项目经费与服务器费用，超出 StudyPilot 学习助手范围。我仅能回答 StudyPilot 项目功能、使用及软件工程课程学习相关问题。",
+      "answer": "无法处理：该问题涉及项目经费与服务器费用，超出 StudyPilot 学习助手可回答的范围（仅限项目功能、使用与软件工程课程学习问题）。建议向项目负责人或财务/运维渠道查询。",
       "points_expected": [],
       "points_hit": [],
       "points_score": "无要求",
@@ -539,12 +683,14 @@
       "expect_insufficient": true,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 135,
-      "completion_tokens": 40,
-      "total_tokens": 175,
-      "latency_ms": 1071,
-      "cost_yuan": 0.00059,
+      "completion_tokens": 47,
+      "total_tokens": 182,
+      "latency_ms": 1215,
+      "cost_yuan": 0.000646,
       "skipped_reason": ""
     },
     {
@@ -560,7 +706,9 @@
       "expect_insufficient": true,
       "citations": [],
       "citations_reliable": 0,
+      "citation_checks": [],
       "retrieved": [],
+      "context": "",
       "prompt_tokens": 0,
       "completion_tokens": 0,
       "total_tokens": 0,
