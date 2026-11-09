@@ -2582,3 +2582,2133 @@ Traceback (most recent call last):
 sqlite3.DatabaseError: file is not a database
 2026-10-26 10:37:43 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
 2026-10-26 10:37:43 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 09:52:04 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 09:52:04 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 09:52:04 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 09:52:04 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 09:52:04 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 09:52:04 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 09:52:04 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 09:52:04 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 09:52:04 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-0/test_t1_create_course0/test.db
+2026-11-09 09:52:04 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 09:52:04 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 09:52:04 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 09:52:04 INFO [studypilot] 调用模型：model=deepseek-chat，messages=1 条，输入约 9 字符
+2026-11-09 09:52:05 INFO [studypilot] 模型返回：耗时 1226 ms，tokens=12
+2026-11-09 09:59:17 INFO [studypilot] Agent 运行结束：run_id=20261109-095917-c6ba63，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 09:59:17 INFO [studypilot] Agent 运行结束：run_id=20261109-095917-b5a0d3，status=step_limit，steps=3，耗时 4 ms，tokens=45
+2026-11-09 09:59:19 INFO [studypilot] Agent 运行结束：run_id=20261109-095917-68892d，status=time_limit，steps=1，耗时 1504 ms，tokens=15
+2026-11-09 09:59:19 INFO [studypilot] Agent 运行结束：run_id=20261109-095919-b26fcc，status=success，steps=4，耗时 6 ms，tokens=60
+2026-11-09 09:59:19 INFO [studypilot] Agent 运行结束：run_id=20261109-095919-652c21，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 09:59:19 INFO [studypilot] Agent 运行结束：run_id=20261109-095919-c6aae0，status=success，steps=5，耗时 7 ms，tokens=75
+2026-11-09 09:59:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 09:59:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 09:59:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 09:59:20 INFO [studypilot] Agent 运行结束：run_id=20261109-095920-042b57，status=agent_failed，steps=2，耗时 4 ms，tokens=30
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-648ad9，status=success，steps=4，耗时 6 ms，tokens=60
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-aa23be，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-199845，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-8773cb，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-a879ba，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:06 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:06 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-f7f882，status=agent_failed，steps=2，耗时 6 ms，tokens=30
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-0270a3，status=verify_failed，steps=2，耗时 1 ms，tokens=30
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-f9b390，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-ec4a9f，status=llm_error，steps=4，耗时 3 ms，tokens=45
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-cdb48b，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-b30e1e，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] Agent 运行结束：run_id=20261109-100006-ad6e3e，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:06 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:06 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:06 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:06 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:06 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:06 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:06 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:00:06 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:06 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:06 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-1/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:06 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:06 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:00:06 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-5882af，status=success，steps=4，耗时 6 ms，tokens=60
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-a98346，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-601276，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-f80c42，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-336653，status=time_limit，steps=1，耗时 606 ms，tokens=15
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:15 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:15 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-268a08，status=agent_failed，steps=2，耗时 5 ms，tokens=30
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-bd0187，status=verify_failed，steps=2，耗时 1 ms，tokens=30
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-2c1522，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-4be58c，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-f4f779，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-e82ebf，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:15 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-2/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:15 INFO [studypilot] Agent 运行结束：run_id=20261109-100015-866196，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:00:15 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] Agent 运行结束：run_id=20261109-100019-4af187，status=success，steps=4，耗时 7 ms，tokens=60
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] Agent 运行结束：run_id=20261109-100019-ce2643，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] Agent 运行结束：run_id=20261109-100019-c5e9cd，status=success，steps=5，耗时 5 ms，tokens=75
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:19 INFO [studypilot] Agent 运行结束：run_id=20261109-100019-32f026，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:19 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:19 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100019-e1be80，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-f2bc9d，status=agent_failed，steps=2，耗时 5 ms，tokens=30
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-49a59c，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-e56aab，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-1dbc20，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-7da009，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-94e8c7，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] Agent 运行结束：run_id=20261109-100020-0d5540，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:20 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:20 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:20 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:20 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:00:20 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:00:20 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:00:20 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:00:20 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:00:20 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-3/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:00:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:00:20 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:00:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:00:27 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 9, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:00:27 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:00:28 INFO [studypilot] 模型返回（工具调用）：耗时 591 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:28 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:00:29 INFO [studypilot] 模型返回（工具调用）：耗时 1215 ms，tokens=1567，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:29 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:00:30 INFO [studypilot] 模型返回（工具调用）：耗时 1192 ms，tokens=2028，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:30 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:00:32 INFO [studypilot] 模型返回（工具调用）：耗时 1511 ms，tokens=2219，工具请求 0 个，finish=stop
+2026-11-09 10:00:32 INFO [studypilot] Agent 运行结束：run_id=20261109-100027-fd4ee7，status=success，steps=4，耗时 4537 ms，tokens=7197
+2026-11-09 10:00:52 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 10, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:00:52 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:00:53 INFO [studypilot] 模型返回（工具调用）：耗时 1194 ms，tokens=1387，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:53 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:00:54 INFO [studypilot] 模型返回（工具调用）：耗时 1211 ms，tokens=1561，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:54 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:00:55 INFO [studypilot] 模型返回（工具调用）：耗时 1182 ms，tokens=2024，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:55 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:00:57 INFO [studypilot] 模型返回（工具调用）：耗时 1360 ms，tokens=2213，工具请求 0 个，finish=stop
+2026-11-09 10:00:57 INFO [studypilot] Agent 运行结束：run_id=20261109-100052-563ac4，status=success，steps=4，耗时 4993 ms，tokens=7185
+2026-11-09 10:00:57 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 11, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:00:57 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:00:58 INFO [studypilot] 模型返回（工具调用）：耗时 1198 ms，tokens=1387，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:58 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:00:59 INFO [studypilot] 模型返回（工具调用）：耗时 1117 ms，tokens=1561，工具请求 1 个，finish=tool_calls
+2026-11-09 10:00:59 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:01:00 INFO [studypilot] 模型返回（工具调用）：耗时 907 ms，tokens=2024，工具请求 1 个，finish=tool_calls
+2026-11-09 10:01:00 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:01:02 INFO [studypilot] 模型返回（工具调用）：耗时 1389 ms，tokens=2187，工具请求 0 个，finish=stop
+2026-11-09 10:01:02 INFO [studypilot] Agent 运行结束：run_id=20261109-100057-3b0972，status=success，steps=4，耗时 4646 ms，tokens=7159
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-554dde，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-1c7d2f，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-627b70，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-9f7281，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-6493a9，status=time_limit，steps=1，耗时 608 ms，tokens=15
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:01:39 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:01:39 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-60dc0c，status=agent_failed，steps=2，耗时 7 ms，tokens=30
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-5e9be4，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-f08096，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-c23468，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-a4716f，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-57d9f4，status=verify_failed，steps=3，耗时 3 ms，tokens=45
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] Agent 运行结束：run_id=20261109-100139-9fb32a，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:01:39 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:01:39 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:01:39 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:01:39 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:01:39 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:01:39 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:01:39 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:01:39 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:01:39 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:01:39 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-4/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:01:39 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:01:39 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:01:39 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:02:57 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 12, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:05:05 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 13, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:10:29 INFO [studypilot] Agent 运行结束：run_id=20261109-101029-2a4132，status=success，steps=5，耗时 7 ms，tokens=75
+2026-11-09 10:14:52 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 15, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:14:53 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:14:54 INFO [studypilot] 模型返回（工具调用）：耗时 936 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:14:54 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:14:55 INFO [studypilot] 模型返回（工具调用）：耗时 1150 ms，tokens=1557，工具请求 1 个，finish=tool_calls
+2026-11-09 10:14:55 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:14:56 INFO [studypilot] 模型返回（工具调用）：耗时 1414 ms，tokens=2015，工具请求 1 个，finish=tool_calls
+2026-11-09 10:14:56 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:14:58 INFO [studypilot] 模型返回（工具调用）：耗时 1422 ms，tokens=2204，工具请求 0 个，finish=stop
+2026-11-09 10:14:58 INFO [studypilot] Agent 运行结束：run_id=20261109-101453-33f437，status=success，steps=4，耗时 4948 ms，tokens=7159
+2026-11-09 10:17:19 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 16, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:19:21 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 17, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:21:23 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 18, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:21:23 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:21:25 INFO [studypilot] 模型返回（工具调用）：耗时 1275 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:21:25 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:21:26 INFO [studypilot] 模型返回（工具调用）：耗时 1197 ms，tokens=1557，工具请求 1 个，finish=tool_calls
+2026-11-09 10:21:26 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:21:27 INFO [studypilot] 模型返回（工具调用）：耗时 1433 ms，tokens=2015，工具请求 1 个，finish=tool_calls
+2026-11-09 10:21:27 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:21:29 INFO [studypilot] 模型返回（工具调用）：耗时 1679 ms，tokens=2204，工具请求 0 个，finish=stop
+2026-11-09 10:21:29 INFO [studypilot] Agent 运行结束：run_id=20261109-102123-1d9954，status=success，steps=4，耗时 5602 ms，tokens=7159
+2026-11-09 10:23:31 INFO [studypilot] Agent 运行结束：run_id=20261109-102331-5af23b，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:23:31 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:23:31 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:23:31 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:23:31 INFO [studypilot] Agent 运行结束：run_id=20261109-102331-d2cea6，status=agent_failed，steps=2，耗时 4 ms，tokens=30
+2026-11-09 10:23:32 INFO [studypilot] Agent 运行结束：run_id=20261109-102332-ab8a57，status=step_limit，steps=3，耗时 4 ms，tokens=45
+2026-11-09 10:23:33 INFO [studypilot] Agent 运行结束：run_id=20261109-102332-6a36fa，status=time_limit，steps=1，耗时 1508 ms，tokens=15
+2026-11-09 10:23:33 INFO [studypilot] Agent 运行结束：run_id=20261109-102333-80d221，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:23:34 INFO [studypilot] Agent 运行结束：run_id=20261109-102334-ed470a，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:23:34 INFO [studypilot] Agent 运行结束：run_id=20261109-102334-ceb185，status=success，steps=5，耗时 7 ms，tokens=75
+2026-11-09 10:23:54 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 26, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:23:54 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:23:56 INFO [studypilot] 模型返回（工具调用）：耗时 1218 ms，tokens=1387，工具请求 1 个，finish=tool_calls
+2026-11-09 10:23:56 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:23:57 INFO [studypilot] 模型返回（工具调用）：耗时 968 ms，tokens=1561，工具请求 1 个，finish=tool_calls
+2026-11-09 10:23:57 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:23:58 INFO [studypilot] 模型返回（工具调用）：耗时 983 ms，tokens=2024，工具请求 1 个，finish=tool_calls
+2026-11-09 10:23:58 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:23:59 INFO [studypilot] 模型返回（工具调用）：耗时 1186 ms，tokens=2187，工具请求 0 个，finish=stop
+2026-11-09 10:23:59 INFO [studypilot] Agent 运行结束：run_id=20261109-102354-7bc093，status=success，steps=4，耗时 4384 ms，tokens=7159
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-e3544a，status=success，steps=4，耗时 7 ms，tokens=60
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-db1192，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-f33607，status=success，steps=5，耗时 5 ms，tokens=75
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-00adf2，status=step_limit，steps=3，耗时 3 ms，tokens=45
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-a8cae8，status=time_limit，steps=1，耗时 606 ms，tokens=15
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:34:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:34:20 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-a12cae，status=agent_failed，steps=2，耗时 17 ms，tokens=30
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-ee176c，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-3e7f6c，status=success，steps=4，耗时 10 ms，tokens=60
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-b6296d，status=success，steps=4，耗时 8 ms，tokens=60
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-4bcf43，status=success，steps=4，耗时 10 ms，tokens=60
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-3a5aee，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] Agent 运行结束：run_id=20261109-103420-732998，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:20 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:34:20 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:20 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:20 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:20 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:20 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:34:21 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:21 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:21 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:21 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:34:21 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:34:21 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:21 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:21 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:21 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:34:21 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:34:21 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:34:21 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:34:21 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:21 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:21 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:34:21 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:21 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-5/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:34:21 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:34:21 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:34:21 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:34:23 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 27, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:34:24 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:34:24 INFO [studypilot] 模型返回（工具调用）：耗时 657 ms，tokens=1387，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:24 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:34:25 INFO [studypilot] 模型返回（工具调用）：耗时 882 ms，tokens=1561，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:25 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:34:26 INFO [studypilot] 模型返回（工具调用）：耗时 1005 ms，tokens=2024，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:26 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:34:27 INFO [studypilot] 模型返回（工具调用）：耗时 1069 ms，tokens=2213，工具请求 0 个，finish=stop
+2026-11-09 10:34:27 INFO [studypilot] Agent 运行结束：run_id=20261109-103424-6c2644，status=success，steps=4，耗时 3647 ms，tokens=7185
+2026-11-09 10:34:55 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 28, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:34:55 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:34:56 INFO [studypilot] 模型返回（工具调用）：耗时 972 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:56 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:34:57 INFO [studypilot] 模型返回（工具调用）：耗时 1108 ms，tokens=1565，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:57 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:34:58 INFO [studypilot] 模型返回（工具调用）：耗时 1106 ms，tokens=2032，工具请求 1 个，finish=tool_calls
+2026-11-09 10:34:58 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:35:00 INFO [studypilot] 模型返回（工具调用）：耗时 1175 ms，tokens=2224，工具请求 0 个，finish=stop
+2026-11-09 10:35:00 INFO [studypilot] Agent 运行结束：run_id=20261109-103455-d4f85e，status=success，steps=4，耗时 4401 ms，tokens=7204
+2026-11-09 10:35:08 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 29, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:35:08 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:35:09 INFO [studypilot] 模型返回（工具调用）：耗时 775 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:09 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:35:11 INFO [studypilot] 模型返回（工具调用）：耗时 1258 ms，tokens=1557，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:11 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:35:12 INFO [studypilot] 模型返回（工具调用）：耗时 1407 ms，tokens=2015，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:12 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:35:14 INFO [studypilot] 模型返回（工具调用）：耗时 1754 ms，tokens=2212，工具请求 0 个，finish=stop
+2026-11-09 10:35:14 INFO [studypilot] Agent 运行结束：run_id=20261109-103508-a453ae，status=success，steps=4，耗时 5216 ms，tokens=7167
+2026-11-09 10:35:18 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 30, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:35:18 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:35:19 INFO [studypilot] 模型返回（工具调用）：耗时 1188 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:19 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:35:20 INFO [studypilot] 模型返回（工具调用）：耗时 954 ms，tokens=1567，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:20 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:35:21 INFO [studypilot] 模型返回（工具调用）：耗时 1247 ms，tokens=2030，工具请求 1 个，finish=tool_calls
+2026-11-09 10:35:21 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:35:22 INFO [studypilot] 模型返回（工具调用）：耗时 1125 ms，tokens=2198，工具请求 0 个，finish=stop
+2026-11-09 10:35:22 INFO [studypilot] Agent 运行结束：run_id=20261109-103518-2ea29f，status=success，steps=4，耗时 4535 ms，tokens=7178
+2026-11-09 10:35:43 INFO [studypilot] Agent 运行结束：run_id=20261109-103543-5b70da，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:35:43 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:35:43 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:35:43 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:35:43 INFO [studypilot] Agent 运行结束：run_id=20261109-103543-bb3c98，status=agent_failed，steps=2，耗时 4 ms，tokens=30
+2026-11-09 10:35:43 INFO [studypilot] Agent 运行结束：run_id=20261109-103543-f74d7f，status=step_limit，steps=3，耗时 3 ms，tokens=45
+2026-11-09 10:35:45 INFO [studypilot] Agent 运行结束：run_id=20261109-103544-592111，status=time_limit，steps=1，耗时 1506 ms，tokens=15
+2026-11-09 10:35:45 INFO [studypilot] Agent 运行结束：run_id=20261109-103545-bdd830，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:35:45 INFO [studypilot] Agent 运行结束：run_id=20261109-103545-e781d4，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:35:46 INFO [studypilot] Agent 运行结束：run_id=20261109-103546-df93aa，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-f28f3c，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-af1b0f，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-e0691e，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-9e81f3，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-d79587，status=time_limit，steps=1，耗时 609 ms，tokens=15
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:36:41 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:36:41 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-21aee7，status=agent_failed，steps=2，耗时 5 ms，tokens=30
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-958863，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-f8a8e9，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-28a04f，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-121ab4，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-251575，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] Agent 运行结束：run_id=20261109-103641-6c2a84，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:36:41 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:36:41 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:36:41 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:36:41 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:36:41 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:36:41 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:36:41 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:36:41 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:36:41 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-6/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:36:41 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:36:41 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:36:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:36:46 INFO [studypilot] Agent 运行结束：run_id=20261109-103646-ca52e2，status=step_limit，steps=3，耗时 3 ms，tokens=45
+2026-11-09 10:39:03 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:39:05 INFO [studypilot] Agent 运行结束：run_id=20261109-103903-e7eeac，status=time_limit，steps=1，耗时 1509 ms，tokens=15
+2026-11-09 10:39:05 INFO [studypilot] Agent 运行结束：run_id=20261109-103905-d9940b，status=agent_failed，steps=3，耗时 10 ms，tokens=45
+2026-11-09 10:39:05 INFO [studypilot] Agent 运行结束：run_id=20261109-103905-f4db37，status=llm_error，steps=4，耗时 6 ms，tokens=45
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] Agent 运行结束：run_id=20261109-104541-a871d7，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] Agent 运行结束：run_id=20261109-104541-c1111a，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] Agent 运行结束：run_id=20261109-104541-bd0da7，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:41 INFO [studypilot] Agent 运行结束：run_id=20261109-104541-7e2e00，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:41 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:41 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104541-50e163，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:45:42 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:45:42 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-197028，status=agent_failed，steps=2，耗时 6 ms，tokens=30
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-61b2cc，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-bddac5，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-a70a79，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-57bf2b，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-4f64a0，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-3f8631，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-9bba28，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] Agent 运行结束：run_id=20261109-104542-705939，status=success，steps=3，耗时 4 ms，tokens=45
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:45:42 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:45:42 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:45:42 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:45:42 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:45:42 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:45:42 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:45:42 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:45:42 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:45:42 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:42 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-7/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:45:42 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:45:42 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:45:42 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:45:57 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 39, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:45:57 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:45:59 INFO [studypilot] 模型返回（工具调用）：耗时 1198 ms，tokens=1383，工具请求 1 个，finish=tool_calls
+2026-11-09 10:45:59 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:46:00 INFO [studypilot] 模型返回（工具调用）：耗时 1172 ms，tokens=1557，工具请求 1 个，finish=tool_calls
+2026-11-09 10:46:00 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:46:01 INFO [studypilot] 模型返回（工具调用）：耗时 1531 ms，tokens=2020，工具请求 1 个，finish=tool_calls
+2026-11-09 10:46:01 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:46:03 INFO [studypilot] 模型返回（工具调用）：耗时 1829 ms，tokens=2211，工具请求 0 个，finish=stop
+2026-11-09 10:46:03 INFO [studypilot] Agent 运行结束：run_id=20261109-104557-af8bf4，status=success，steps=4，耗时 5772 ms，tokens=7171
+2026-11-09 10:46:03 INFO [studypilot] 样例数据已写入：{'course': '软件工程', 'course_id': 1, 'plan_id': 40, 'tasks': 12, 'done': 5, 'pending': 7, 'completion_rate': 41.7, 'points': 4, 'today': '2026-11-09'}
+2026-11-09 10:46:03 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=2 条，tools=4 个
+2026-11-09 10:46:04 INFO [studypilot] 模型返回（工具调用）：耗时 881 ms，tokens=1387，工具请求 1 个，finish=tool_calls
+2026-11-09 10:46:04 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=4 条，tools=4 个
+2026-11-09 10:46:05 INFO [studypilot] 模型返回（工具调用）：耗时 1152 ms，tokens=1561，工具请求 1 个，finish=tool_calls
+2026-11-09 10:46:05 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=6 条，tools=4 个
+2026-11-09 10:46:07 INFO [studypilot] 模型返回（工具调用）：耗时 1332 ms，tokens=2024，工具请求 1 个，finish=tool_calls
+2026-11-09 10:46:07 INFO [studypilot] 调用模型（工具调用）：model=deepseek-chat，messages=8 条，tools=4 个
+2026-11-09 10:46:08 INFO [studypilot] 模型返回（工具调用）：耗时 1713 ms，tokens=2187，工具请求 0 个，finish=stop
+2026-11-09 10:46:08 INFO [studypilot] Agent 运行结束：run_id=20261109-104603-93eeb3，status=success，steps=4，耗时 5109 ms，tokens=7159
+2026-11-09 10:46:09 INFO [studypilot] Agent 运行结束：run_id=20261109-104609-0e8b37，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:46:09 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:09 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:09 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:09 INFO [studypilot] Agent 运行结束：run_id=20261109-104609-7f46a6，status=agent_failed，steps=2，耗时 4 ms，tokens=30
+2026-11-09 10:46:09 INFO [studypilot] Agent 运行结束：run_id=20261109-104609-e21d52，status=step_limit，steps=3，耗时 3 ms，tokens=45
+2026-11-09 10:46:11 INFO [studypilot] Agent 运行结束：run_id=20261109-104609-df4cdc，status=time_limit，steps=1，耗时 1509 ms，tokens=15
+2026-11-09 10:46:11 INFO [studypilot] Agent 运行结束：run_id=20261109-104611-7d5a0a，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:46:11 INFO [studypilot] Agent 运行结束：run_id=20261109-104611-1bc744，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:46:11 INFO [studypilot] Agent 运行结束：run_id=20261109-104611-b115fc，status=success，steps=5，耗时 6 ms，tokens=75
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] Agent 运行结束：run_id=20261109-104647-dbe7b0，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] Agent 运行结束：run_id=20261109-104647-25ba60，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] Agent 运行结束：run_id=20261109-104647-914be1，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:47 INFO [studypilot] Agent 运行结束：run_id=20261109-104647-561e6d，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:47 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:47 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104647-90ea7c，status=time_limit，steps=1，耗时 605 ms，tokens=15
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:48 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:48 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-c9a919，status=agent_failed，steps=2，耗时 4 ms，tokens=30
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-4cad33，status=verify_failed，steps=2，耗时 1 ms，tokens=30
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-11d797，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-a10fbb，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-e0c2b4，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-18f4aa，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-94a712，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-ccea52，status=time_limit，steps=1，耗时 606 ms，tokens=15
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] Agent 运行结束：run_id=20261109-104648-e6a4ee，status=success，steps=3，耗时 4 ms，tokens=45
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:46:48 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:46:48 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:46:48 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:46:48 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:46:48 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:46:48 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:46:48 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:46:48 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:46:48 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:46:48 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-8/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:46:48 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:46:48 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:46:48 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-484ee7，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-f9bab4，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-b44b2f，status=success，steps=5，耗时 4 ms，tokens=75
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-34f95a，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-801016，status=time_limit，steps=1，耗时 604 ms，tokens=15
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:47:13 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:47:13 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-326d3f，status=agent_failed，steps=2，耗时 6 ms，tokens=30
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-099565，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-ccbe84，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-cc9fce，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-d4fbae，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-c37955，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:13 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-214e08，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:13 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:13 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] Agent 运行结束：run_id=20261109-104713-f100d5，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] Agent 运行结束：run_id=20261109-104714-49faa5，status=success，steps=3，耗时 5 ms，tokens=45
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:47:14 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:47:14 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:47:14 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:47:14 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:47:14 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:47:14 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:47:14 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:47:14 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:47:14 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:47:14 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-9/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:47:14 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:47:14 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:47:14 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-de1451，status=success，steps=4，耗时 5 ms，tokens=60
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-1732f8，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-f6f5c4，status=success，steps=5，耗时 3 ms，tokens=75
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-545c5d，status=step_limit，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-cc4418，status=time_limit，steps=1，耗时 607 ms，tokens=15
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:30 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:30 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:48:30 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:48:30 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 175, in task_stats
+    course = _course_row(conn, args.course)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/agent/tools.py", line 29, in _course_row
+    user_id = current_user_id(conn)
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 113, in current_user_id
+    return conn.execute("SELECT user_id FROM users LIMIT 1").fetchone()["user_id"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:48:30 INFO [studypilot] Agent 运行结束：run_id=20261109-104830-9426d0，status=agent_failed，steps=2，耗时 6 ms，tokens=30
+2026-11-09 10:48:30 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-8af3b0，status=verify_failed，steps=2，耗时 2 ms，tokens=30
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-4c7cf3，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-0d95ff，status=success，steps=4，耗时 3 ms，tokens=60
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-31da93，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-d421a5，status=verify_failed，steps=3，耗时 2 ms，tokens=45
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-0dc3de，status=success，steps=4，耗时 4 ms，tokens=60
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-da60f2，status=time_limit，steps=1，耗时 608 ms，tokens=15
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] Agent 运行结束：run_id=20261109-104831-8d936b，status=success，steps=3，耗时 4 ms，tokens=45
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 WARNING [studypilot] 业务异常 POST /api/courses -> 课程“软件工程”已存在（COURSE_DUPLICATED）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 WARNING [studypilot] 业务异常 POST /api/courses -> 课程名称不能为空（EMPTY_COURSE_NAME）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 WARNING [studypilot] 业务异常 POST /api/courses/1/goal -> 考试日期必须晚于今天，请重新填写（INVALID_EXAM_DATE）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:48:31 WARNING [studypilot] 业务异常 POST /api/plans/generate -> 该课程还没有知识点掌握度，请先添加知识点（EMPTY_KNOWLEDGE_POINTS）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:48:31 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:48:31 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:48:31 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 INFO [studypilot] 保存考试目标：课程 1，考试 2026-12-09，目标 85 分
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，需求分析，掌握度 40%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件架构，掌握度 60%
+2026-11-09 10:48:31 INFO [studypilot] 新增知识点：课程 1，软件测试，掌握度 30%
+2026-11-09 10:48:31 INFO [studypilot] 生成候选计划：课程 1，生成方式 rule_template，共 3 个任务
+2026-11-09 10:48:31 INFO [studypilot] 确认学习计划：课程 1，plan_id=1，共 3 个任务
+2026-11-09 10:48:31 INFO [studypilot] 完成任务 1（复习软件测试），掌握度 30% -> 75%
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 INFO [studypilot] 创建课程成功：软件工程（id=1）
+2026-11-09 10:48:31 WARNING [studypilot] 业务异常 POST /api/tasks/9999/complete -> 任务不存在或已被删除（TASK_NOT_FOUND）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止
+2026-11-09 10:48:31 INFO [studypilot] 初始化用户：罗心月
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端启动，数据库：/private/var/folders/x1/2_2s5ff95fn61d6fvtrb21w80000gn/T/pytest-of-luo/pytest-10/test_tool_list_courses_and_sta0/test.db
+2026-11-09 10:48:31 ERROR [studypilot] 数据库操作失败：file is not a database
+Traceback (most recent call last):
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/db.py", line 93, in get_conn
+    yield conn
+  File "/Users/luo/Desktop/AI 学习任务规划与知识追踪系统/backend/app/repository/course_repo.py", line 9, in list_courses
+    rows = conn.execute(
+           ~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<8 lines>...
+        """
+        ^^^
+    ).fetchall()
+    ^
+sqlite3.DatabaseError: file is not a database
+2026-11-09 10:48:31 ERROR [studypilot] 业务异常 GET /api/courses -> 数据库暂时不可用，请稍后重试（DATABASE_UNAVAILABLE）
+2026-11-09 10:48:31 INFO [studypilot] StudyPilot 后端停止

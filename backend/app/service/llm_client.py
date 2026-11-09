@@ -149,3 +149,82 @@ def chat_json(
     second["latency_ms"] = sum(a["latency_ms"] for a in attempts)
     second["retried"] = True
     return data, second
+
+def chat_tools(
+    messages: list[dict],
+    tools: list[dict],
+    *,
+    model: str | None = None,
+    temperature: float = 0.1,
+    max_tokens: int = 900,
+    timeout: float | None = None,
+    base_url: str | None = None,
+    api_key_override: str | None = None,
+) -> dict:
+    """支持工具调用的模型请求，返回 assistant 消息（含 tool_calls）、用量和耗时。"""
+    key = api_key_override if api_key_override is not None else api_key()
+    if not key:
+        raise BusinessError("未配置 DEEPSEEK_API_KEY，无法调用模型服务", 503, "LLM_NOT_CONFIGURED")
+
+    url = f"{(base_url or DEFAULT_BASE_URL).rstrip('/')}/chat/completions"
+    payload = {
+        "model": model or DEFAULT_MODEL,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "stream": False,
+        "tools": tools,
+        "tool_choice": "auto",
+    }
+
+    log.info("调用模型（工具调用）：model=%s，messages=%d 条，tools=%d 个", payload["model"],
+             len(messages), len(tools))
+    started = time.time()
+    try:
+        resp = httpx.post(
+            url,
+            json=payload,
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            timeout=timeout or DEFAULT_TIMEOUT,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as exc:  # noqa: BLE001 - 统一分类后抛出业务异常
+        error = _classify(exc, url.rsplit("/chat/completions", 1)[0])
+        log.error("模型调用失败：%s（%s）", error.message, error.code)
+        raise error from exc
+
+    latency_ms = int((time.time() - started) * 1000)
+    try:
+        choice = data["choices"][0]
+        raw = choice["message"]
+    except (KeyError, IndexError) as exc:
+        log.error("模型返回结构异常：%s", str(data)[:200])
+        raise BusinessError("模型返回内容结构异常，无法解析", 502, "LLM_BAD_RESPONSE") from exc
+
+    message = {"role": "assistant", "content": raw.get("content")}
+    tool_calls = raw.get("tool_calls") or []
+    if tool_calls:
+        message["tool_calls"] = [
+            {
+                "id": call.get("id") or f"call_{index}",
+                "type": call.get("type", "function"),
+                "function": {
+                    "name": (call.get("function") or {}).get("name", ""),
+                    "arguments": (call.get("function") or {}).get("arguments", "{}"),
+                },
+            }
+            for index, call in enumerate(tool_calls)
+        ]
+
+    result = {
+        "message": message,
+        "model": data.get("model", payload["model"]),
+        "usage": data.get("usage", {}),
+        "latency_ms": latency_ms,
+        "finish_reason": choice.get("finish_reason"),
+    }
+    log.info("模型返回（工具调用）：耗时 %d ms，tokens=%s，工具请求 %d 个，finish=%s",
+             latency_ms, result["usage"].get("total_tokens"), len(tool_calls), result["finish_reason"])
+    return result
+
