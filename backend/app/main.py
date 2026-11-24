@@ -6,25 +6,32 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
-from app.api import courses, goals, knowledge, plans, qa, tasks
+from app.api import courses, goals, knowledge, plan_jobs, plans, qa, tasks
 from app.errors import BusinessError
+from app.integration import runner
 from app.logging_conf import log
 from app.repository.db import DB_PATH, init_db
+from app.service import job_service
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
+    runner.start()
+    job_service.recover_interrupted()
+    job_service.cleanup_old_jobs()
     log.info("StudyPilot 后端启动，数据库：%s", DB_PATH)
     yield
+    runner.shutdown(wait=False)
     log.info("StudyPilot 后端停止")
 
 
-app = FastAPI(title="StudyPilot API", version="0.6.0", lifespan=lifespan)
+app = FastAPI(title="StudyPilot API", version="0.7.0", lifespan=lifespan)
 app.include_router(courses.router)
 app.include_router(goals.router)
 app.include_router(knowledge.router)
 app.include_router(plans.router)
+app.include_router(plan_jobs.router)
 app.include_router(tasks.router)
 app.include_router(qa.router)
 

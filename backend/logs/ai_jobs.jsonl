@@ -1,0 +1,37 @@
+{"time": "2026-11-24 09:06:28", "job_id": "job-20261124-090628-2b63f4", "event": "job_created", "course_id": 1, "available_minutes": null, "start_date": null, "simulate": null, "retry_of": null}
+{"time": "2026-11-24 09:06:28", "job_id": "job-20261124-090628-2b63f4", "event": "job_started", "course_id": 1, "simulate": null}
+{"time": "2026-11-24 09:06:31", "job_id": "job-20261124-090628-2b63f4", "event": "job_succeeded", "elapsed_ms": 3337, "result_status": "success", "tasks": 8, "calls": 1}
+{"time": "2026-11-24 09:06:33", "job_id": "job-20261124-090628-2b63f4", "event": "job_confirmed", "plan_id": 1, "tasks": 8}
+{"time": "2026-11-24 09:06:33", "job_id": "job-20261124-090633-de9bfc", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": "slow", "retry_of": null}
+{"time": "2026-11-24 09:06:33", "job_id": "job-20261124-090633-de9bfc", "event": "job_started", "course_id": 2, "simulate": "slow"}
+{"time": "2026-11-24 09:06:34", "job_id": "job-20261124-090633-de9bfc", "event": "job_canceled", "note": "停止界面等待，迟到的模型结果将被丢弃"}
+{"time": "2026-11-24 09:06:37", "job_id": "job-20261124-090633-de9bfc", "event": "late_result_discarded", "elapsed_ms": 4324, "tasks": 6}
+{"time": "2026-11-24 09:06:38", "job_id": "job-20261124-090638-8b18a8", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": "timeout", "retry_of": null}
+{"time": "2026-11-24 09:06:38", "job_id": "job-20261124-090638-8b18a8", "event": "job_started", "course_id": 2, "simulate": "timeout"}
+{"time": "2026-11-24 09:06:39", "job_id": "job-20261124-090638-8b18a8", "event": "job_failed", "error_code": "LLM_TIMEOUT", "error": "模型服务响应超时（演示），任务未完成，可重试或改用规则计划", "elapsed_ms": 1023}
+{"time": "2026-11-24 09:06:39", "job_id": "job-20261124-090639-13cb47", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": null, "retry_of": "job-20261124-090638-8b18a8"}
+{"time": "2026-11-24 09:06:39", "job_id": "job-20261124-090639-13cb47", "event": "job_started", "course_id": 2, "simulate": null}
+{"time": "2026-11-24 09:06:47", "job_id": "job-20261124-090639-13cb47", "event": "job_succeeded", "elapsed_ms": 7501, "result_status": "success", "tasks": 6, "calls": 2}
+{"time": "2026-11-24 09:06:49", "job_id": "job-20261124-090649-1b865c", "event": "job_created", "course_id": 1, "available_minutes": null, "start_date": null, "simulate": "slow", "retry_of": null}
+{"time": "2026-11-24 09:06:49", "job_id": "job-20261124-090649-1b865c", "event": "job_started", "course_id": 1, "simulate": "slow"}
+{"time": "2026-11-24 09:06:54", "job_id": "job-20261124-090649-1b865c", "event": "job_succeeded", "elapsed_ms": 5335, "result_status": "success", "tasks": 8, "calls": 1}
+{"time": "2026-11-24 09:06:56", "job_id": "job-20261124-090656-28919e", "event": "job_created", "course_id": 1, "available_minutes": null, "start_date": null, "simulate": "slow", "retry_of": null}
+{"time": "2026-11-24 09:06:56", "job_id": "job-20261124-090656-28919e", "event": "job_started", "course_id": 1, "simulate": "slow"}
+{"time": "2026-11-24 09:06:57", "job_id": "job-20261124-090657-10f3cb", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": null, "retry_of": null}
+{"time": "2026-11-24 09:06:57", "job_id": "job-20261124-090657-10f3cb", "event": "job_started", "course_id": 2, "simulate": null}
+{"time": "2026-11-24 09:07:00", "job_id": "job-20261124-090657-10f3cb", "event": "job_succeeded", "elapsed_ms": 3038, "result_status": "success", "tasks": 6, "calls": 1}
+{"time": "2026-11-24 09:07:02", "job_id": "job-20261124-090656-28919e", "event": "job_succeeded", "elapsed_ms": 5681, "result_status": "success", "tasks": 8, "calls": 1}
+{"time": "2026-11-24 09:07:13", "job_id": "job-20261124-090713-95e007", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": null, "retry_of": null}
+{"time": "2026-11-24 09:07:13", "job_id": "job-20261124-090713-95e007", "event": "job_started", "course_id": 2, "simulate": null}
+{"time": "2026-11-24 09:07:13", "job_id": "job-20261124-090713-95e007", "event": "job_succeeded", "elapsed_ms": 0, "result_status": "fallback", "tasks": 3, "calls": 1}
+{"time": "2026-11-24 09:07:30", "job_id": "job-20261124-090730-504c0b", "event": "job_created", "course_id": 1, "available_minutes": null, "start_date": null, "simulate": null, "retry_of": null}
+{"time": "2026-11-24 09:07:30", "job_id": "job-20261124-090730-504c0b", "event": "job_started", "course_id": 1, "simulate": null}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090730-504c0b", "event": "job_succeeded", "elapsed_ms": 2761, "result_status": "success", "tasks": 8, "calls": 1}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090730-504c0b", "event": "job_confirmed", "plan_id": 1, "tasks": 8}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090733-dd6149", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": "slow", "retry_of": null}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090733-dd6149", "event": "job_started", "course_id": 2, "simulate": "slow"}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090733-dd6149", "event": "job_canceled", "note": "停止界面等待，迟到的模型结果将被丢弃"}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090733-8f773e", "event": "job_created", "course_id": 2, "available_minutes": null, "start_date": null, "simulate": "timeout", "retry_of": null}
+{"time": "2026-11-24 09:07:33", "job_id": "job-20261124-090733-8f773e", "event": "job_started", "course_id": 2, "simulate": "timeout"}
+{"time": "2026-11-24 09:07:34", "job_id": "job-20261124-090733-8f773e", "event": "job_failed", "error_code": "LLM_TIMEOUT", "error": "模型服务响应超时（演示），任务未完成，可重试或改用规则计划", "elapsed_ms": 1014}
+{"time": "2026-11-24 09:07:38", "job_id": "job-20261124-090733-dd6149", "event": "late_result_discarded", "elapsed_ms": 5031, "tasks": 6}

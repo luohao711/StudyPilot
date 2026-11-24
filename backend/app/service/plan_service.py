@@ -107,7 +107,7 @@ def generate_plan(course_id: int, available_minutes: int | None = None, start_da
     }
 
 
-def confirm_plan(course_id: int, tasks: list[dict]) -> dict:
+def confirm_plan(course_id: int, tasks: list[dict], generator: str = "rule_template") -> dict:
     if not course_repo.get_course(course_id):
         raise BusinessError("课程不存在，请先创建课程", 404, "COURSE_NOT_FOUND")
     if not tasks:
@@ -119,7 +119,7 @@ def confirm_plan(course_id: int, tasks: list[dict]) -> dict:
             if task["date"] >= goal["exam_date"]:
                 raise BusinessError(f"任务“{task['title']}”的日期晚于考试日期，请先修改", 400, "TASK_DATE_AFTER_EXAM")
 
-    plan_id = plan_repo.create_plan(course_id, "rule_template")
+    plan_id = plan_repo.create_plan(course_id, generator)
     count = plan_repo.replace_tasks(course_id, plan_id, tasks)
     plan_repo.confirm_plan(plan_id)
     log.info("确认学习计划：课程 %s，plan_id=%s，共 %d 个任务", course_id, plan_id, count)

@@ -69,9 +69,36 @@ CREATE TABLE IF NOT EXISTS daily_tasks (
     note         TEXT NOT NULL DEFAULT '',
     completed_at TEXT
 );
+
+-- 实验8：AI 任务记录。任务状态、输入快照、结果和错误都落库，刷新或重连后可以恢复。
+CREATE TABLE IF NOT EXISTS ai_jobs (
+    job_id            TEXT PRIMARY KEY,
+    course_id         INTEGER NOT NULL REFERENCES courses(course_id) ON DELETE CASCADE,
+    job_type          TEXT NOT NULL DEFAULT 'plan_generate',
+    status            TEXT NOT NULL DEFAULT 'queued',
+    request_json      TEXT NOT NULL,
+    result_json       TEXT,
+    error_code        TEXT,
+    error_message     TEXT,
+    attempts          INTEGER NOT NULL DEFAULT 0,
+    cancel_requested  INTEGER NOT NULL DEFAULT 0,
+    idempotency_key   TEXT,
+    retry_of          TEXT,
+    confirmed_plan_id INTEGER REFERENCES study_plans(plan_id),
+    created_at        TEXT NOT NULL DEFAULT (datetime('now', 'localtime')),
+    started_at        TEXT,
+    finished_at       TEXT
+);
+
+-- 同一门课程同时只允许一个排队/执行中的任务；幂等键避免重复点击生成多条任务。
+CREATE UNIQUE INDEX IF NOT EXISTS ux_ai_jobs_active
+    ON ai_jobs(course_id) WHERE status IN ('queued', 'running');
+CREATE UNIQUE INDEX IF NOT EXISTS ux_ai_jobs_idem
+    ON ai_jobs(idempotency_key) WHERE idempotency_key IS NOT NULL;
+CREATE INDEX IF NOT EXISTS ix_ai_jobs_course ON ai_jobs(course_id, created_at);
 """
 
-TABLES = ["daily_tasks", "study_plans", "knowledge_points", "exam_goals", "courses", "users"]
+TABLES = ["ai_jobs", "daily_tasks", "study_plans", "knowledge_points", "exam_goals", "courses", "users"]
 
 
 def connect() -> sqlite3.Connection:

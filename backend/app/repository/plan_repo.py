@@ -11,6 +11,18 @@ def latest_plan(course_id: int) -> dict | None:
     return dict(row) if row else None
 
 
+def get_plan(plan_id: int) -> dict | None:
+    with get_conn() as conn:
+        row = conn.execute("SELECT * FROM study_plans WHERE plan_id = ?", (plan_id,)).fetchone()
+    return dict(row) if row else None
+
+
+def count_plan_tasks(plan_id: int) -> int:
+    with get_conn() as conn:
+        row = conn.execute("SELECT COUNT(*) AS c FROM daily_tasks WHERE plan_id = ?", (plan_id,)).fetchone()
+    return int(row["c"]) if row else 0
+
+
 def create_plan(course_id: int, generator: str) -> int:
     with get_conn() as conn:
         cur = conn.execute(
