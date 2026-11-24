@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>实验7 核心AI能力原型数据流</title>
+<style>
+  html, body { margin: 0; background: #ffffff; font-family: "PingFang SC", "Heiti SC", sans-serif; }
+  .wrap { width: 960px; padding: 22px 28px 16px; box-sizing: border-box; }
+  h1 { font-size: 25px; margin: 0 0 4px; color: #1f2f46; font-weight: 600; }
+  .sub { color: #5c6b7d; font-size: 15px; margin-bottom: 8px; }
+  .legend { font-size: 14px; color: #44546a; margin: 6px 0 2px; }
+  .line { display: inline-block; width: 36px; height: 2px; background: #3f6fa8; vertical-align: middle; margin: 0 6px 0 14px; }
+  .line.dash { background: repeating-linear-gradient(90deg, #b05a4a 0 6px, transparent 6px 11px); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>StudyPilot 核心 AI 能力：学习计划生成数据流</h1>
+  <div class="sub">用户输入 → 输入校验 → 上下文装配 → 预处理 → 模型生成 → 结构化解析 → 程序校验 → 输出/保存与日志</div>
+  <div class="legend"><span><span class="line"></span>主链路</span><span><span class="line dash"></span>校验失败/模型失败分支</span></div>
+  <svg width="900" height="1430" viewBox="0 0 900 1430" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,7 L9,3.5 z" fill="#3f6fa8"/>
+      </marker>
+      <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="9" refY="3.5" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,7 L9,3.5 z" fill="#b05a4a"/>
+      </marker>
+    </defs>
+    <style>
+      .box { fill: #f3f7fc; stroke: #3f6fa8; stroke-width: 2; rx: 10; }
+      .box2 { fill: #fff8ec; stroke: #c58a2a; stroke-width: 2; rx: 10; }
+      .box3 { fill: #eef7f1; stroke: #3d8a5f; stroke-width: 2; rx: 10; }
+      .box4 { fill: #f7f4fb; stroke: #7d6aa6; stroke-width: 2; rx: 10; }
+      .t { font-size: 24px; fill: #1f2f46; font-weight: 700; }
+      .s { font-size: 17px; fill: #55657a; }
+      .n { font-size: 17px; fill: #ffffff; font-weight: 700; }
+      .edge { stroke: #3f6fa8; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+      .edge-red { stroke: #b05a4a; stroke-width: 2; fill: none; marker-end: url(#arrowRed); stroke-dasharray: 6 5; }
+      .lbl { font-size: 16px; fill: #55657a; }
+      .lbl-red { font-size: 16px; fill: #9a4433; }
+      .badge { fill: #3f6fa8; }
+    </style>
+
+    <!-- 主链路 -->
+    <rect class="box" x="110" y="40" width="530" height="120" />
+    <circle class="badge" cx="142" cy="68" r="12"/><text class="n" x="142" y="74" text-anchor="middle">1</text>
+    <text class="t" x="166" y="80">用户输入</text>
+    <text class="s" x="140" y="112">页面「AI 生成计划」按钮；CLI --case P07</text>
+    <text class="s" x="140" y="138">输入课程 + 考试目标 + 知识点掌握度</text>
+
+    <rect class="box" x="110" y="190" width="530" height="120" />
+    <circle class="badge" cx="142" cy="218" r="12"/><text class="n" x="142" y="224" text-anchor="middle">2</text>
+    <text class="t" x="166" y="230">输入校验（程序）</text>
+    <text class="s" x="140" y="262">课程 / 考试目标 / 知识点是否存在</text>
+    <text class="s" x="140" y="288">上限：20 个知识点、30—600 分钟/天</text>
+
+    <rect class="box" x="110" y="340" width="530" height="120" />
+    <circle class="badge" cx="142" cy="368" r="12"/><text class="n" x="142" y="374" text-anchor="middle">3</text>
+    <text class="t" x="166" y="380">上下文装配</text>
+    <text class="s" x="140" y="412">读 StudyPilot SQLite：课程、考试目标、</text>
+    <text class="s" x="140" y="438">知识点掌握度（按掌握度升序排列）</text>
+
+    <rect class="box" x="110" y="490" width="530" height="120" />
+    <circle class="badge" cx="142" cy="518" r="12"/><text class="n" x="142" y="524" text-anchor="middle">4</text>
+    <text class="t" x="166" y="530">预处理</text>
+    <text class="s" x="140" y="562">窗口 ≤14 天、总预算、最少需要分钟、</text>
+    <text class="s" x="140" y="588">薄弱点顺序、能否覆盖全部知识点</text>
+
+    <rect class="box2" x="110" y="640" width="530" height="120" />
+    <circle cx="142" cy="668" r="12" fill="#c58a2a"/><text class="n" x="142" y="674" text-anchor="middle">5</text>
+    <text class="t" x="166" y="680">Prompt v2 + 模型</text>
+    <text class="s" x="140" y="712">deepseek-chat，temperature=0.3，JSON 输出</text>
+    <text class="s" x="140" y="738">窗口/预算/覆盖/优先级/长度规则 + 示例</text>
+
+    <rect class="box2" x="110" y="790" width="530" height="120" />
+    <circle cx="142" cy="818" r="12" fill="#c58a2a"/><text class="n" x="142" y="824" text-anchor="middle">6</text>
+    <text class="t" x="166" y="830">结构化解析</text>
+    <text class="s" x="140" y="862">Pydantic：字段、日期格式、长度</text>
+    <text class="s" x="140" y="888">不合法时带错误自动重试 1 次</text>
+
+    <rect class="box" x="110" y="940" width="530" height="120" />
+    <circle class="badge" cx="142" cy="968" r="12"/><text class="n" x="142" y="974" text-anchor="middle">7</text>
+    <text class="t" x="166" y="980">程序校验 validator</text>
+    <text class="s" x="140" y="1012">日期窗口、每天时长、知识点覆盖、薄弱点优先、</text>
+    <text class="s" x="140" y="1038">单任务时长、每点/每天任务数、notes 说明</text>
+
+    <rect class="box4" x="110" y="1090" width="530" height="120" />
+    <circle cx="142" cy="1118" r="12" fill="#7d6aa6"/><text class="n" x="142" y="1124" text-anchor="middle">8</text>
+    <text class="t" x="166" y="1130">输出与展示/保存</text>
+    <text class="s" x="140" y="1162">summary / tasks / notes / checks / meta</text>
+    <text class="s" x="140" y="1188">页面显示校验、修复、耗时、费用；可存 draft</text>
+
+    <rect class="box4" x="110" y="1240" width="530" height="90" />
+    <text class="t" x="140" y="1272">运行日志 JSONL</text>
+    <text class="s" x="140" y="1302">run_id、model_call、validate、repair、fallback、run_end</text>
+
+    <!-- 分支：修复与降级 -->
+    <rect class="box3" x="680" y="760" width="200" height="150" />
+    <text class="t" x="700" y="794">有限修复（≤1次）</text>
+    <text class="s" x="700" y="824">把问题清单反馈给</text>
+    <text class="s" x="700" y="850">模型，重新生成并</text>
+    <text class="s" x="700" y="876">再次校验</text>
+
+    <rect class="box3" x="680" y="940" width="200" height="120" />
+    <text class="t" x="700" y="974">规则降级</text>
+    <text class="s" x="700" y="1004">两次校验失败或</text>
+    <text class="s" x="700" y="1030">模型调用失败时，按</text>
+    <text class="s" x="700" y="1056">掌握度排期并说明</text>
+
+    <!-- 主链路箭头 -->
+    <path class="edge" d="M375,160 L375,188"/>
+    <path class="edge" d="M375,310 L375,338"/>
+    <path class="edge" d="M375,460 L375,488"/>
+    <path class="edge" d="M375,610 L375,638"/>
+    <path class="edge" d="M375,760 L375,788"/>
+    <path class="edge" d="M375,910 L375,938"/>
+    <path class="edge" d="M375,1060 L375,1088"/>
+    <path class="edge" d="M375,1210 L375,1238"/>
+
+    <!-- 校验通过 / 不通过 -->
+    <path class="edge" d="M640,1000 L656,1000 L656,835 L678,835"/>
+    <text class="lbl-red" x="500" y="1000">不通过</text>
+    <path class="edge-red" d="M780,758 L780,700 L642,700"/>
+    <text class="lbl-red" x="648" y="690">带问题清单修复</text>
+    <path class="edge-red" d="M640,1030 L656,1030 L656,1000 L678,1000"/>
+    <text class="lbl-red" x="540" y="1042">仍失败/调用失败</text>
+    <path class="edge" d="M680,1000 L656,1000 L656,1150 L642,1150"/>
+    <text class="lbl" x="545" y="1110">通过/降级结果</text>
+
+    <!-- 集成说明 -->
+    <text class="s" x="110" y="1362" font-size="15">集成位置：PlanView.vue「AI 生成计划」→ POST /api/plans/generate-ai →</text>
+    <text class="s" x="110" y="1388" font-size="15">planning.generator；结果可保存为 study_plans(draft)，确认后进入既有任务流程。</text>
+  </svg>
+</div>
+</body>
+</html>

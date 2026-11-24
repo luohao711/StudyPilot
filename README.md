@@ -13,6 +13,7 @@
 - `reports/experiment4/`：实验4原始题目、LaTeX源文件、运行截图和最终PDF。
 - `reports/experiment5/`：实验5 LaTeX源文件、运行截图和最终PDF。
 - `reports/experiment6/`：实验6 LaTeX源文件、循环图、运行截图、运行记录和最终PDF。
+- `reports/experiment7/`：实验7 LaTeX源文件、数据流图、运行截图、评测结果和最终PDF。
 
 ## 运行后端
 
