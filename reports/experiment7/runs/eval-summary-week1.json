@@ -1,0 +1,100 @@
+{
+  "tag": "week1",
+  "cases": 15,
+  "methods": [
+    "rule",
+    "v05"
+  ],
+  "summary": {
+    "rule": {
+      "label": "规则模板（无AI基线）",
+      "cases": 15,
+      "generate_cases": 9,
+      "generate_passed": 6,
+      "reject_cases": 0,
+      "reject_passed": 0,
+      "scored_passed": 6,
+      "scored_total": 9,
+      "avg_latency_ms": 1.0,
+      "total_tokens": 0,
+      "total_cost_yuan": 0,
+      "avg_human_action": null,
+      "avg_human_reason": null,
+      "check_rates": {
+        "schema": "9/9",
+        "date": "9/9",
+        "daily_cap": "9/9",
+        "coverage": "6/7",
+        "priority": "6/6",
+        "minutes": "9/9",
+        "capacity": "9/9",
+        "notes": "0/2"
+      },
+      "failed_cases": [
+        {
+          "case_id": "P07",
+          "issues": [
+            "notes"
+          ],
+          "error_code": null
+        },
+        {
+          "case_id": "P08",
+          "issues": [
+            "notes"
+          ],
+          "error_code": null
+        },
+        {
+          "case_id": "P10",
+          "issues": [
+            "coverage"
+          ],
+          "error_code": null
+        }
+      ]
+    },
+    "v05": {
+      "label": "v0.5 初版（Prompt v1，直接调用模型）",
+      "cases": 15,
+      "generate_cases": 9,
+      "generate_passed": 7,
+      "reject_cases": 6,
+      "reject_passed": 6,
+      "scored_passed": 13,
+      "scored_total": 15,
+      "avg_latency_ms": 4636.0,
+      "total_tokens": 9796,
+      "total_cost_yuan": 0.06425,
+      "avg_human_action": null,
+      "avg_human_reason": null,
+      "check_rates": {
+        "schema": "8/9",
+        "date": "9/9",
+        "daily_cap": "9/9",
+        "coverage": "6/7",
+        "priority": "5/5",
+        "minutes": "9/9",
+        "capacity": "9/9",
+        "summary": "9/9",
+        "notes": "2/2"
+      },
+      "failed_cases": [
+        {
+          "case_id": "P04",
+          "issues": [
+            "coverage"
+          ],
+          "error_code": null
+        },
+        {
+          "case_id": "P10",
+          "issues": [
+            "schema"
+          ],
+          "error_code": null
+        }
+      ]
+    }
+  }
+}
