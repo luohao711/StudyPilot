@@ -1,0 +1,128 @@
+{
+  "time": "2026-11-24 09:00:31",
+  "course_id": 1,
+  "model": "deepseek-chat",
+  "rows": [
+    {
+      "mode": "v0.6_sync",
+      "http_status": 200,
+      "submit_ms": 4875,
+      "total_ms": 4875,
+      "status": "success",
+      "checks_passed": true,
+      "tasks": 7,
+      "total_tokens": 3224,
+      "cost_yuan": 0.011668,
+      "cancellable": false,
+      "recoverable_after_refresh": false,
+      "duplicate_submit_deduped": false
+    },
+    {
+      "mode": "v0.7_async",
+      "http_status": 202,
+      "job_id": "job-20261124-085953-a03596",
+      "submit_ms": 5,
+      "total_ms": 5806,
+      "status": "succeeded",
+      "result_status": "success",
+      "checks_passed": true,
+      "tasks": 8,
+      "total_tokens": 3240,
+      "cost_yuan": 0.012006,
+      "cancellable": true,
+      "recoverable_after_refresh": true,
+      "duplicate_probe": {
+        "same_job": true,
+        "deduplicated": true,
+        "submit_ms": 4
+      }
+    },
+    {
+      "mode": "v0.6_sync",
+      "http_status": 200,
+      "submit_ms": 7682,
+      "total_ms": 7682,
+      "status": "success",
+      "checks_passed": true,
+      "tasks": 8,
+      "total_tokens": 3789,
+      "cost_yuan": 0.014478,
+      "cancellable": false,
+      "recoverable_after_refresh": false,
+      "duplicate_submit_deduped": false
+    },
+    {
+      "mode": "v0.7_async",
+      "http_status": 202,
+      "job_id": "job-20261124-090007-b7b6fc",
+      "submit_ms": 7,
+      "total_ms": 11590,
+      "status": "succeeded",
+      "result_status": "success",
+      "checks_passed": true,
+      "tasks": 8,
+      "total_tokens": 1429,
+      "cost_yuan": 0.00593,
+      "cancellable": true,
+      "recoverable_after_refresh": true,
+      "duplicate_probe": null
+    },
+    {
+      "mode": "v0.6_sync",
+      "http_status": 200,
+      "submit_ms": 8798,
+      "total_ms": 8798,
+      "status": "fallback",
+      "checks_passed": true,
+      "tasks": 4,
+      "total_tokens": 3895,
+      "cost_yuan": 0.01526,
+      "cancellable": false,
+      "recoverable_after_refresh": false,
+      "duplicate_submit_deduped": false
+    },
+    {
+      "mode": "v0.7_async",
+      "http_status": 202,
+      "job_id": "job-20261124-090027-f37429",
+      "submit_ms": 5,
+      "total_ms": 3468,
+      "status": "succeeded",
+      "result_status": "success",
+      "checks_passed": true,
+      "tasks": 8,
+      "total_tokens": 1435,
+      "cost_yuan": 0.005978,
+      "cancellable": true,
+      "recoverable_after_refresh": true,
+      "duplicate_probe": null
+    }
+  ],
+  "summary": {
+    "rounds": 3,
+    "v0.6_submit_ms": {
+      "avg": 7118.3,
+      "min": 4875,
+      "max": 8798
+    },
+    "v0.7_submit_ms": {
+      "avg": 5.7,
+      "min": 5,
+      "max": 7
+    },
+    "v0.6_total_ms": {
+      "avg": 7118.3,
+      "min": 4875,
+      "max": 8798
+    },
+    "v0.7_total_ms": {
+      "avg": 6954.7,
+      "min": 3468,
+      "max": 11590
+    },
+    "v0.6_checks_passed": 3,
+    "v0.7_checks_passed": 3,
+    "v0.6_failures": 1,
+    "v0.7_failures": 0
+  }
+}

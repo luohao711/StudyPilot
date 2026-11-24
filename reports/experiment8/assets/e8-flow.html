@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>实验8 AI任务集成流程</title>
+<style>
+  html, body { margin: 0; background: #fff; font-family: "PingFang SC", "Heiti SC", sans-serif; }
+  .wrap { width: 930px; padding: 18px 20px 8px; box-sizing: border-box; }
+  h1 { font-size: 25px; margin: 0 0 4px; color: #1f2f46; font-weight: 600; }
+  .sub { color: #5c6b7d; font-size: 16px; margin-bottom: 4px; }
+  .legend { font-size: 15px; color: #44546a; margin: 4px 0 8px; }
+  .solid { display: inline-block; width: 28px; height: 3px; background: #3f6fa8; vertical-align: middle; margin: 0 6px 0 10px; }
+  .dash { display: inline-block; width: 28px; height: 3px; vertical-align: middle; margin: 0 6px 0 14px;
+          background: repeating-linear-gradient(90deg, #b05a4a 0 6px, transparent 6px 10px); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI 计划任务：集成后的用户流程与系统调用</h1>
+  <div class="sub">提交即返回 → 后台生成 → 页面轮询 → 人工检查 → 确认保存；失败/取消/重启都有出口</div>
+  <div class="legend"><span><span class="solid"></span>主流程</span><span><span class="dash"></span>失败、取消与恢复</span></div>
+  <svg width="890" height="1510" viewBox="0 0 890 1510" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#3f6fa8"/>
+      </marker>
+      <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#b05a4a"/>
+      </marker>
+    </defs>
+    <style>
+      .box { fill: #f3f7fc; stroke: #3f6fa8; stroke-width: 2; rx: 10; }
+      .box2 { fill: #eef7f1; stroke: #3d8a5f; stroke-width: 2; rx: 10; }
+      .box3 { fill: #fff8ec; stroke: #c58a2a; stroke-width: 2; rx: 10; }
+      .box4 { fill: #f7f4fb; stroke: #7d6aa6; stroke-width: 2; rx: 10; }
+      .t { font-size: 20px; fill: #1f2f46; font-weight: 700; }
+      .s { font-size: 16px; fill: #3d4d5e; }
+      .n { font-size: 17px; fill: #ffffff; font-weight: 700; }
+      .edge { stroke: #3f6fa8; stroke-width: 2.4; fill: none; marker-end: url(#a); }
+      .edge-red { stroke: #b05a4a; stroke-width: 2; fill: none; marker-end: url(#ar); stroke-dasharray: 6 5; }
+      .lbl { font-size: 16px; fill: #55657a; }
+      .lblr { font-size: 16px; fill: #9a4433; }
+      .side { font-size: 15px; fill: #5b6b7c; }
+      .wait { fill: #e8f1fb; opacity: 0.6; }
+    </style>
+
+    <!-- 等待区 -->
+    <rect class="wait" x="24" y="470" width="792" height="330" rx="10" />
+    <text class="side" x="40" y="500" fill="#375f8f">等待区：POST 已返回，页面每 1.2 秒轮询；可离开、刷新或取消，不占用一个长请求</text>
+
+    <!-- 1 用户输入 -->
+    <rect class="box" x="40" y="40" width="560" height="80" />
+    <circle cx="66" cy="65" r="12" fill="#3f6fa8"/><text class="n" x="66" y="71" text-anchor="middle">1</text>
+    <text class="t" x="88" y="72">用户：选择课程，点击“AI 生成计划”</text>
+    <text class="s" x="88" y="102">输入来自项目数据库：课程、考试目标、知识点掌握度、每天可用时间</text>
+
+    <!-- 2 提交 -->
+    <rect class="box" x="40" y="150" width="560" height="80" />
+    <circle cx="66" cy="175" r="12" fill="#3f6fa8"/><text class="n" x="66" y="181" text-anchor="middle">2</text>
+    <text class="t" x="88" y="182">页面 → 接口：POST /api/plans/ai-jobs</text>
+    <text class="s" x="88" y="212">course_id、available_minutes、start_date、一次性幂等键</text>
+
+    <!-- 3 校验 -->
+    <rect class="box" x="40" y="260" width="560" height="80" />
+    <circle cx="66" cy="285" r="12" fill="#3f6fa8"/><text class="n" x="66" y="291" text-anchor="middle">3</text>
+    <text class="t" x="88" y="292">接口 + 服务：类型/范围/日期 + 业务预检</text>
+    <text class="s" x="88" y="322">课程、考试目标、知识点、窗口和预算；不合法返回 400/422，不创建任务</text>
+
+    <!-- 4 落库返回 -->
+    <rect class="box" x="40" y="370" width="560" height="80" />
+    <circle cx="66" cy="395" r="12" fill="#3f6fa8"/><text class="n" x="66" y="401" text-anchor="middle">4</text>
+    <text class="t" x="88" y="402">写 ai_jobs(queued) → 返回 202 + job_id</text>
+    <text class="s" x="88" y="432">页面立即退出“提交中”，显示排队/处理中与已等待秒数</text>
+
+    <!-- 5 后台 -->
+    <rect class="box2" x="40" y="520" width="560" height="80" />
+    <circle cx="66" cy="545" r="12" fill="#3d8a5f"/><text class="n" x="66" y="551" text-anchor="middle">5</text>
+    <text class="t" x="88" y="552">后台线程：mark running → 生成器读数据库</text>
+    <text class="s" x="88" y="582">窗口 ≤14 天、知识点 ≤20 个；装配上下文后调用模型</text>
+
+    <!-- 6 模型 -->
+    <rect class="box3" x="40" y="630" width="560" height="80" />
+    <circle cx="66" cy="655" r="12" fill="#c58a2a"/><text class="n" x="66" y="661" text-anchor="middle">6</text>
+    <text class="t" x="88" y="662">模型调用（45 秒超时，输出 JSON）</text>
+    <text class="s" x="88" y="692">deepseek-chat、Prompt v2；返回任务、理由、tokens 和费用</text>
+
+    <!-- 7 校验 -->
+    <rect class="box3" x="40" y="740" width="560" height="80" />
+    <circle cx="66" cy="765" r="12" fill="#c58a2a"/><text class="n" x="66" y="771" text-anchor="middle">7</text>
+    <text class="t" x="88" y="772">程序校验 → 修复 1 次 → 规则降级</text>
+    <text class="s" x="88" y="802">日期、每天时长、覆盖、优先级、任务数；仍不合格则返回 fallback</text>
+
+    <!-- 8 写结果 -->
+    <rect class="box2" x="40" y="850" width="560" height="80" />
+    <circle cx="66" cy="875" r="12" fill="#3d8a5f"/><text class="n" x="66" y="881" text-anchor="middle">8</text>
+    <text class="t" x="88" y="882">未取消才写 result_json，页面轮询到 succeeded</text>
+    <text class="s" x="88" y="912">任务编号贯穿查询、取消、重试和保存，刷新后仍能恢复</text>
+
+    <!-- 9 展示检查 -->
+    <rect class="box" x="40" y="970" width="560" height="80" />
+    <circle cx="66" cy="995" r="12" fill="#3f6fa8"/><text class="n" x="66" y="1001" text-anchor="middle">9</text>
+    <text class="t" x="88" y="1002">用户：查看结果、人工检查、编辑任务</text>
+    <text class="s" x="88" y="1032">提示“AI 结果需人工检查”；可修改标题/日期/时长，也可重新生成或放弃</text>
+
+    <!-- 10 保存 -->
+    <rect class="box4" x="40" y="1080" width="560" height="80" />
+    <circle cx="66" cy="1105" r="12" fill="#7d6aa6"/><text class="n" x="66" y="1111" text-anchor="middle">10</text>
+    <text class="t" x="88" y="1112">确认保存：POST /ai-jobs/{id}/confirm</text>
+    <text class="s" x="88" y="1142">校验编辑后的任务，写 plan/tasks 并回填 confirmed_plan_id；重复确认幂等</text>
+
+    <!-- 分支 11 -->
+    <rect class="box3" x="40" y="1200" width="560" height="80" />
+    <circle cx="66" cy="1225" r="12" fill="#b05a4a"/><text class="n" x="66" y="1231" text-anchor="middle">11</text>
+    <text class="t" x="88" y="1232">失败/取消：failed / canceled</text>
+    <text class="s" x="88" y="1262">重试创建新 job_id（retry_of 指向旧任务）；取消后迟到结果丢弃，不能保存</text>
+
+    <!-- 分支 12 -->
+    <rect class="box3" x="40" y="1310" width="560" height="80" />
+    <circle cx="66" cy="1335" r="12" fill="#b05a4a"/><text class="n" x="66" y="1341" text-anchor="middle">12</text>
+    <text class="t" x="88" y="1342">服务重启：遗留 queued/running → failed</text>
+    <text class="s" x="88" y="1372">错误码 JOB_INTERRUPTED，提示重新生成，不永远停在“处理中”</text>
+
+    <!-- 主流程箭头 -->
+    <path class="edge" d="M320,120 L320,148"/>
+    <path class="edge" d="M320,230 L320,258"/>
+    <path class="edge" d="M320,340 L320,368"/>
+    <path class="edge" d="M320,450 L320,518"/>
+    <path class="edge" d="M320,600 L320,628"/>
+    <path class="edge" d="M320,710 L320,738"/>
+    <path class="edge" d="M320,820 L320,848"/>
+    <path class="edge" d="M320,930 L320,968"/>
+    <path class="edge" d="M320,1050 L320,1078"/>
+    <path class="edge" d="M320,1160 L320,1198"/>
+    <path class="edge-red" d="M320,1280 L320,1308"/>
+
+    <!-- 右侧标注 -->
+    <text class="side" x="640" y="168">信任边界①</text>
+    <text class="side" x="640" y="190">前端参数不被信任</text>
+    <text class="side" x="640" y="212">后端校验后才使用</text>
+
+    <text class="side" x="640" y="498">数据：ai_jobs</text>
+    <text class="side" x="640" y="520">任务/输入快照/状态</text>
+    <text class="side" x="640" y="542">结果与时间落库</text>
+
+    <text class="side" x="640" y="632">外部服务：</text>
+    <text class="side" x="640" y="654">DeepSeek chat</text>
+    <text class="side" x="640" y="676">不接触数据库/密钥</text>
+    <text class="side" x="640" y="698">输出不可信</text>
+
+    <text class="side" x="640" y="768">信任边界②</text>
+    <text class="side" x="640" y="790">模型输出先校验</text>
+    <text class="side" x="640" y="812">再由用户确认</text>
+
+    <text class="side" x="640" y="948">日志：ai_jobs.jsonl</text>
+    <text class="side" x="640" y="970">创建/状态/取消/迟到</text>
+
+    <text class="side" x="640" y="1108">信任边界③</text>
+    <text class="side" x="640" y="1130">保存为写操作</text>
+    <text class="side" x="640" y="1152">只接受成功任务</text>
+    <text class="side" x="640" y="1174">按 job_id 幂等</text>
+  </svg>
+</div>
+</body>
+</html>

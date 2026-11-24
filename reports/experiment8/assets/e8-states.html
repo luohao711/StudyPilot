@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>实验8 AI任务状态机</title>
+<style>
+  html, body { margin: 0; background: #fff; font-family: "PingFang SC", "Heiti SC", sans-serif; }
+  .wrap { width: 1080px; padding: 20px 26px 14px; box-sizing: border-box; }
+  h1 { font-size: 23px; margin: 0 0 4px; color: #1f2f46; font-weight: 600; }
+  .sub { color: #5c6b7d; font-size: 14px; margin-bottom: 6px; }
+  .note { font-size: 13px; color: #55657a; line-height: 1.7; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AI 计划任务状态与转换</h1>
+  <div class="sub">状态写入 SQLite；虚线为取消、重启恢复与重试产生的分支</div>
+  <svg width="1020" height="560" viewBox="0 0 1020 560" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#3f6fa8"/>
+      </marker>
+      <marker id="br" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#b05a4a"/>
+      </marker>
+      <marker id="bg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#3d8a5f"/>
+      </marker>
+    </defs>
+    <style>
+      .state { fill: #f3f7fc; stroke: #3f6fa8; stroke-width: 2; rx: 12; }
+      .ok { fill: #eef7f1; stroke: #3d8a5f; stroke-width: 2.4; rx: 12; }
+      .bad { fill: #fdf1ee; stroke: #b05a4a; stroke-width: 2.2; rx: 12; }
+      .end { fill: #f7f4fb; stroke: #7d6aa6; stroke-width: 2.2; rx: 12; }
+      .name { font-size: 19px; font-weight: 700; fill: #24364d; }
+      .desc { font-size: 13px; fill: #55657a; }
+      .edge { stroke: #3f6fa8; stroke-width: 2; fill: none; marker-end: url(#b); }
+      .edge-red { stroke: #b05a4a; stroke-width: 1.8; fill: none; marker-end: url(#br); stroke-dasharray: 6 5; }
+      .edge-green { stroke: #3d8a5f; stroke-width: 2; fill: none; marker-end: url(#bg); }
+      .lbl { font-size: 13px; fill: #3d4d5e; }
+      .lblr { font-size: 13px; fill: #9a4433; }
+      .lblg { font-size: 13px; fill: #2f6b49; }
+    </style>
+
+    <!-- 状态框 -->
+    <rect class="state" x="40" y="60" width="170" height="78" />
+    <text class="name" x="125" y="94" text-anchor="middle">queued</text>
+    <text class="desc" x="125" y="118" text-anchor="middle">已提交，等待线程</text>
+
+    <rect class="state" x="300" y="60" width="170" height="78" />
+    <text class="name" x="385" y="94" text-anchor="middle">running</text>
+    <text class="desc" x="385" y="118" text-anchor="middle">模型生成/校验中</text>
+
+    <rect class="ok" x="570" y="60" width="180" height="78" />
+    <text class="name" x="660" y="94" text-anchor="middle">succeeded</text>
+    <text class="desc" x="660" y="118" text-anchor="middle">结果已落库，可确认</text>
+
+    <rect class="end" x="830" y="220" width="170" height="78" />
+    <text class="name" x="915" y="254" text-anchor="middle">已保存计划</text>
+    <text class="desc" x="915" y="278" text-anchor="middle">confirmed_plan_id</text>
+
+    <rect class="bad" x="300" y="250" width="170" height="78" />
+    <text class="name" x="385" y="284" text-anchor="middle">failed</text>
+    <text class="desc" x="385" y="308" text-anchor="middle">错误码 + 提示</text>
+
+    <rect class="bad" x="40" y="250" width="170" height="78" />
+    <text class="name" x="125" y="284" text-anchor="middle">canceled</text>
+    <text class="desc" x="125" y="308" text-anchor="middle">取消/停止等待，丢弃结果</text>
+
+    <!-- 主链路 -->
+    <line class="edge" x1="210" y1="99" x2="296" y2="99" />
+    <text class="lbl" x="253" y="91" text-anchor="middle">线程领取</text>
+    <line class="edge-green" x1="470" y1="99" x2="566" y2="99" />
+    <text class="lblg" x="518" y="91" text-anchor="middle">结果落库</text>
+    <line class="edge-green" x1="750" y1="99" x2="860" y2="212" />
+    <text class="lblg" x="822" y="150" text-anchor="middle">用户确认保存</text>
+    <text class="lblg" x="822" y="168" text-anchor="middle">（幂等，只写一次）</text>
+
+    <!-- 失败 -->
+    <line class="edge-red" x1="385" y1="138" x2="385" y2="246" />
+    <text class="lblr" x="400" y="190" text-anchor="start">超时/连接失败/</text>
+    <text class="lblr" x="400" y="208" text-anchor="start">输出不合格/内部错误</text>
+
+    <!-- 取消（queued/running 均可） -->
+    <line class="edge-red" x1="100" y1="138" x2="100" y2="246" />
+    <text class="lblr" x="112" y="196" text-anchor="start">取消</text>
+
+    <!-- 重试：failed -> running（外侧绕行） -->
+    <path class="edge" d="M470,289 C505,289 505,289 505,210 C505,150 505,120 470,120" />
+    <text class="lbl" x="478" y="240" text-anchor="start">重试</text>
+
+    <!-- 重试：canceled -> queued（外侧绕行） -->
+    <path class="edge" d="M40,289 C18,289 18,289 18,210 C18,150 18,99 40,99" />
+    <text class="lbl" x="28" y="240" text-anchor="start">重试</text>
+
+    <!-- 启动恢复（文字说明，不是状态间正常转换） -->
+    <text class="lblr" x="40" y="26" text-anchor="start">服务重启：遗留 queued/running → failed（JOB_INTERRUPTED），不留在“处理中”</text>
+
+    <!-- 终态说明 -->
+    <text class="desc" x="40" y="400">终态：succeeded（可确认）、failed（可重试）、canceled（可重试）；confirmed_plan_id 非空后不再重复写计划。</text>
+    <text class="desc" x="40" y="426">并发约束：同一门课程最多一个 queued/running 任务（部分唯一索引）；幂等键相同直接返回已有任务。</text>
+    <text class="desc" x="40" y="452">取消语义：只停止页面等待，已发出的模型请求无法中断；迟到结果在写库前被丢弃，保存接口只接受 succeeded。</text>
+    <text class="desc" x="40" y="478">刷新恢复：页面挂载时查询该课程最近 5 个任务，有活跃任务则继续轮询，有未保存的成功结果则恢复任务列表。</text>
+  </svg>
+</div>
+</body>
+</html>

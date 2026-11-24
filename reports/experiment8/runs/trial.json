@@ -1,0 +1,42 @@
+{
+  "version": "v0.7（commit/tag 见报告 3.9）",
+  "model": "deepseek-chat，temperature=0.3，Prompt v2",
+  "environment": "macOS，Chrome，后端 http://127.0.0.1:8000，前端 http://127.0.0.1:5173",
+  "participant": {
+    "role": "同班同学（非开发者，匿名）",
+    "count": 1,
+    "briefing": "只提供 README 中的运行说明与三条任务，不演示、不替操作、不解释页面实现"
+  },
+  "tasks": [
+    {"id": "T1", "goal": "在“学习计划”页为高等数学生成 AI 计划并保存", "completed": true, "round1_seconds": 168, "round2_seconds": 95, "note": "第一轮在等待态停留较久，第二轮看到“可以离开本页”后直接等待"},
+    {"id": "T2", "goal": "生成过程中刷新页面，确认任务不丢失并拿到结果", "completed": true, "round1_seconds": 74, "round2_seconds": 48, "note": "第一轮刷新后不确定是否要重新点击；第二轮能从“最近 AI 任务”恢复"},
+    {"id": "T3", "goal": "取消一次生成，改用规则计划并保存", "completed": true, "round1_seconds": 61, "round2_seconds": 52, "note": "第一轮先点了“重试”再取消，重复操作；第二轮直接取消后改用规则生成"}
+  ],
+  "confusions_round1": [
+    "“排队中”和“处理中”同时可能出现，不知道是排队等待服务器还是模型正在生成",
+    "按钮从“AI 生成计划”变成“AI 任务处理中…”，以为整个页面被锁定",
+    "降级结果仍显示“AI 计划 / 程序校验通过”，误以为仍是模型生成的内容",
+    "任务处理中时点了历史任务的“查看”，当前任务的等待状态不再更新",
+    "任务标题输入框太窄，长标题看不全"
+  ],
+  "feedback": [
+    "希望明确写出“可以离开页面/刷新后继续等”",
+    "希望失败后直接给出“重试还是改用规则计划”的选择",
+    "希望历史任务能显示结束时间和是否已保存"
+  ],
+  "fixes": [
+    {"id": "F1", "content": "状态行区分排队/处理中并显示已等待秒数，提示可以离开和刷新恢复", "commit": "见报告表8-13"},
+    {"id": "F2", "content": "生成中按钮文案改为“AI 生成中…”，避免误认为整页锁定", "commit": "见报告表8-13"},
+    {"id": "F3", "content": "降级结果单独提示“规则模板降级结果（不是模型生成）”", "commit": "见报告表8-13"},
+    {"id": "F4", "content": "处理中禁用其他历史任务的“查看”，避免切换后丢失等待状态", "commit": "见报告表8-13"},
+    {"id": "F5", "content": "加宽任务标题输入框，历史任务显示结束时间", "commit": "见报告表8-13"}
+  ],
+  "round2_result": {
+    "all_tasks_completed": true,
+    "with_assistance": false,
+    "total_seconds": 195,
+    "remaining_confusions": ["仍希望看到每次模型调用的费用明细（当前只有总费用）"],
+    "summary": "三条任务均在无提示、无代操作的情况下完成；降级、取消、刷新恢复都能自己找到入口"
+  },
+  "note": "试用为单人小样本，记录由试用者口述、作者整理；原始入口与结果截图见 reports/experiment8/assets/e8-wait.png、e8-success.png、e8-recovery.png。"
+}
