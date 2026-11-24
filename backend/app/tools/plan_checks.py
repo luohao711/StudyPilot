@@ -25,7 +25,8 @@ def is_feasible(case: dict) -> bool:
     days = window_days(case)
     points = case["input"]["points"]
     minutes = int(case["input"]["available_minutes"] or 0)
-    return len(points) * config.MIN_PER_POINT_MINUTES <= len(days) * minutes
+    return (len(points) * config.MIN_PER_POINT_MINUTES <= len(days) * minutes
+            and len(points) <= len(days) * config.MAX_TASKS_PER_DAY)
 
 
 def _entry(passed, detail: str = "") -> dict:

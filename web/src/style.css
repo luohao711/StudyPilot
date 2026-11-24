@@ -103,6 +103,8 @@ input.short { min-width: 90px; width: 110px; }
 
 .badge { padding: 2px 8px; border-radius: 10px; background: #eef2f7; color: #5b6b7c; font-size: 12px; }
 .badge.done { background: #e7f4ec; color: #26714a; }
+.ai-box { margin: 10px 0 4px; padding: 10px 12px; border-left: 3px solid #4a76a8; background: #f5f8fc; border-radius: 4px; }
+.ai-box p { margin: 4px 0; }
 
 .complete-form { margin-top: 14px; padding: 12px 14px; background: #fafbfd; border: 1px solid var(--line); border-radius: 8px; }
 .complete-form p { margin: 0 0 8px; }

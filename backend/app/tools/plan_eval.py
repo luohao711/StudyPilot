@@ -164,6 +164,14 @@ def run_case(case: dict, method: str, scores: dict) -> dict:
     return record
 
 
+def merge_scores(records: list[dict], scores: dict) -> None:
+    """把人工评分合并到已有评测记录，缺评分时保留原记录。"""
+    for row in records:
+        human = (scores.get(row["case_id"], {}) or {}).get(row["method"])
+        if human:
+            row["human"] = human
+
+
 def summarize(records: list[dict], methods: list[str]) -> dict:
     summary = {}
     for method in methods:
@@ -241,6 +249,8 @@ def main() -> int:
     parser.add_argument("--tag", default="run", help="本次评测标签，用于输出文件名")
     parser.add_argument("--out-dir", default=str(config.EVAL_OUTPUT_DIR))
     parser.add_argument("--scores", default=str(config.PROJECT_DIR / "reports" / "experiment7" / "human_scores.json"))
+    parser.add_argument("--scores-only", action="store_true", help="不重新调用模型，只合并人工评分并重算汇总")
+    parser.add_argument("--table", action="store_true", help="在汇总后打印逐样例对比表")
     args = parser.parse_args()
 
     methods = [name.strip() for name in args.methods.split(",") if name.strip()]
@@ -251,6 +261,37 @@ def main() -> int:
     cases = load_cases(args.cases)
     scores = load_scores(args.scores)
     os.makedirs(args.out_dir, exist_ok=True)
+
+    if args.scores_only:
+        all_records: dict[str, list[dict]] = {}
+        for method in methods:
+            path = os.path.join(args.out_dir, f"eval-{method}-{args.tag}.jsonl")
+            with open(path, encoding="utf-8") as fp:
+                rows = [json.loads(line) for line in fp if line.strip()]
+            merge_scores(rows, scores)
+            all_records[method] = rows
+        summary = summarize([row for rows in all_records.values() for row in rows], methods)
+        summary_path = os.path.join(args.out_dir, f"eval-summary-{args.tag}.json")
+        with open(summary_path, "w", encoding="utf-8") as fp:
+            json.dump({"tag": args.tag, "cases": len(cases), "methods": methods, "summary": summary},
+                      fp, ensure_ascii=False, indent=2)
+        print_summary(summary)
+        if args.table:
+            print("逐样例对比（生成类样例看程序检查，拒绝类样例看错误码）：")
+            print(f"{'样例':<6}{'类别':<12}{'规则':<12}{'v0.5':<12}{'v0.6':<12}")
+            print("-" * 58)
+            for case in cases:
+                cells = []
+                for method in methods:
+                    row = next(item for item in all_records[method] if item["case_id"] == case["id"])
+                    if row["expected_mode"] == "reject":
+                        mark = "拒绝正确" if row.get("passed") else ("拒绝错误" if row.get("passed") is not None else "N/A")
+                    else:
+                        mark = "通过" if row.get("passed") else "失败"
+                    cells.append(mark)
+                print(f"{case['id']:<6}{case['category']:<12}" + "".join(f"{cell:<12}" for cell in cells))
+        print(f"汇总（含人工评分）：{summary_path}")
+        return 0
 
     all_records: dict[str, list[dict]] = {method: [] for method in methods}
     for case in cases:

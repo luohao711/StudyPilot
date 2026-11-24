@@ -15,7 +15,7 @@ MODEL = os.environ.get("PLAN_AI_MODEL", os.environ.get("DEEPSEEK_MODEL", "deepse
 TEMPERATURE = float(os.environ.get("PLAN_AI_TEMPERATURE", "0.3"))
 MAX_TOKENS = int(os.environ.get("PLAN_AI_MAX_TOKENS", "2000"))
 TIMEOUT = float(os.environ.get("PLAN_AI_TIMEOUT", "45"))
-PROMPT_VERSION = os.environ.get("PLAN_AI_PROMPT_VERSION", "v1")
+PROMPT_VERSION = os.environ.get("PLAN_AI_PROMPT_VERSION", "v2")
 
 # 计划窗口与规模限制：由程序执行，不依赖提示词。
 MAX_PLAN_DAYS = 14
@@ -23,6 +23,10 @@ MAX_POINTS = 20
 MIN_PER_POINT_MINUTES = 15
 MIN_TASK_MINUTES = 10
 MAX_TASK_MINUTES = 120
+MAX_TASKS = 20
+MAX_TASKS_PER_POINT = 2
+MAX_TASKS_PER_DAY = 3
+MAX_REPAIR = int(os.environ.get("PLAN_AI_MAX_REPAIR", "1"))
 MIN_AVAILABLE_MINUTES = 30
 MAX_AVAILABLE_MINUTES = 600
 

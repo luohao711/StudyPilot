@@ -30,6 +30,7 @@ export const updateMastery = (courseId, pointId, mastery) =>
   put(`/courses/${courseId}/points/${pointId}`, { mastery })
 
 export const generatePlan = (payload) => post('/plans/generate', payload)
+export const generatePlanAI = (payload) => post('/plans/generate-ai', payload)
 export const confirmPlan = (payload) => post('/plans/confirm', payload)
 export const currentPlan = (courseId) => request(`/plans/current?course_id=${courseId}`)
 export const adjustPlan = (courseId) => post('/plans/adjust', { course_id: courseId })

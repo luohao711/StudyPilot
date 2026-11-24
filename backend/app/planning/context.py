@@ -109,7 +109,8 @@ def load_input(
     if not days:
         raise BusinessError("考试日期之前没有可用时间，请先调整考试目标或开始日期", 400, "NO_AVAILABLE_DAY")
 
-    feasible = len(points) * config.MIN_PER_POINT_MINUTES <= len(days) * minutes
+    feasible = (len(points) * config.MIN_PER_POINT_MINUTES <= len(days) * minutes
+                and len(points) <= len(days) * config.MAX_TASKS_PER_DAY)
     return PlanningInput(
         course_id=course_id,
         course_name=course["name"],
@@ -137,10 +138,17 @@ def prompt_context(inp: PlanningInput) -> dict:
         "exam_date": inp.exam_date.isoformat(),
         "start_date": inp.start_date.isoformat(),
         "window": f"{inp.window_days[0].isoformat()} 至 {inp.window_days[-1].isoformat()}（共 {len(inp.window_days)} 天）",
+        "window_first": inp.window_days[0].isoformat(),
+        "window_last": inp.window_days[-1].isoformat(),
+        "day_count": len(inp.window_days),
         "available_minutes": inp.available_minutes,
         "total_budget": inp.total_budget,
         "min_required_minutes": inp.min_required_minutes,
+        "max_tasks": min(config.MAX_TASKS, len(inp.points) * config.MAX_TASKS_PER_POINT),
+        "max_tasks_per_day": config.MAX_TASKS_PER_DAY,
+        "max_tasks_per_point": config.MAX_TASKS_PER_POINT,
         "feasible": "可以覆盖全部知识点" if inp.feasible else "无法覆盖全部知识点，必须按薄弱程度取舍并在 notes 中说明",
+        "feasible_note": "可以覆盖全部知识点，每个知识点至少安排1个任务" if inp.feasible else "预算不足，无法覆盖全部知识点：按掌握度从低到高安排尽可能多的知识点，并在 notes 中说明",
         "points": point_lines,
         "weak_points": weak,
     }

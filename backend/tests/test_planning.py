@@ -149,3 +149,148 @@ def test_input_no_available_day(client):
     with pytest.raises(BusinessError) as error:
         load_input(course_id, start_date=exam_date)
     assert error.value.code == "NO_AVAILABLE_DAY"
+
+# ---------------- v0.6 修订版：校验、修复、降级与接口 ----------------
+
+from app.planning import validator
+
+
+def _valid_tasks() -> list[dict]:
+    return [
+        _task("软件测试", _future(1), 30, "梳理软件测试层次并做黑盒测试练习"),
+        _task("数据库设计", _future(1), 30, "梳理ER模型并做范式判断例题"),
+        _task("软件架构", _future(2), 30, "梳理架构风格并做质量属性分析"),
+        _task("需求分析", _future(3), 20, "做用例图与需求规格说明练习"),
+    ]
+
+
+def test_validator_accepts_valid_plan(seeded):
+    inp = load_input(seeded)
+    tasks = [
+        {"point": "软件测试", "title": "做黑盒测试练习", "date": _future(1), "minutes": 30, "reason": "掌握度30%最低"},
+        {"point": "数据库设计", "title": "做范式判断例题", "date": _future(2), "minutes": 30, "reason": "掌握度38%较低"},
+        {"point": "软件架构", "title": "梳理架构风格", "date": _future(3), "minutes": 30, "reason": "掌握度45%较低"},
+        {"point": "需求分析", "title": "回顾需求分析要点", "date": _future(4), "minutes": 20, "reason": "掌握度62%较高"},
+    ]
+    assert validator.validate_plan(inp, tasks, "先薄弱后巩固", "") == []
+
+
+def test_validator_catches_unknown_point_and_date(seeded):
+    inp = load_input(seeded)
+    tasks = [_task("综合复习", _future(30), 30, "全知识点模拟")]
+    codes = {issue.code for issue in validator.validate_plan(inp, tasks, "计划", "说明")}
+    assert "UNKNOWN_POINT" in codes
+    assert "DATE_OUT_OF_WINDOW" in codes
+    assert "MISSING_POINTS" in codes
+
+
+def test_validator_catches_daily_overload_and_minutes(seeded):
+    inp = load_input(seeded)
+    tasks = [
+        _task("软件测试", _future(1), 120, "长任务一"),
+        _task("软件测试", _future(1), 120, "长任务二"),
+        _task("软件测试", _future(1), 120, "长任务三"),
+    ]
+    codes = {issue.code for issue in validator.validate_plan(inp, tasks, "计划", "")}
+    assert "DAILY_OVERLOAD" in codes
+    assert "TOO_MANY_TASKS_PER_POINT" in codes
+    assert "MINUTES_RANGE" not in codes
+
+
+def test_validator_requires_notes_when_infeasible(client):
+    exam = _future(1)
+    course_id = client.post("/api/courses", json={"name": "冲刺课程", "term": "2026秋"}).json()["course_id"]
+    client.post(f"/api/courses/{course_id}/goal", json={"exam_date": exam, "target_score": 70, "available_minutes": 60})
+    for name, mastery in (("知识点一", 20), ("知识点二", 30), ("知识点三", 40), ("知识点四", 50),
+                          ("知识点五", 60), ("知识点六", 70)):
+        client.post(f"/api/courses/{course_id}/points", json={"name": name, "mastery": mastery})
+    inp = load_input(course_id)
+    assert inp.feasible is False
+    tasks = [{"point": "知识点一", "title": "梳理知识点一", "date": _future(0), "minutes": 20, "reason": "最薄弱"}]
+    codes = {issue.code for issue in validator.validate_plan(inp, tasks, "计划", "")}
+    assert "NOTES_MISSING" in codes
+    assert validator.validate_plan(inp, tasks, "计划", "时间不足，无法全部覆盖，优先安排最薄弱点") == []
+
+
+def _sequence_chat_json(outputs: list[dict]):
+    """按顺序返回预设输出，用于测试修复和降级分支。"""
+    queue = list(outputs)
+
+    def fake(messages, schema, **kwargs):
+        data = queue.pop(0) if queue else outputs[-1]
+        output = PlanOut.model_validate(data)
+        return output, {
+            "content": "{}",
+            "model": "fake-model",
+            "usage": {"prompt_tokens": 100, "completion_tokens": 50, "total_tokens": 150},
+            "latency_ms": 10,
+            "finish_reason": "stop",
+        }
+
+    return fake
+
+
+def test_v2_success(seeded, monkeypatch):
+    monkeypatch.setattr(llm_client, "chat_json", _sequence_chat_json([
+        {"summary": "先薄弱后巩固", "tasks": _valid_tasks()},
+    ]))
+    result = generator.generate(seeded, version="v2")
+    assert result["status"] == "success"
+    assert result["generator"] == "llm_v2"
+    assert result["checks"]["passed"] is True
+    assert result["meta"]["repair_attempts"] == 0
+
+
+def test_v2_repairs_invalid_first_output(seeded, monkeypatch):
+    invalid = {"summary": "计划", "tasks": [_task("综合复习", _future(30), 30, "全知识点模拟")]}
+    monkeypatch.setattr(llm_client, "chat_json", _sequence_chat_json([
+        invalid,
+        {"summary": "先薄弱后巩固", "tasks": _valid_tasks()},
+    ]))
+    result = generator.generate(seeded, version="v2")
+    assert result["status"] == "success"
+    assert result["meta"]["repair_attempts"] == 1
+    assert result["meta"]["calls"] == 2
+    assert result["checks"]["passed"] is True
+
+
+def test_v2_falls_back_after_two_invalid_outputs(seeded, monkeypatch):
+    invalid = {"summary": "计划", "tasks": [_task("综合复习", _future(30), 30, "全知识点模拟")]}
+    monkeypatch.setattr(llm_client, "chat_json", _sequence_chat_json([invalid, invalid]))
+    result = generator.generate(seeded, version="v2")
+    assert result["status"] == "fallback"
+    assert result["generator"] == "llm_v2_fallback"
+    assert result["fallback_reason"].startswith("模型输出未通过约束校验")
+    assert result["checks"]["passed"] is True
+    assert {task["point"] for task in result["tasks"]} == {"需求分析", "软件架构", "数据库设计", "软件测试"}
+
+
+def test_v2_falls_back_on_model_error(seeded, monkeypatch):
+    def failing(messages, schema, **kwargs):
+        raise BusinessError("模型服务连接失败", 503, "LLM_CONNECTION_ERROR")
+
+    monkeypatch.setattr(llm_client, "chat_json", failing)
+    result = generator.generate(seeded, version="v2")
+    assert result["status"] == "fallback"
+    assert "模型调用失败" in result["fallback_reason"]
+    assert result["tasks"]
+    assert result["checks"]["passed"] is True
+
+
+def test_generate_ai_api(client, seeded, monkeypatch):
+    monkeypatch.setattr(llm_client, "chat_json", _sequence_chat_json([
+        {"summary": "先薄弱后巩固", "tasks": _valid_tasks()},
+    ]))
+    resp = client.post("/api/plans/generate-ai", json={"course_id": seeded})
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["generator"] == "llm_v2"
+    assert body["checks"]["passed"] is True
+    assert len(body["tasks"]) == 4
+
+
+def test_generate_ai_api_rejects_missing_goal(client):
+    course_id = client.post("/api/courses", json={"name": "没有目标", "term": "2026秋"}).json()["course_id"]
+    resp = client.post("/api/plans/generate-ai", json={"course_id": course_id})
+    assert resp.status_code == 400
+    assert resp.json()["code"] == "GOAL_NOT_FOUND"

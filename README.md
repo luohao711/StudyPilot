@@ -72,6 +72,30 @@ python3 -m app.tools.agent_log --last-success
 只读工具超时 3 秒、最多重试 2 次；写工具超时 5 秒、不自动重试；确认等待 20 秒且计入总时限（拒绝后不再重复询问）；
 最终回答由程序核对数据库后判定，不通过最多修正 2 次。日志写入 `backend/logs/agent_runs.jsonl`。
 
+## AI 学习计划原型（实验7）
+
+核心 AI 能力是“按掌握度生成可执行的考前计划”：输入课程、考试目标、知识点掌握度和
+每天可用时间，模型输出每日任务；程序再检查日期窗口、每天时长上限、知识点覆盖、
+薄弱点优先级和任务时长，不合格时反馈给模型修复一次，仍不合格则改用规则模板降级，
+保证页面始终能拿到可执行计划。
+
+```bash
+cd backend
+python3 -m app.seed --reset                         # 样例课程与知识点
+source ../tmp/env.sh                                # 仅本机：从 DSH 凭据导出 DEEPSEEK_API_KEY
+python3 -m app.tools.plan_ai_cli --course 软件工程 --start 2026-11-24 --version v2 --save
+python3 -m app.tools.plan_ai_cli --course 软件工程 --version v1   # 初版对照（只做结构校验）
+python3 -m app.tools.plan_eval --methods rule,v05,v06 --tag week2  # 同一评测集对比三种方案
+```
+
+- 评测集：`backend/eval/plan_cases.jsonl`（15 个样例，固定 `base_date`，可重复运行）。
+- 评测明细与汇总：`reports/experiment7/runs/eval-*.jsonl`、`eval-summary-*.json`。
+- 运行日志：`backend/logs/plan_ai_runs.jsonl`（含校验、修复、降级事件，密钥遮挡）。
+- 配置集中在 `backend/app/planning/config.py`：模型、温度、输出上限、超时、修复次数、
+  价格和评测路径；密钥只从 `DEEPSEEK_API_KEY` 环境变量读取。
+- 接口：`POST /api/plans/generate-ai`（参数 course_id、available_minutes、start_date、save）；
+  前端「学习计划」页有“AI 生成计划（带检查）”按钮，显示校验结果、修复次数、耗时和费用。
+
 ## 运行前端
 
 ```bash
@@ -90,8 +114,9 @@ python3 -m pytest tests -v
 测试使用临时数据库，覆盖课程、考试目标、知识点、计划生成、任务完成和数据库不可用等情况；
 `tests/test_rag.py` 覆盖知识库片段元数据、分词、检索排序、同义词扩展、引用校验和Prompt版本；
 `tests/test_agent.py` 覆盖工具参数校验、访问范围、重复调用去重、步数/时间限制、工具异常、
-人工确认同意/拒绝和结果核验，共 23 个用例；加上实验4、实验5的用例，全套共 43 个，全部离线执行
-（正常流程的真实模型调用见命令行运行记录）。
+人工确认同意/拒绝和结果核验，共 23 个用例；`tests/test_planning.py` 覆盖 AI 计划原型的输入校验、
+约束校验、修复、降级、保存和接口，共 20 个用例；加上实验4、实验5的用例，全套共 63 个，
+全部离线执行（正常流程的真实模型调用见命令行运行记录）。
 
 ## 编译实验报告
 
@@ -110,3 +135,5 @@ xelatex 实验3-软件架构与界面设计.tex
 - `v0.2`：测试修订版，核心业务闭环、异常处理、日志和测试。
 - `v0.3`：资料问答（LLM 调用、Prompt 迭代、知识库切分、BM25 检索、RAG 链路与对比测试）。
 - `v0.4`：工具调用与单 Agent 运行时（工具白名单与参数校验、Agent 循环、人工确认、步数/超时/重试限制、结果核验与运行日志）。
+- `v0.5`：AI 学习计划初版原型（直接调用模型、结构化输出、CLI、15 个样例的评测集与规则基线对比）。
+- `v0.6`：AI 学习计划修订版（约束预处理、Prompt v2、程序校验、有限修复、规则降级、接口与页面入口）。

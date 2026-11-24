@@ -20,7 +20,7 @@ async def lifespan(app: FastAPI):
     log.info("StudyPilot 后端停止")
 
 
-app = FastAPI(title="StudyPilot API", version="0.3.0", lifespan=lifespan)
+app = FastAPI(title="StudyPilot API", version="0.6.0", lifespan=lifespan)
 app.include_router(courses.router)
 app.include_router(goals.router)
 app.include_router(knowledge.router)

@@ -44,12 +44,34 @@
       <div class="field">
         <label></label>
         <button :disabled="!courseId || generating" @click="generate">
-          {{ generating ? '生成中…' : '生成候选计划' }}
+          {{ generating ? '生成中…' : '生成候选计划（规则）' }}
+        </button>
+        <button :disabled="!courseId || aiGenerating" @click="generateAI">
+          {{ aiGenerating ? 'AI 生成中…' : 'AI 生成计划（带检查）' }}
         </button>
         <button class="ghost" :disabled="!courseId" @click="addManualTask">手工添加任务</button>
         <span v-if="notice" class="tip">{{ notice }}</span>
       </div>
       <div v-if="error" class="error">{{ error }}</div>
+      <div v-if="aiResult" class="ai-box">
+        <p>
+          <b>AI 计划</b>　{{ aiResult.generator }} / Prompt {{ aiResult.prompt_version }}　
+          <span :class="aiResult.checks && aiResult.checks.passed ? 'badge done' : 'badge'">
+            程序校验{{ aiResult.checks && aiResult.checks.passed ? '通过' : '未通过' }}
+          </span>　
+          修复 {{ aiResult.meta.repair_attempts || 0 }} 次　模型调用 {{ aiResult.meta.calls }} 次　
+          耗时 {{ aiResult.meta.latency_ms }} ms　tokens {{ aiResult.meta.total_tokens }}　
+          费用约 {{ aiResult.meta.cost_yuan }} 元
+        </p>
+        <p v-if="aiResult.status === 'fallback'" class="tip">
+          降级原因：{{ aiResult.fallback_reason }}（已返回规则模板计划，可继续修改）
+        </p>
+        <p v-if="aiResult.checks && aiResult.checks.issues && aiResult.checks.issues.length" class="tip">
+          校验问题：{{ aiResult.checks.issues.join('、') }}
+        </p>
+        <p class="tip">{{ aiResult.summary }}</p>
+        <p v-if="aiResult.notes" class="tip">取舍说明：{{ aiResult.notes }}</p>
+      </div>
 
       <div v-if="tasks.length === 0" class="empty">还没有候选任务，点击“生成候选计划”。</div>
       <table v-else>
@@ -80,7 +102,7 @@
 <script setup>
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { addPoint, confirmPlan, generatePlan, getGoal, listCourses, listPoints } from '../api'
+import { addPoint, confirmPlan, generatePlan, generatePlanAI, getGoal, listCourses, listPoints } from '../api'
 
 const route = useRoute()
 const courses = ref([])
@@ -89,6 +111,8 @@ const points = ref([])
 const goal = ref(null)
 const tasks = ref([])
 const generating = ref(false)
+const aiGenerating = ref(false)
+const aiResult = ref(null)
 const confirming = ref(false)
 const adding = ref(false)
 const error = ref('')
@@ -113,6 +137,7 @@ async function onCourseChange() {
   message.value = ''
   tasks.value = []
   notice.value = ''
+  aiResult.value = null
   const [goalData, pointData] = await Promise.all([getGoal(courseId.value), listPoints(courseId.value)])
   goal.value = goalData.goal
   points.value = pointData.items
@@ -140,6 +165,7 @@ async function generate() {
   try {
     const data = await generatePlan({ course_id: courseId.value })
     tasks.value = data.tasks
+    aiResult.value = null
     notice.value = data.ai_available
       ? '已由模型服务生成候选计划'
       : '模型服务未配置，已使用规则模板生成候选计划，确认前可以修改'
@@ -149,6 +175,26 @@ async function generate() {
     error.value = `${e.message}（可点击“手工添加任务”继续）`
   } finally {
     generating.value = false
+  }
+}
+
+async function generateAI() {
+  aiGenerating.value = true
+  error.value = ''
+  message.value = ''
+  try {
+    const data = await generatePlanAI({ course_id: courseId.value })
+    aiResult.value = data
+    tasks.value = data.tasks
+    notice.value = data.status === 'fallback'
+      ? '模型输出未通过检查，已自动降级为规则模板，可手工调整后确认'
+      : 'AI 已生成候选计划，并经过程序约束检查，可修改后确认'
+  } catch (e) {
+    aiResult.value = null
+    tasks.value = []
+    error.value = `AI 生成失败：${e.message}`
+  } finally {
+    aiGenerating.value = false
   }
 }
 
